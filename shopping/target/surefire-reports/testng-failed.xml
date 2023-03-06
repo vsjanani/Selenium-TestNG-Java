@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="tests" name="HappyPathTestCases(failed)" verbose="0">
+    <classes>
+      <class name="com.ae.shopping.testCases.ShopTops">
+        <methods>
+          <include name="F2301_AE_product_description_display"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.ae.shopping.testCases.ShopTops -->
+    </classes>
+  </test> <!-- HappyPathTestCases(failed) -->
+  <test thread-count="5" parallel="tests" name="ErrorTestCases(failed)" verbose="0">
+    <classes>
+      <class name="com.ae.shopping.testCases.ErrorScenario">
+        <methods>
+          <include name="F2301_AE_F2301_AE_womenMenu_topsOption_invalid"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.ae.shopping.testCases.ErrorScenario -->
+    </classes>
+  </test> <!-- ErrorTestCases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,5 @@
+1676310752152	Rename type 'ChromeDevToolsProtocol'
+1676310790526	Rename type 'ChromeDevToolsViaDirectCommands'
+1676593198152	Rename type 'CDPNetworkBlock'
+1676593204549	Delete element
+1676612531123	Rename type 'CDPNetworkErrorLogs'

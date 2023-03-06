@@ -1,0 +1,21 @@
+package com.ae.shopping.testCases;
+import org.junit.Assert;
+import org.testng.annotations.Test;
+
+import com.ae.shopping.baseTest.DawnDusk;
+import com.ae.shopping.pageObjects.MegaMenuPage;
+
+public class ErrorScenario extends DawnDusk{
+	public MegaMenuPage objMegaMenuPg;
+	
+	@Test
+	public void F2301_AE_f() {
+		objMegaMenuPg = objHomePg.clickAcceptAllCookies();
+		Boolean blnOptFrmWomen = objMegaMenuPg.getOptionFromWomen("Hello");
+		Assert.assertFalse("No such option is present in Mega Menu Women", blnOptFrmWomen);
+//		System.out.println("executed");
+		
+		
+			}
+
+}

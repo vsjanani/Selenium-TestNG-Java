@@ -1,0 +1,33 @@
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.HashMap;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+public class FileUploadAutoIt {
+	@Test
+	public void fileUpload() throws IOException {
+		ChromeOptions objChromeOptions = new ChromeOptions();
+		HashMap<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("download.default_directory", System.getProperty("user.dir"));		
+		WebDriver objWebDriver = new ChromeDriver(objChromeOptions);
+		objWebDriver.get("https://smallpdf.com/pdf-to-jpg");
+		objWebDriver.findElement(By.cssSelector(".ggoliT")).click();
+		Runtime.getRuntime().exec("C:\\Users\\jansr\\Downloads\\SeleniumDemo.exe");
+//		WebDriverWait objExplicitWait = new WebDriverWait(objWebDriver, Duration.ofSeconds(5));
+//		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.xpath("(//div[contains(@class,'fnaLLy')])[1]")))).click();
+//		objWebDriver.findElement(By.xpath("//span[contains(text(),'option')]")).click();
+//		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.linkText("Download")))).click();
+//		File f = new File("user.dir"+"//Authorization Letter.jpg");
+//		System.out.println(f.exists());
+		
+	}
+
+}

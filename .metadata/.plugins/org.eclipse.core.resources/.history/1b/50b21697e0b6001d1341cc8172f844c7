@@ -1,0 +1,25 @@
+package Verify;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+
+public class MySqlJDBC {
+
+	public static void main(String[] args) throws SQLException  {
+		// TODO Auto-generated method stub
+		//jdbc:mysql//localhost:3306/qadbt hence this should be written as:
+		// "jdbc
+		Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qadbt", "root", "SanjeevKrish@01");
+		Statement objDBConnected = DBConn.createStatement();
+		ResultSet objResultSet = objDBConnected.executeQuery("select * from SeleniumDemo where id=2");
+		objResultSet.next();
+		System.out.println(objResultSet.getString("location"));
+		
+	}
+
+}

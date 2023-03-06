@@ -1,0 +1,50 @@
+package com.ae.shopping.testCases;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import com.ae.shopping.baseTest.DawnDusk;
+import com.ae.shopping.pageObjects.MegaMenuPage;
+import com.ae.shopping.pageObjects.QuickShopPage;
+import com.ae.shopping.pageObjects.WomenTopsPage;
+
+
+public class ShopTops extends DawnDusk {
+	public MegaMenuPage objMegaMenuPg;
+	public WomenTopsPage objWomenTopsPg;
+	public QuickShopPage objQuickShopPg;
+	public String strExpectedProductName = "AE Funday Graphic Sweatshirt";
+	@Test(groups = "chromeinvokation")
+	public void F2301_AE_url_title() throws InterruptedException {
+		String strUrlTitle = objWebDriver.getTitle();
+		objMegaMenuPg = objHomePg.clickAcceptAllCookies();
+		Assert.assertEquals(strUrlTitle, "Men’s & Women’s Jeans, Clothes & Accessories | American Eagle");
+//		Thread.sleep(3000);
+	}
+	
+	@Test(dependsOnMethods={"F2301_AE_url_title"})	
+	public void F2301_AE_womenMenu_topsOption_display() {
+		Boolean blnOptFromWomen = objMegaMenuPg.getOptionFromWomen("Tops");
+		Assert.assertTrue(blnOptFromWomen, "Expected option from menu Women is not present");
+					
+	}
+	
+	@Test(dependsOnMethods= {"F2301_AE_womenMenu_topsOption_display"})
+	public void F2301_AE_product_display() {
+		objWomenTopsPg = objMegaMenuPg.clickOptFrmWomen("Tops");
+		Boolean blnOptFrmBestSelling = objWomenTopsPg.getBestSellingProdName(strExpectedProductName);
+		Assert.assertTrue(blnOptFrmBestSelling, "Expected product name from Now Trending header is not present");
+	}
+	
+	@Test(dependsOnMethods= {"F2301_AE_product_display"})
+	public void F2301_AE_product_description_display() {
+		
+		objQuickShopPg = objWomenTopsPg.clickQuickShopForSelectedProduct(strExpectedProductName);
+		String strProductName = objQuickShopPg.getProductTitle();
+		Assert.assertEquals(strProductName, strExpectedProductName);
+	}
+	
+	
+	
+}

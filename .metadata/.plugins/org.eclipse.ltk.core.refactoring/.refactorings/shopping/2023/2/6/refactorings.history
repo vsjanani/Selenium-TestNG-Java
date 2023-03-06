@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;shopping/testSuites/testng.xml&apos; to &apos;ParallelTest.xml&apos;" description="Rename resource &apos;testng.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="testSuites/testng.xml" name="ParallelTest.xml" stamp="1675990856831" updateReferences="true"/>
+</session>

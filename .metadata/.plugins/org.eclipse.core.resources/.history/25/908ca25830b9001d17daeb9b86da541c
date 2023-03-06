@@ -1,0 +1,11 @@
+
+public class dummy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(System.getProperty("user.dir"));
+		File f = new File(System.getProperty("user.dir")+"//Authorization Letter.jpg");
+		"C:\Users\jansr\eclipse-workspace\Selenium_Java_Learning_01\Authorization Letter.jpg"	
+	}
+
+}

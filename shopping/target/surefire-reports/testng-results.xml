@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-16T10:28:59 PST" name="Suite" finished-at="2023-02-16T10:29:14 PST" duration-ms="15760">
+    <groups>
+      <group name="chromeinvokation">
+        <method signature="ErrorScenario.F2301_AE_F2301_AE_womenMenu_topsOption_invalid(java.util.HashMap)[pri:0, instance:com.ae.shopping.testCases.ErrorScenario@4bdeaabb]" name="F2301_AE_F2301_AE_womenMenu_topsOption_invalid" class="com.ae.shopping.testCases.ErrorScenario"/>
+      </group> <!-- chromeinvokation -->
+    </groups>
+    <test started-at="2023-02-16T10:28:59 PST" name="Test" finished-at="2023-02-16T10:29:14 PST" duration-ms="15760">
+      <class name="com.ae.shopping.testCases.ErrorScenario">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.ae.shopping.testCases.ErrorScenario@4bdeaabb]" started-at="2023-02-16T10:28:59 PST" name="launchApp" finished-at="2023-02-16T10:29:11 PST" duration-ms="12419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="F2301_AE_F2301_AE_womenMenu_topsOption_invalid(java.util.HashMap)[pri:0, instance:com.ae.shopping.testCases.ErrorScenario@4bdeaabb]" started-at="2023-02-16T10:29:12 PST" name="F2301_AE_F2301_AE_womenMenu_topsOption_invalid" data-provider="excelToHashMap" finished-at="2023-02-16T10:29:14 PST" duration-ms="1650" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Hello, exptdProdName=AE Go Big Shirt}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- F2301_AE_F2301_AE_womenMenu_topsOption_invalid -->
+        <test-method signature="checkDevToolsBrokenLink()[pri:0, instance:com.ae.shopping.testCases.ErrorScenario@4bdeaabb]" started-at="2023-02-16T10:29:14 PST" name="checkDevToolsBrokenLink" finished-at="2023-02-16T10:29:14 PST" duration-ms="572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDevToolsBrokenLink -->
+      </class> <!-- com.ae.shopping.testCases.ErrorScenario -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
