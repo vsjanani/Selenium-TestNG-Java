@@ -1,0 +1,203 @@
+Download Java:
+download jdk latest version
+add system variable as JAVA_HOME giving jdk installed path.C:\Program Files\Java\jdk-18.0.2.1\
+
+Dowload Eclipse:
+just google as download eclipse and download the latest version.
+
+Project creation:
+
+Create a new java project and while creating give no to module-info and click finish.
+
+Download Selenium:
+To download anything related to java, it is pushed into mvnrepository website as jars or dependancies. It is advisable to add dependancies.
+Hence, project created in eclipse should be converted into maven project.
+
+To do so, create project in eclipse, go to configure and convert into maven project (pom.xml file will be created)
+go to mvn repository and copy the selenium dependancy. Paste it under <dependancies> (create this tag) inside pom.xml file.
+
+
+Download Testng:
+
+Paste Testng dependancy from mvn repository.
+Also, in eclipse->window->preferences->search for TestNG. If not found, then it should be installed via eclipse Help -> eclipse marketplace.
+To create TestNG.xml, right click on the src or package -> TestNG -> Convert to TestNG.
+
+Download apache javautils or commons io (both same)
+
+To take screenshot, search for above in mvn repository. paste the commons io dependancy in pom.xml file
+
+****************************************************
+
+
+To create new Maven Project:
+
+Download Maven in google. Go to apache download maven. Get the binary zip file. download it. Go to the installed folder, copy the path, add it ias system variable as MAVEN_HOME just like JAVA_HOME.
+Now, go to path in that system variable dialogue box, paste the apache-mave > bin installed folder path.
+
+File->New->Maven->Maven Project -> use default location -> Group-ID: org.apache.maven.archetypes; artifact-ID: maven-archetype-quickstart (It is a framework) -> Next-> give group-id (com.amazon), artificat-Id: shopping or prime or aws and change package name to artifact-ID -> Finish.
+
+Add selenium-java and testng dependancies to pom.xml file in maven project..
+
+Add  io.github.bonigarcia » webdrivermanager dependacy from mvn repo to pom.xml. - not required as selenium is upgraded with no webdriver manager like geckodriver or chromedriver.
+
+Add jackson databind dependancy to convert string from json file to hashmap. It is a data reading process - datasetup file to be read by selenium through class called hashmap.
+
+Add apache io commons dependancy to access files. (to access class called FileUtils)
+
+Add extent report dependancy for reporting.
+
+Add apache poi and ooxml dependancy for reading data in excel file.
+
+*******************************************************8
+To run project via local command terminal:
+
+Install maven to run from command terminal. So far we ran using maven inbuilted in eclipse. But to run the code
+from local system, mave has to be installed. Follow steps in below link for installation:
+
+https://www.qamadness.com/knowledge-base/how-to-install-maven-and-configure-environment-variables/
+
+Now, testng.xml has to run in maven in local system terminal to execute scripts. For that, search "maven testng integration" in google.
+
+under maven.apache.org, copy the surefire plugin configuration under title "Using Suite XML Files". //this is to execute test cases from test folder in maven project.
+
+paste in your project's pom.xml file under <plugin>
+
+Now, copy the <build> tag till plugin, and paste it under newly manually created <profiles> <profile> <id> (give testing type name either Regression or Smoke etc) and paste the <build> tag inside each ID tag.
+
+now ensure maven compiler is 1.8
+
+.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+now from local terminal, go to project folder(cd C:\Users\jansr\eclipse-workspace\shopping) and give command as:
+mvn test -P Regression //here -P refers to Profile tag. and Regression refers to ID.
+
+Reason behind placing <build> tag inside <Profile> is, in real-time, there may be 20 xml file. tester cannot go and edit name under <build> each time.
+Hence, <profile> tag is created and <build> is placed under it.
+
+commands:
+Go to project folder. 
+
+mvn clean //to clean all the build errors if any. It is advisable to do it before every execution.
+
+Note: If you want to run from project directly via mvn test command without the TestNG.xml (but using testng annotation), ensure to have all the java class files name ends with Test. eg:ErrorScenarioTest or FieldPresenceValidatesTest. Hence, mvn test can directly run these test case files from project without the help of xml. It is not needed though. Just a learning.
+
+only with surefire plugin, all the test case files will be executed, but if we add the testng.xml exclusively below surefire plugin
+
+To run only a single test case via maven,
+mvn -Dtest=TestCircle test eg: mvn -Dtest=ErrorScenarioTest test
+
+refer all these maven.apache.org documentation.
+
+***************************************************************8
+
+jenkins:
+
+download jenkins war file from google.
+open command prompt, go to war downloaded path, give command as: java -jar jenkins.war
+
+Item name in jenkins should not have spaces. Should be separated by -. eg: American-Eagle-Shopping
+
+fields to fill on the whole are:
+parameters
+custom workspace if not from git
+build steps.
+
+BuildSteps -> invoke top level maven project -> goals- test -P "$Profile" -D browser="$Browser" //while running from local system terminal,  mvn test -P Regression -D Chrome is used. But here
+we are giving choice parameters and those saved variables are used for reference like $Browser $Profile.
+
+Now, click httpPort:8080/configure search Global properties and add name as JAVA_HOME and value as local JAVA_HOME path from control panel.
+
+Now click build with parameters.
+
+**************************************************************
+
+Cucumber with testng:
+
+Add cucumber-java and cucumber-testng dependacies from mvn repo to pom.xml
+
+go to eclipse->help->eclipse marketplace-> cucumber eclipse plugin -> install.
+
+cucumber eclipse plugin is used to write feature file in right format (syntax to support cucumber format).
+
+install chrome tidy gherkin plugin to convert feature into java code.
+
+****************************************************************
+
+selenium grid:
+
+download selenium grid file. open local terminal go to downloaded path as cd c//downloads or something and give below command:
+cd Selenium Grid
+
+java -jar selenium-server-4.8.0.jar hub
+
+Now your local machine is hub. see in localhost:4444
+
+To set the same local machine as node:
+
+java -jar selenium-server-4.8.0.jar node
+
+Now your local machine is node as well. see in localhost:4444
+
+To set node in a different physical machine (other laptop), download same selenium grid jar.
+
+Go to terminal and type below command:
+
+java -jar selenium-server-4.8.0.jar node --publish-events tcp://10.0.0.152:4442 --subscribe-events tcp://10.0.0.152:4443
+
+Note: above ip address is obtained in hub laptop containing below line.
+XPUB binding to [binding to tcp://*:4442, advertising as tcp://10.0.0.152:4442], XSUB binding to [binding to tcp://*:4443, advertising as tcp://10.0.0.152:4443]
+
+Note: publishing event is the sender of message via topic. Topic sends the message to subscribing events. It is in short call pub/sub messaging.
+
+Now write code in a laptop where:
+Hub URL is -  http://10.0.0.152:4444,which can be seen in below line after giving this command -java -jar selenium-server-4.8.0.jar hub that making a laptop as hub laptop (Note: code can be in one laptop, hub can be in one laptop and node can be in one laptop)
+
+Rahulshetty had code and hub in same laptop. but still, hub address is needed to given under remotewebdriver(see selenium_java_learning.txt for using remotewebdriver)
+
+10:20:01.110 INFO [Hub.execute] - Started Selenium Hub 4.8.0 (revision 267030adea): http://10.0.0.152:4444
+
+To close/shutdown hub:
+
+http://localhost:4444/lifecycle-manager?action=shutdown
+
+
+******************************************************************
+ChromeDev Tools:
+
+to get this, open a maven project (ensure maven compliler plugin 1.8 is already in pom.xml, if not add it, then add selenium dependancy as well)
+
+chromedev tools doesn't need any specific dependancy. only coding varies. refer learning notepad for more details.
+
+********************************************************************
+
+download mysql for windows (the onewith higher mb)
+msql password: SanjeevKrish@01, username is root. Ensure to save password always.Port is 3306 (it is by default, if you want you can change it)
+installation is all user friendly. just give next next execute, dependancies will be autodownloaded and mysqlworkbench is autoopened. if not, just open
+program files, go to mysql folder and find out workbench. It is just a mysql editor like eclipse for selenium.
+
+
+now, download mysql connector java from mvnrepository
+
+************************************************************
+
+download AutoIt:
+
+GO to autoIt downloads and click "autoit download". just give next next to download.
+
+Now go to programfiles86 where AutoIt3 is downloaded.
+Open that folder and click Au3Info_x64 (this is like chropath for desktop)
+Also, click SciTE -> SciTE file (it is like eclipse for desktop)
+Now create a file save it as filename.au3. Open it using SciTE editor. start writing script.
+
+***********************************************************
+
+BrowserStack is not much to worry about. Check the learning notepad as it needs only coding level changes.
+
+******************************************************
+
+Git:
+
+just install git and tortoise git. For command line git, see python learning notepad.

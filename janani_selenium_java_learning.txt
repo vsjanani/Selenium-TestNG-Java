@@ -1,0 +1,1936 @@
+The JVM is the runtime that hosts running programs.
+The JRE is the on-disk part of Java that creates the JVM and loads programs into them.
+The JDK provides the tools necessary to write Java programs that can be executed and run by the JVM and JRE.
+
+Two ways of creating webdriver_obj:
+
+a: ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
+b: WebDriver webdriver_obj = new ChromeDriver();
+
+a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
+  
+	WebDriver is an interface carried methods like getTitle, close, quit etc with empty bodies.
+Classes like ChromeDriver, EdgeDriver needs to use these methods and add their own codes to execute the methods from WebDriver interface.
+But in this line, ChromeDriver's own methods also can be used by webdriver_obj.getInputState etc along with WebDriver methods. But those ChromeDriver related methods may not be present in other browsers like firefox or ie.
+Note: WebDriver related methods is applicable across all browsers.
+Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.
+
+b: WebDriver webdriver_obj = new ChromeDriver(); 
+	
+	If this piece of code is used, only WebDriver implementation of ChromeDriver is used. ChromeDriver methods are excluded.
+
+browser invocation code:
+
+System.setProperty("webdriver.chrome.driver", "give chromedriver.exe path here");
+WebDriver webdriver_obj = new ChromeDriver();
+
+Variables:
+int, float(double, both are same), char, String, boolean (to store true or false into a variable. Note: true and false is not a string. it is a boolean)
+
+Print Statment:
+int num = 5;
+System.out.println(num + "is the value of num variable")
+
+Arrays:
+
+			int[] mylist = {1, 2, 3, 4, 5}; or int[] mylist = new int[5]; mylist[0] =1 and so on. first method is preferrable though.
+
+Different ways to print array elements:
+System.out.print(Arrays.toString(mylist));
+for(int i=0; i < mylist.length; i++) {
+	System.out.println(mylist[i]);
+	}
+for (int i : mylist) {
+	System.out.println(i);
+			}
+
+For and if else:
+
+for can be used simply as in python like, 
+for (int i : mylist) {
+	System.out.println(i);
+			}
+
+if else:
+if (condition) {}
+else {}
+
+ArrayList:
+
+Arrays are created with pre-defined memory allocation like, int[] mylist = new int[5] or int[] mylist = {1,2,3,4,5}. In both these statements, it is predefined which wont work out always as values gets added in runtime during realtime testing.
+Hence dynamic array is used which is called as ArrayList. It is a class. So usual method of object creation is done to access ArrayList methods.
+
+ArrayList mylist = new ArrayList();
+
+To create an arraylist for string, just add string tag to it.
+
+ArrayList<String> mylist1 = new ArrayList<String>();
+
+Note: array size   = object/variable.length(). In arraylist, it is, object/variable.size()
+
+String:
+String is a class with lot of methods. A string can be defined using 2 ways shown below:
+
+1. String name = "janani"
+if another string say "myname" is also defined with same value "janani" (String myname = "janani"), then new memory wont be created instead, it gets mapped to the same variable, 'name'.
+2. String name = new String("janani");
+This is the full statement and point1 is the shortcut of this full statement. But  here, even if same value is assigned to another variable, new memory gets created.
+Hence this piece of code can be used if same value needs to be assigned to two different variables.
+
+Interview question:
+how to reverse the string:
+
+get the size of the string.
+for(i=0, i<string.size, i--){ print charAt[i]}
+
+    StringBuilder str = new StringBuilder("Hello");
+    System.out.println(str.reverse());
+
+public static void main: this is the main block where only execution happens. Common methods needs to be used multiple times should be not be included in this braces because it gets auto-executed like a linear program.
+Hence, methods should be class level (outside main block braces)
+public: access level. respective class or method can be accessed across all classes.If a method inside a class should not get accessed by other classes, it can be defined as private.
+static: if a method is declared static, it can be accessed without creating objects. Respective method can be accessed with just method name; object creation is not required.
+void: if a method or class does not return anything, it should be defined void. If a method gonna return a string, it should be: public static string main or public static string getData()
+
+driver options:
+driver.manage().maximise()
+webdriver_obj.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+thread.sleep(1000); #argument should be in milliseconds. 1000ms = 1sec
+driver.manage() has options for windown maximise and cookies(deletion and addition)
+
+Locators:
+selector hub is the locator plugin for edge and firefox like chropath.
+for both xpath and css, if chropath returns multiple matching webelements in different plots of a website, then, use parent-css/xpath  space child-css/xpath.
+for both xpath and css, if chropath returns multiple matching webelements in same plots or under same box, then use, css:nth-of-type() (in bracket use the index)
+for above scenario in xpath, (xpath)[1]
+if particular webelement is third sibling then try, xpath[3]. 
+
+CSS: Tagname
+if there are two same tag names and if you want to go the last tag name: button:last-of-type will work. To get first tag name, button:first-of-type will work
+to get some random type, nth-of-type to be used.
+if value of an attribute keeps changing, tagname[attribute* = 'value'] to be used. For eg, in html, <input type = "password">, lets assume this password value changes often by developers from password to passwd or pass or passwords. In that case, only pass is stable word. 
+Hence write css as: input[type*='pass']
+if there are multiple values for attribute class, then use .classname.classname.classname. (separate classnames by .)
+
+Xpath: //Tagname
+relative xpath should start with // and absolute xpath should start with / (from root or first parent)
+xpath if tagname is not clear, //*[@attribute = "value"]
+To use linktext or partial link text, tag name should carry anchor <a> otherwise, use //tagname[text() = " "] or //tagname[contains(text(), ' ')] 
+Give Parent xpath (space) Child Xpath to locate one particular element when it has similarr 100 elements or so. Parent xpath select one area in website and select child within that particular area.
+above syntax is applicabe to css as well. Parent CSS (space) child css.
+Tagname: if there is only one unique tagname, By.tagname("p") where p is the tagname <p .....>
+
+
+
+
+Sending webdriver_obj to another function:
+
+while receiving object from a calling method, in called method, object's class name should also be mentioned along with argument as follows:
+
+public static void main(string[] args){
+WebDriver webdriver_obj = new ChromeDriver();
+getData(webdriver_obj) #calling a static method, hence instead of creating object for that method or class, its enough if we directly call the method.
+}
+
+public static void getData(WebDriver webdriver_obj) #note that variable is assigned to that respectivev class name.
+{
+ does some operations 
+
+}
+
+getAttribute is used when an html tags actual attribute is required. getAttribute() method returns value of the attribute (like value of class name or id etc)
+for eg:
+html:
+<input id="search_form_input_homepage" class="js-search-input search__input--adv" type="text" autocomplete="off" name="q" tabindex="1" value="" autocapitalize="off" autocorrect="off">
+
+code:
+WebElement searchTextBox= driver.findElement(By.id("search_form_input_homepage"));
+
+// retrieving html attribute value using getAttribute() method
+String typeValue=searchTextBox.getAttribute("type");
+System.out.println("Value of type attribute: "+typeValue);
+String autocompleteValue=searchTextBox.getAttribute("autocomplete");
+System.out.println("Value of autocomplete attribute: "+autocompleteValue);
+Output:
+Value of type attribute: text
+Value of autocomplete attribute: off
+
+*****************parsing, wait, webelement return and assert************************************************
+
+
+//		In below piece of code, am trying to retrieve visibility of element from function getmystr (it is a webelement, hence return type in getmystr function is mentioned as webelement. 
+//	    from the retrieved webelement, am trying to get text, "Hello World!", where, splitting it with space and taking only World!, splitting again with !, taking first element of array from World and !.
+		String mystr = getmystr(webdriver_obj).getAttribute("textContent").split(" ")[1].split("!")[0]; // it returns output "World"
+		
+		Assert.assertEquals(mystr, "World");
+		
+//		String mystr = webdriver_obj.findElement(By.cssSelector("#finish h4")).getAttribute("textContent");
+		System.out.println(mystr);	
+	}
+
+	public static WebElement getmystr(WebDriver webdriver_obj) {
+		
+		return new WebDriverWait(webdriver_obj, Duration.ofSeconds(8)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish h4")));
+//		return mystr;
+	
+	}
+}
+
+********************************************************************************************************************
+
+navigation:
+
+		webdriver_obj.navigate().to("https://www.amazon.in"); -- similar to driver.get() which will wait until all the synchronisation occurs before executing next line of code. But navigate is used to move from one url to another where no waiting occurs. If needed, exp or imp wait can be used.
+		webdriver_obj.navigate().back();
+		webdriver_obj.navigate().forward();
+
+dropdowns:
+
+only if select tag is present in html:
+
+Select mydropdown = new Select(webdriver_obj.find_element(By.....))
+
+If error message is, "Unable to locate element", it means xpath or locator itself is wrong.
+
+List<WebElement> mylist = webdriver_obj.find_Elements(By.xpath....)
+But in python, it can be directly assigned to a variable.  list<webelement> is all not required.
+
+Assertions:
+
+Assert.assertEqual
+Assert.assertTrue -> test fails if condition is false. It expects condition to be only true.
+Assert.assertFalse -> expects condition to be only false.
+
+Disable validation:
+If a link just greyed out but not functionally disabled, to check if it is really greyed out, check for any minor changes of html attribute's values like css style, opacity etc.
+
+In below example, opacity value is 1 when link is enabled and 0.5 when greyed out(not disabled)
+if(webdriver_obj.findElement(By.xpath("//button[text() = 'Start']")).getAttribute("Style").contains("1"))
+{
+Assert.assertTrue(true)
+}
+else
+{
+Assert.assertTrue(false)
+}
+
+String inputText = "mum";
+		WebElement myElement = driverObj.findElement(By.xpath("//div[@data-testid = 'to-testID-origin']"));
+		String js = "arguments[0].setAttribute('value','"+inputText+"')";
+		((JavascriptExecutor) driverObj).executeScript(js, myElement);
+
+
+1
+2
+3
+JavascriptExecutor jse = ((JavascriptExecutor)driver);        	
+WebElement email = driver.findElement(By.id("useremail"));
+jse.executeScript("arguments[0].value='---your email id---';", email);
+
+JavascriptExecutor jse = (JavascriptExecutor)driverObj;
+		jse.executeScript("document.getElementById('elementID').setAttribute('value', 'new value for element')");
+		jse.executeScript("document.getElementByXpath('elementID')")
+
+
+static library for relative locators like above, below, toleftof, to rightof:
+
+import static org.openqa.selenium.support.locators.RelativeLocator.*
+
+driver.findElement(with(By.tagname).toLeftOf(Webelement variable or direct By locator)).click();
+
+driverObj.findElement(with(By.tagName("circle")).toLeftOf(By.xpath("//div[text() = 'Family & Friends']"))).click();
+
+
+Duplicate radio buttons and checkboxes:
+
+At times, isSelected shows false even if radiobutton/checkbox is selected. particular webelement is not exactly radiobutton. In such cases, our own isSelected code has to be written.
+like, note the change happening in html webelement when radiobutton is selected and unselected. There should be any new tags or change of tags or change of attributes.
+Based on the changes, code needs to be written as follows:
+
+In below code, g tag is newly popped which selecting the radio button. Hence g tag presence is verified by taking count of number g tags present under svg. If it is 0, radio button is not selected else selected.
+WebElement FamilyCheck = driverObj.findElement(By.xpath("//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']"));
+getcount(FamilyCheck);
+FamilyCheck.click();
+getcount(driverObj.findElement(By.xpath("//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']")));
+
+public static void getcount(WebElement child) {
+		List<WebElement> children = child.findElements(By.tagName("g"));
+		if (children.size() > 0) {
+			System.out.println("g is present, it is selected");
+	}
+		else {
+			System.out.println("g is not present, it is not selected");
+		}
+		
+		
+	}
+
+5
+ctrl+shft+f -> to format or  align the code.
+
+Fluent Wait:
+
+Fluent wait is part of explicit WebDriver Wait. In fluent wait, polling second is added along with driver wait.
+In webdriver wait, if 10 seconds is given, driver checks webelement for every millisecond.
+But in fluent wait, if 10 seconds is waiting period and 2 seconds is polling then, driver checks only for 2 seconds once until 10 seconds duration.
+Hence if element found in 1st second, it has to wait for one more second. it is used under such rare condition.
+
+
+svg tag:
+
+if a tagname is not accessbile, it can accessed with the help of local-name() attribute as follows:
+
+//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']
+
+capslock:
+mouseHover.moveToElement(FamilyCheck).keyDown(Keys.SHIFT).sendKeys("hello")
+
+keys entered will be HELLO in browser.
+
+frames:
+
+by id, or any web attribute like class name or by index. driver.switchTo().frame(driver.findElement(By.className("frame-demo")));
+index starts from 0. 
+get the number of webelements with tagname as frames in the webpage. -> driver.findElements(By.tagName(frames or iframes whatever is in html)).size(); 
+If there are 2 frames,
+first frame can be located using driver.switchTo.frame(0)
+driver.switchTo().defaultContent(); to get back to html from frames.
+
+opening links in separate tab:
+keys.chord(KEYS.c
+
+calendar:
+
+driver.findElements(By.className("day"));
+//Grab common attribute//Put into list and iterate
+int count=driver.findElements(By.className("day")).size();
+
+for(int i=0;i<count;i++)
+{
+String text=driver.findElements(By.className("day")).get(i).getText(); --> here get(i) means fetch the first webelement with classname as day
+if(text.equalsIgnoreCase("21"))
+{
+driver.findElements(By.className("day")).get(i).click();
+break;
+}
+
+javascript executor:
+
+it is used when some unique operations to be executed. 
+DUring headless mode execution, window scrolling is required to avoid test cases failure for the script which executed in browser mode.
+operations like window scrolling , table scroll up, left, down etc also can be performed with javascript executor.
+JavascriptExecutor js = (JavascriptExecutor)webdriver_obj;
+js.executeScript("window.scrollBy(0,10000)");
+document.querySelector(xpath or css selector).checkoutvarietyofmethodshere. Type this in html console.
+
+below code is scroll the table present in the webpage. Above code is to scroll the whole browser window. below is internal scrolling.
+eg: js.executeScript("document.querySelector('.css-1dbjc4n.r-18u37iz.r-1g40b8q').scrollTop=5000");
+
+		
+Convert string to integer:
+Integer.parseInt(String value)
+
+Debug mode:
+Add toggle breakpoint for any line of code. during debug mode of execution, right click and click watch under debug mode to do real run time validation.
+
+Chrome options:
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		options.addArguments("--start-maximized");
+		options.setAcceptInsecureCerts(true); -->accept https security advanced certifications internally and directly loads the website
+		WebDriver driverObj = new ChromeDriver(options);
+
+for detailed chrome options like proxy setting etc, refer the below website:
+https://chromedriver.chromium.org/capabilities
+
+To take screenshot:
+File srcFile = ((TakesScreenshot)webdriver_obj).getScreenshotAs(OutputType.FILE);
+File desFile = new File("C:\\Users\\jansr\\Documents\\myScreenshot");
+FileUtils.moveFile(srcFile, desFile); //can use copyFile as well.
+
+To open all the URLs and check if there are any broken links(404 error or error not found ):
+
+If you want to get all the urls under href tag, it is not possible to directly access href tag.
+Hence, get the list of weblements using anchor a tag and then, from each element in anchor a tag(use for loop), use, .getAttribute("href") to get the URLs.
+
+SoftAssert softObj = new SoftAssert();
+		for (WebElement eachURLElement : mylist) {
+//			String myLink = eachURLElement.findElement(By.tagName("i")).getAttribute("class").split("-")[1];
+			String eachURL = eachURLElement.getAttribute("href");
+			URL myURL = new URL(eachURL);
+			HttpURLConnection  = (HttpURLConnection) myURL.openConnection();
+//			urlConnnectObj.setRequestMeturlConnectObjhod("HEAD");
+			urlConnectObj.connect();
+			softObj.assertTrue(urlConnectObj.getResponseCode() < 400, "is broken"); //simplified model for below if loop.
+			
+//			if (urlConnectObj.getResponseCode() > 200) {
+//				System.out.println(myLink + "is broken");
+//			}
+
+		}
+		softObj.assertAll();
+
+	}
+
+SoftAssert also noted above. This is to gather all the outputs and display at the end without affecting the next step of execution.
+HardAssertion is normal assertion without creating softassertion object.
+
+Difference between hard assert and soft assert:
+
+An assertion error (java.lang.AssertionError) is thrown when the conditions in the Hard Assert are met. Subsequent test steps (in the current method) after hard assert are skipped from execution and the execution proceeds with the next @Test in the test suite.
+
+In the case of Soft Assert, the errors are accumulated in each @Test execution and the AssertAll() method throws asserts encountered during the process of Selenium Test Automation execution.
+
+**************************************************************************
+Stream:
+
+Stream works only with Lists and  ArrayList. Hence output of stream can only be stored in a list. It greatly optimises the processing for loop in a single piece of code.
+for eg: to print only strings that starts with alphabet A, in a list of array can be written in one line code.
+
+Stream is a class used to create stream array directly (eg: Stream.of(1,2,3)) or Array.stream(arr) and any list provided needs to be converted to stream to work as stream.
+Stream output is always can be collected only to a list hence List(superclass of arraylist) is preferred than ArrayList. Other than that, both List and ArrayList can work in stream.
+
+eg: mylist.stream()
+Stream has two important params:
+1.filters
+2.maps
+both can be combined and used or can be used separately based on the logic of coding needed.
+
+filter is used to filter the elements(like if condition) of arraylist based on the condition and map is used to manipulate/modify the element.
+similarly, anyMatch is a method used for verifying and confirming the elements. But output of anyMatch is used to get the boolean result. Means, if only boolean output is required, anyMatch can be used like below:
+
+anylistname.stream().anyMatch(p->p.getText().equals("Hello");
+
+for eg:
+mylist2.stream().filter(s->s.length()<3).forEach(System.out::println);
+Stream.of("janani", "dinesh", "darshini", "krishna").map(s->s.toUpperCase()).forEach(System.out::println);
+
+both can be also combined under below case:
+
+Stream.of("janani", "dinesh", "darshini", "krishna").filter(s->s.length()>6).map(s->s.toUpperCase()).forEach(System.out::println);
+the above code is to modify the elements which has char length greater than 6. means only kids name gets changed. 
+
+ int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+  int sum = 0;
+sum = Arrays.stream(arr) // Step 1
+                  .sum(); // Step 2
+        System.out.println("Average using streams : " +
+                                   (sum / arr.length));
+  
+        // forEach()
+        // It iterates through the entire streams
+        System.out.println("Printing array elements : ");
+        Arrays.stream(arr)  //this can also be written as Stream.of(designyourarrayhere) or alreadydesignedarray.stream().blablabla
+            .forEach(e->System.out.print(e + " "));
+
+
+map() vs forEach()
+Some of the difference between map() and forEach() methods are listed below −
+
+The map() method returns a new array, whereas the forEach() method does not return a new array.
+
+The map() method is used to transform the elements of an array, whereas the forEach() method is used to loop through the elements of an array.
+
+forEach output cannot be sent to collectors. maps output can be sent to collector and the list obtained can be reused. 
+
+flatmap:
+flatmap is used to merge many list of elements to one single array.
+//To print biggest number in a matrix. Use flatMapToInt to convert all the matrix elements into a flat one single array of elements like {1,2,3,4,5,6,7,89}
+		List numbers1 = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+		int[][] t = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+		List<int[]> hello = Arrays.asList(t);
+		OptionalInt hi = hello.stream().flatMapToInt(Arrays::stream).max();
+
+FlatMap should be used if any type of array is used. either it is single array or 2d array. if just array is used, 
+map wil not work. only flatmap will work. just convert to instream using flatmap and do whatever function you want like, max, min, sum etc etc.
+
+Any one of the below code can be used. Watch the carefully for changes made.
+
+We mostly wont use below type of array like Integer[]. But advisable to do this if you wanna work with streams.
+Integer[] a = {2,3,4,4,5,7};
+List<Integer> q = Arrays.asList(a); //here, array is changed to list of integer with no array format hence flat is not required
+System.out.println(q.stream().mapToInt(Integer::intValue).sum());
+
+Or, if int[] is used instead of Integer, then flatmap comes into pic.This is the commonly used datatype int[]
+int[] a = {2,3,4,4,5,7};
+List<int[]> q = Arrays.asList(a);// here it can convert only to int[] otherwise system throwing error. Hence flatmap is used.
+System.out.println(q.stream().flatMapToInt(s->IntStream.of(s)).sum()); // for any kind of function, flatmap is must here.
+
+
+
+ArrayList update:
+ArrayList<Integer> answers = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
+
+ArrayList vs List:
+ArrayList has dynamic memory allocation. New element can be added, modified or removed in arraylist.
+
+Why List over ArrayList:
+Collectors output can only be stored in List. Either list is created or Array list needs to be casted which makes the code looks little messy.
+
+In List, array cannot be resized.
+
+limit:
+.filter().limit(1) -> here, filtered elements get limited to 1 number only.
+
+
+Collectors and sorting:
+collectors is used to collect the stream output to a list.
+To remove duplicates, distinct function from stream can be used.
+List also can do sorting without stream help, using comparator function. But distinct is unique one available only in stream.
+Array
+ArrayList<Integer> mylist5 = new ArrayList(Arrays.asList(2, 8, 5, 2, 8, 7, 5, 9, 3));
+List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList());
+System.out.println(mylist6);
+mylist5.sort(Comparator.reverseOrder());
+System.out.println(mylist5);
+
+List can also be used instead of ArrayList:
+List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
+
+AssertEquals with failure message:
+Assert.assertEquals(expList, actualList, "This is not equal");
+
+Beautiful piece of code using do while:
+
+this is to find a text in a table, if it is not found, click next page and search in that table; do this until the text is found.
+
+Logic is, Do: search for webelement and gettext, if not found(list - collected through stream is empty), click next page. While: list is empty(this will repeat the Do, until list has value)
+
+do
+
+{
+
+List<WebElement> rows = driver.findElements(By.xpath("//tr/td[1]"));
+
+price = rows.stream().filter(s -> s.getText().contains("Rice"))
+
+.map(s -> getPriceVeggie(s)).collect(Collectors.toList());
+
+price.forEach(a -> System.out.println(a));
+
+if(price.size()<1)
+
+{
+
+driver.findElement(By.cssSelector("[aria-label='Next']")).click();
+
+}
+
+}while(price.size()<1);
+
+
+collectors:
+two ways of adding sum of all numbers in a list:
+		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+		int sum = numbers.stream().mapToInt(Integer::intValue).sum();
+		System.out.println(sum);
+		int sumAgain = numbers.stream().collect(Collectors.summingInt(Integer::intValue)); //to sum the alphanumber
+		System.out.println(sumAgain);
+
+To sum decimals in alphanumeric array:
+String string = "Item1 10 Item2 25 Item3 30 Item4 45";
+
+		Integer sum1 = Arrays.stream(string.split(" ")).filter(s->s.matches("\\d+")).collect(Collectors.summingInt(Integer::parseInt));
+		System.out.println(sum1);	
+		Integer sum11 = Arrays.stream(string.split(" ")).filter(s->s.matches("\\d+")).mapToInt(Integer::parseInt).sum();
+		System.out.println(sum11);
+
+Integer.toString(number) -> this can be used to conver
+TestNG:
+Important note for tesng using inheritance: if testng is used, and the same class inherits from other class, then methods from other class can be directly accessed. Object creation is not required.
+It is similar to pytest. No public static void main is required. Still execution will occur. Each test cases should be inside method with @Test Annotations on top over it.
+Note: If a class has TestNG annotations, it should get executed via testng.xml.
+ <classes>
+      <class name="TestNG_Practice.Basics">
+      <methods>
+      	<exclude name="demo1"></exclude>
+      </methods>
+      </class>      
+      <class name="TestNG_Practice.Basics_xml"/>
+    </classes>
+
+Testcase name should start with module name in TestNG. so that, it can be excluded or included easily for execution using regex operation.
+
+exclude operation:
+
+<methods>
+      	<exclude name="demo.*"></exclude>
+</methods>
+
+@BeforeSuite:
+To set env variables, invoke urls etc.
+
+@BeforeTest:)
+To clear database before executing a set of module or classes like personal_loan module.<classes>. each java file which has n number of test cases can be controlled.
+Test is a module or one complete functionality like one full shopping procedure or applying one loan.It is to run method before running test cases within tag <Tests> in xml file.
+
+@BeforeClass:
+Method to run before every class.
+
+@BeforeSuite:
+It has control of entire xml file as Suite is the first and last tag
+
+@BeforeMethod:
+To delete cookies and clear cache.
+
+Groups:
+To select only handful of test cases out of multiple classes or java files. It is like mark in pytest.
+@Test(groups = {"Smoke"}) before test case name.
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <groups>
+  <run> 
+  <include name="smoke"></include>
+  </run>
+  </groups>
+    <classes>
+    <class name="TestNG_Practice.Basics_xml"></class>
+    <class name="TestNG_Practice.Basics"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+dependsOnMethods:
+TestNG runs in alphabetical order. But, flow of execution and test case name cannot fall alphabetically. Hence, updating dependsOnMethods would execute the mentioned method first.
+
+@Test(groups= {"smoke"},dependsOnMethods={"demo211"})
+	public void demo2(){
+		System.out.println("demo2");
+	}
+
+@Test(enabled = false) -> just like xfail in pytest.
+@Test(timeout = 4000) -> wait for 40 seconds before  failing the test case.
+
+Parameters:
+
+Data driving mechanism from xml file:
+
+<suite name="Suite">
+<parameter name="URL" value="amazon.com"></parameter>
+<parameter name="username" value="jansree"></parameter>
+  <test thread-count="5" name="Test">
+ <classes>
+
+@Parameters({"URL", "username"})
+	@Test
+	public void demo21(String URL, String username){
+		System.out.println("demo21" + URL + username);
+		
+	}
+
+Parameters defined below suite is a common website like amazon.com.
+Parameters defined below test, will be restricted only to test level like login page, shopping page etc.
+
+If both suit below and test below is defined, only test below is considered in test cases.
+
+@DataProvider:
+
+@Test(dataProvider = "loginDetails")
+	public void check(String username, String password){
+		System.out.println("demo2111");
+		System.out.println(username);
+		System.out.println(password);
+	}
+	
+	@DataProvider
+	@Test
+	public static Object[][] loginDetails(){
+		Object[][] details = new Object[3][2];
+		details[0][0] = "janani";
+		details[0][1] = "janani123";
+		details[1][0] = "krishna";
+		details[1][1] = "krishna123";
+		details[2][0] = "dinesh";
+		details[2][1] = "dinesh123";
+		return details;
+		
+	}
+Parallel:
+To run test methods or tests or classes parallely, parallel = "methods (or classes or tests - check for autopopulated options after typing parallel in testng.xml)" can be used.
+<suite parallel="tests" name="Suite">
+
+thread-count:
+Thread-count number represents the maximum of number methods (browsers) or allowed to run when parallel is defined. if thread-count is 2, only 2 methods would execute parallely. means only two browsers can get opened parallely.
+
+@BeforeClass(alwaysRun=true):
+If certain test cases are grouped with some name like, "negative test cases". in that case, before or after class methods in dawndusk class will not execute as it is not grouped.
+alwaysRun=true will run, even if the test case is not grouped.
+
+eg:
+@BeforeClass(alwaysRun=true)
+	public HomePage launchApp() throws IOException {
+		
+		objWebDriver = driverSetup();
+		objWebDriver.get("https://www.ae.com");
+		objHomePg = new HomePage(objWebDriver);
+		return objHomePg;
+				
+	}
+
+TestNG Priority:
+
+By default all the testcases has priority 0. means all have equal priority and executes in alphabetical order. Hence if the priority is updated, alphabetical order will be not executed.
+0 - first
+1 - second
+2 - third
+
+In our test case, we started first test method with priority-1.
+
+*******************************************************************************************************************
+
+Interface:
+
+Interface has empty methods with inbuilt functionality. User has to give values to the methods. It is used to keep certain details hidden. It can be accessed with "implements" keywords in class. Hence object cannot be created for interface.
+
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    // The body of sleep() is provided here
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+Listeners (an interface):
+
+Listeners is an interface which has methods like Onsuccess, onfailure, onstart, onfinish etc. 
+When screenshot code is writte inside onfailure method and this java class path is added in testng.xml, then, screenshot will be taken on every failure of testcases mentioned inside testng.xml.
+It is very simple. Create a class and implement ITestListener.  Now follow below steps, to include empty methods.
+
+
+How to Add unimplemented methods in eclipse?
+The shortcut for adding unimplemented methods in a class in Eclipse is “Alt + Shift + S + V”.
+Or right click on the listener class -> Source -> Override/Implement methods.
+public class Listen implements ITestListener {
+@Override
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestSuccess(result);
+		System.out.println("Hi am listening" + result.getName()); --> result.getName() prints the test case name.
+	}
+}
+
+**************************************************************
+
+To view TestNG reports:
+
+Refresh the project in eclipse to get Test-Output folder -> index.html and emailable-report.html
+
+******************************************************************
+
+slowness in explicit wait execution:
+
+In such case, instead of visibility of element located(By.CSS..), use only visibilityOf(driver.findElemennt(By.CSS..)).Giving entire element will save time and increase performance.
+
+MouseHover:
+Actions mouseHover = new Actions(driverObj);
+mouseHover.sendKeys(webElement target, charToSend) -> this type of sendkey can be used to directly move to the element and send keys in single step.
+
+**************************************************************************************************************8
+Frameworks
+___________
+
+Why Maven?
+•	Central repository to get dependencies
+•	Maintaining common structure across the organization
+•	Flexibility in Integrating with CI tools
+•	Plugins for Test framework execution
+
+
+Create Maven Project ->refer installation notepad for how to make it.
+
+Page Object Model and Page Factory:
+
+Project structure: Test contains conftest like base test and test cases.java whereas Main contains utilities, page objects and data.
+
+Test -> Package -> subpackages -> test cases and base test files.
+
+Main -> Package -> subpackages -> page object files annd utilities.
+
+Note: to create subpackages, go to Package -> create new package and name it as Package.Subpackage . eg(Amazon.LoginPageObject or Amazon.Tests)
+
+First create BaseTest and file with extension .properties to give browser details.
+
+Coding Conventions:
+http://pragmatictestlabs.com/2018/03/05/coding-convention-selenium-java/
+
+static int plusMethodInt(int x, int y) {
+  return x + y;
+}
+
+static double plusMethodDouble(double x, double y) {
+  return x + y;
+}
+
+public static void main(String[] args) {
+  int myNum1 = plusMethodInt(8, 5);
+  double myNum2 = plusMethodDouble(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+static int plusMethod(int x, int y) {
+  return x + y;
+}
+
+static double plusMethod(double x, double y) {
+  return x + y;
+}
+
+public static void main(String[] args) {
+  int myNum1 = plusMethod(8, 5);
+  double myNum2 = plusMethod(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+
+Constructor:
+
+Constructor name should match the class name unlike python which has def __init__.
+constructor of classA will be executed the moment object is created for classA.
+
+
+Hashmap:
+
+Hashmap is like dictionary in python.
+
+ HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+    // Add keys and values (Country, City)
+    capitalCities.put("England", "London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway", "Oslo");
+    capitalCities.put("USA", "Washington DC");
+    System.out.println(capitalCities);
+
+output will be : {USA=Washington DC, Norway=Oslo, England=London, Germany=Berlin}
+
+In realtime, hashmap is used to send login credentials or any data to methods. It is key value mode.
+
+To get hashmap from json file, objectmapper class has to be used.
+
+In basetest:
+public List<HashMap<String,String>> convertJsontoHashMap(String strFilePath) throws IOException {
+		String strFileContent = FileUtils.readFileToString(new File(strFilePath), StandardCharsets.UTF_8);
+		ObjectMapper objMapper = new ObjectMapper();
+		List<HashMap<String, String>> hmExptdData = objMapper.readValue(strFileContent, new TypeReference<List<HashMap<String, String>>>(){});
+		return hmExptdData;		
+
+In test class:
+@DataProvider
+	public  Object[][] exptdDataSetUp() throws IOException {
+		List<HashMap<String, String>> hmExptdDataSetUp =  convertJsontoHashMap(System.getProperty("user.dir")+"/src/test/java/com/ae/shopping/dataSetUp/dataSetUp.json");
+		return new Object[][] {{hmExptdDataSetUp.get(0)}}; //returning array {{}} using Object coz, Object is the parent or super class of all datatypes like Integer, String, Long etc hence it can hold data combined with int, string etc. Otherwise, datasetup should be either only int or string. 
+
+@Test(dataProvider= "exptdDataSetUp", groups = {"chromeinvokation"})
+	public void F2301_AE_url_title(HashMap<String, String> exptdDataSetUp)  {
+		String strUrlTitle = objWebDriver.getTitle();
+		objMegaMenuPg = objHomePg.clickAcceptAllCookies();
+		Assert.assertEquals(strUrlTitle, exptdDataSetUp.get("exptdUrlTitle"));
+//		Thread.sleep(3000);
+	}
+		
+	}
+
+
+
+
+Framework:
+
+DawnDusk:
+
+create property file and load the file in dawndusk. getProperty of the key in property file which is browser value. it may be chrome or browser.
+
+Why not inheriting the page object class directly to java main class instead of object creation?
+
+I could see both in selenium python and java where inheritance is used between basetest and maintest or between pageobject and abstract but why the concept is not used to inherit page objects to test cases class (main class) as I could see one object is created in someother function which is difficult to track. Can someone help me to understand?
+
+*********************************************************************
+LESSONS LEARNT:
+public static void main understanding in framework:
+below assumption seems wrong it didnt work for TableSort_Stream.java class under Selenium_Java_Learning_01
+If psvm is one of the method which gets executed first in a class. If a variable is declared inside a class but not within main function, if needs to accessed, it has to be done by creating object.
+Incase, if it is a regular method not main method ,then declared variable can be accessed without object.
+Static keyword will not work if for parallel test runs since same webdriver gets used for multiple for testcases. 
+static can be used for readable classes like properties class, screenshot etc. Webdriver obj gets modified now and then hence static wont work for parallel run.
+Inside if else loop, object or any variable can only be assigned/initialised(i =10) but not declared  (int i).
+
+Reason to declare Webdriver driverObj as instance variable: if it is a local variable, it has to be declared in each method where drivereObj is received just like how 
+we declare in constructor hence it is made public instant variable.
+
+Page object class only contains webelements and its actions. It should not hold any data like username value or password value. 
+
+Access Modifier	within class	within package	outside package by subclass only	outside package
+									(inheriting the class which has 
+									protected variable or method)
+
+Private			Y			N			N					N
+Default			Y			Y			N					N
+Protected			Y			Y			Y					N
+Public			Y			Y			Y					Y
+
+All webelements in webpage should have access modifier private. Ensure in framework, under pageobject classes, only action methods are public. If webelement is public, it can be easily accessible by other class. It is advisable to have only action methods accessible by other class as we have created webelements to be used for proper actions only not to access an element and click directly. 
+
+
+diference between element presence and element visible:
+Element Present checks if the element is present or not in the HTML body, it does not care about whether the element is in hidden state(style="display:none;) or not.
+Element Visible checks whether element is in visible state or not, if element is in hidden state(style="display:none;) then it will return false or exception.
+
+
+variables in java:A
+instance variables - also called as non-static variable. created inside a class but outside method. can be used only by creating object. like, create object for a class inside main method (even if it is the same class having instance variable), now use that object to access variable like obj1.variable.
+It is called as instance variable because it can be accessed only by creating object or instance. If no value is assigned, it is default to 0. For eg: int i.  i prints output 0.
+
+local variables - only inside a method.
+
+static variables - also called class variables, object creation is not required.Static variables are created when the program starts and destroyed when the program stops. Variable is purely belongs to class and it cannot be accessed using object like, object.variable. Hence it is called class variable. if there are many static variable, static block can be used as shown below.
+
+static {
+int i =0;
+String hello;
+}
+
+static methods accepts only static variables.
+
+multiple window handles:
+Set<String> arrWindows = driver.getWindowHandles(); //get all these return types like Set<String> during auto population itself. No need to remember all these.
+Iterator<String> itLoop = arrWindows.iterator();
+String strParentID = itLoop.next(); // assume now control is in child window so next() function navigates driver control to parent window.
+String strChildID = itLoop.next();
+driver.switchTo().window(strParentID); //assume the control is now with child so moving to parent from child.
+
+
+All about HTML:
+
+spotlight header - banner with text in mid of a webpage - sptlt
+hamburger menu - menu bar with three small lines
+dropline menu - gives one line of menu option under main menu
+flyout menu - right side vertical menu where one menu carries another menu which opens again from right.
+accordion menu Accordion Menus are vertical menus where clicking the main item expands the section below it. Clicking the top link a second time closes the section
+
+regardind flex webelements, inspect the same webelement in incognito mode to find the appropriate attribute and value.
+
+Abstract class vs interface:
+
+Unimplemented method or abstract method: method with no coding inside it.
+Implemented method or concrete method: method with coding inside it.
+
+Interface has only unimplemented methods whereas abstract can both unimplemented and implemented method (coding inside method (concrete method)).
+
+Interface has 100% abstraction. Uses implements and public keyword.
+Abstract class has partial abstraction. Uses extends and public keyword. Rest other keywords are not allowed like private, if so, inheritance cannot be achieved.
+
+Abstraction means unimplemented methods.
+
+abstract keyword will be used for abstract class name and abstract method.
+whereas, while creating interface class, only class name is declared as interface. And, anyways, jdk wont allow to create code inside any method if interface keyword is used in class name.
+
+If we extend abstract class to any child class, it will force to implement unimplemented method.
+For eg: in abstract class A, if we have a method (flightbodyColor()) without body (with keyword as abstract) and if we extend class A to child class B. Auto suggestion error occurs to implement the unimplemented method. If we do so, below method will be autopopulated. User is now forced to have this method in child class B.
+
+@Override
+public void flightbodyColor(){
+}
+
+Note: Abstract class can only be extended. Object cannot be created for abstract class.
+
+Difference between abstraction and inheritance is that abstraction helps to reduce the complexity of the code, while Inheritance helps to improve code reusability.
+
+Multiple inheritance(class C inheriting from A, B) is not possible in java . Interface is used instead. 
+
+Function Overloading:
+
+Same method name can be used if you have different argument type or same argument type with different count.
+eg:
+public void getData(int a);
+public void getData(String a);
+public void getData(int a, int b);
+
+all three methods execute separately based on what argument we use to call the method. In real time, getcreditcardetails can be used in various forms like using cardno, or card name or both.	
+
+Function Overriding:
+If same method name, argument type and count inherited from parent is again defined in child with different coding.
+When executed, code inside child is printed. Priority is given to local class if same method is used which is called overriding.
+
+*****************************************************************************************
+Framework Map:
+
+Child	extends Parent  extends child	  child  extends Parent			  
+Listener-->  BaseTest <-- TestClass   PageObject -->  Utilities
+
+DataSetup folder called in TestClass. HashMap method in BaseTest. List collected in TestClass and sent as object in to @Test methods under TestClasses
+ExtentNG(it has reporting utility) folder called in Listener.
+Global property file called in BaseTest for browser details.
+
+Folder Details:
+Main: 
+pageObjects (webelements and its actions),
+resources(extentNG, global property file) 
+utilities (mouse actions and waits)
+
+Test: 
+baseTest - browser invocation, closure, screenshot, hashmap methods.
+testCases - control steps for what next and assertions, hashmap dataprovider to send json file and split
+dataSetUp.
+dataSetUp - has json file which has data to process in testCases.
+
+
+
+
+*************************************************************************
+
+
+Screenshot for failed test cases:
+
+It can be taken in three ways:
+
+1.As listener has override methods, webdriver knowledge should be manually injected once again. inheriting dawn dusk will not work
+
+in dawndusk:
+public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+		
+		
+	}
+
+in listener:
+public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		extentTest.get().fail(result.getThrowable());//
+		
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
+					.get(result.getInstance());
+			
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		
+		String filePath = null;
+		try {
+			
+			filePath = getScreenshot(result.getMethod().getMethodName(),driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
+		
+		
+		//Screenshot, Attach to report
+		
+		
+	}
+
+2. Make webdriver as static. keep screenshot method in dawndusk and call the method from listener directly.
+
+3. This method is not working. ignore this: icontext method and get driver from testcase. similar to way-1 but using icontext class.
+objWebDriver = (WebDriver) result.getTestContext().getAttribute("objWebDriver"); //this statement returns value of objWebDriver and that value is stored inside objWebDriver. WebDriver cast will be automatically assigned. not to worry about it.
+
+
+ExtentReporterNG:
+
+It is like a blank html page where we have to give all the details to make a report.
+
+Four classes to remember in extent reports namely:
+ExtentSparkReporter - for report cosmetic configuration like document name report name etc.
+ExtentReports - the actual report which could create test cases and flush it to html.
+ExtentTest - To connect extent report object with thread local object. This is done by storing created test in this class object.
+ThreadLocal - to create thread for each testcases running separately so that test report is updated for exact test case.
+ briefly, this is used to avoid failed test case being update as passed or vice versa. 
+ThreadLocal class creates thread ID for each test case to avoid false updates. 
+
+public ExtentReports report() {
+	String strReportPath = System.getProperty("user.dir") + "\\reports\\index.html";
+	ExtentSparkReporter objExtentSpark = new ExtentSparkReporter(strReportPath);
+	objExtentSpark.config().setDocumentTitle("Ae.com:Shopping Test Report");
+	objExtentSpark.config().setReportName("Shopping");
+	ExtentReports objExtentReport = new ExtentReports();
+	objExtentReport.attachReporter(objExtentSpark);
+	objExtentReport.setSystemInfo("Tester", "Janani.VS");
+	return objExtentReport;
+	}
+
+
+Under listener class above method has to called after creating object.
+
+	ExtentReporterNG objExtentReport = new ExtentReporterNG();
+	ExtentReports objExtentReports = objExtentReport.report();
+	ExtentTest objExtentTestDetails;
+	ThreadLocal<ExtentTest> objThreadLocal = new ThreadLocal<ExtentTest>(); //this is to run test parallely. if this is not done, and test is executing in parallel mode, incorrect test case name would get stored in listener. thread local creates ID for each test run and keeps track of it.
+
+under ontest start - test has to be created. means entry to first test execution in extentreport index.html is made. similary consequent entries made for each @Test methods from test cases
+objExtentTestDetails = objExtentReports.createTest(result.getMethod().getMethodName());
+objThreadLocal.set(objExtentTestDetails);
+
+under ontest failure:
+String strTestCaseName = result.getName();
+objExtentTestDetails.fail(result.getThrowable());
+		objExtentTestDetails.addScreenCaptureFromPath(strScreenShotPath, strTestCaseName); //screenshot path is given here.
+objThreadLocal.get().fail(result.getThrowable());
+		objThreadLocal.get().addScreenCaptureFromPath(strScreenShotPath, strTestCaseName);
+
+
+under onfinish:
+objExtentReports.flush();
+
+
+***********************************************************
+
+Retry Analyser:
+
+It is used to run flaky or inconsistent test cases. 
+Note: user has to identify the flaky test cases, and mark next to @Test as below:
+@Test(retryAnalyzer = Retry.class) //Retry is a class name where retry code is written by user.
+
+public class RetryFailedTest implements IRetryAnalyzer {
+	int intCountTestRun = 0;
+	int intRetryTestRun = 1;
+	@Override
+	public boolean retry(ITestResult result) {
+		// TODO Auto-generated method stub
+		if(intCountTestRun < intRetryTestRun) {
+			intCountTestRun++;
+			return true;
+			
+		}
+		return false;
+	}
+
+}
+
+Retry runs only if returned output is true.
+
+
+Suite
+Total tests run: 2, Passes: 0, Failures: 1, Skips: 0, Retries: 1
+
+*************************************************
+
+Ternary operator in java for command-line:
+
+condition ? exp1 : exp2;
+
+explanation: if condition is true, exp1 gets executed else exp2 gets executed. You can save the output of above expression to a variable too.
+
+int result = 10<8 ? 10 :8;
+now result variable will carry output 8.
+String strBrowserName = System.getProperty("browserName")!= null? System.getProperty("browserName"):objProperties.getProperty("browser");
+
+Condition checks if command-line output is not null. If some value is given like firefox or edge, that will get stored under strBrowserName. otherwise, value given in globalProperties file will be stored.
+
+To run using command line arguments, mvn test -D edge -P Regression 
+*************************************************
+To run in headless mode:
+maximise using chrome option as below:
+below dimension is standard to open browser in full size:
+driver.manage().window().setSize(new Dimension(1440,900));
+
+chrome -        chrome
+chromeheadless |-headless  
+
+if chrome{
+ if contains headless {
+	options}
+ webdriver.
+
+ actual code:
+ChromeOptions objChromeOptions = new ChromeOptions();
+		if (strBrowserName.contains("chrome")) {
+			if(strBrowserName.contains("headless")) {
+				objChromeOptions.addArguments("headless");
+				
+			}
+		objWebDriver = new ChromeDriver(objChromeOptions);
+		}
+
+scheduling in jenkins:
+
+Build Triggers -> Build Periodically -> *****
+MINUTES Minutes in one hour (0-59)
+HOURS Hours in one day (0-23)
+DAYMONTH Day in a month (1-31)
+MONTH Month in a year (1-12)
+DAYWEEK Day of the week (0-7) where 0 and 7 are sunday
+ 
+
+****************************************************************
+
+****************************************************************
+
+Cucumber:
+
+BDD is recommended for below two reasons:
+
+1. business people can understand easier. 
+2. Error message can be easily tagged with the requirement hence, it can be easily understood where exactly error occurred.
+3. Manual testing and automation will have same test cases.
+4. Cucumber is a tool that can perform BDD by using feature file linked with code.
+
+Cucumber is behaviour driven development(BDD) testing using Gherkin language shown below:
+
+Three files are required:
+
+1. .feature file which carries one or multiple scenarios under one requirement called as feature.
+2. .java file for step definition which is the same as testcase file in testng.
+3. .java file to integrate or connect above feature and java file and execute.
+
+1. .feature file:
+Scenario (In cucumber test case should be called as scenario):
+
+Given
+When
+And (can have n number of And)
+Then
+And (can have n number of And)
+But (negative output)
+
+@tag
+Feature: Title of your feature - business requirement
+  I want to use this template for my feature file
+
+ 
+  @tag2
+  Scenario Outline: Title of your scenario outline - any one scenario
+    Given I want to write a step with <name> - pre-requisite or precondition like login
+    When I check for the <value> in step - action
+    Then I verify the <status> in step - output
+
+    Examples:    //it is like data provider.
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
+
+Feature file contains only one feature and carries one or many scenarios:
+
+Feature: Login Action
+
+Scenario: Successful Login with Valid Credentials
+	Given User is on Home Page
+	When User Navigate to LogIn Page
+	And User enters UserName and Password
+	Then Message displayed Login Successfully
+
+Scenario: Successful LogOut
+	When User LogOut from the Application
+	Then Message displayed LogOut Successfully
+
+Note: Ambigous or same step in step definition error is thrown if same wording is used for two different keyboards like given and when or And or then.
+
+for eg:
+Given <optFrmWomen> is clicked
+  When Quick Shop option for selected <productName> is clicked
+
+Above eg throws ambious error as both has is_clicked term and cucumber assumes as same step gets repeated. hence one of the step should get changed to is_entered.
+
+2. .java file: this is a stepdefinition file. Use tidy gherkin plugin. copy feature file requirement and get it as java code. Paste it in this java file and start writing code under each steps. Code should be just like in testcase file of testng.
+for eg:
+@Given("^(.+) is clicked$")
+ public void is_clicked(String strOptFrmWomen) throws Throwable {
+	    	objMegaMenuPg.getOptionFromWomen(strOptFrmWomen);
+		objWomenTopsPg = objMegaMenuPg.clickOptFrmWomen(strOptFrmWomen); 
+	    }
+
+3. .java file - this file is used to integrate feature file with step definition file. Also to integrate cucumber to read testNG code like assertions. 
+
+@CucumberOptions(features = "src/test/java/com/ae/shopping/cucumber", glue = "com.ae.shopping.stepDefinitions", monochrome = true, plugin = {
+		"html:target.cucumber.html" }, tags = "@NegativeScenario or @SmokeTestCucumber")
+public class TestNGTestRunner extends AbstractTestNGCucumberTests {
+}
+
+
+monochrome = true is to read cucumber output in readable format.
+ {"html:target.cucumber.html"}) is to write reports in mentioned path.
+
+inherit AbstractTestNGCucumberTests class so that cucumber can read testng assertions.
+
+Tags:
+tags = {"@Android","@IOS"} // {","} - OR {"",""} - AND
+
+Note: both doesn't work though. only " or " works.
+
+Now add TestNGRunner in pom.xml by creating a profile ID with name for eg: CucumberFramework and add this as choice pa
+
+****************************************************************************
+
+Excel data drive:
+
+while using TestNG for excel datadriver, dataprovider is the only way to send data to @Test method.
+
+dataprovider can send only Object[][]. Each row takes each run. if there is one row, with 3 columns, one run occurs with three input data.
+If there 3 rows with one column, three different run happens and testng reports 3 test cases ran. It all depends on how object[][] is defined. Look for example defined below:
+
+SO even if it is. list of hashmap, it has to be converted to object[][].
+
+Object[][] myObj = mystr;
+		return myObj;
+
+Here new Object[][] is not done coz, String[][] mystr = new String[][] is already defined in the code. Hence it is directly assigned to Object class. coz, Object is a parent of String, Integer etc.
+
+or:
+
+myMap.put(cellExptdParams.toString(), cellExptdValues.toString());
+				}
+			}
+		}
+		System.out.println(myMap);
+		return new Object[][] {{myMap}};
+
+Here, we have created hashmap hence new object is created and mymap is assigned to it.
+
+To send data as key value pair (expected value for a param), hashmap is good.
+For multiple runs, direct use of object[][] is advisable.
+
+Example-1:
+
+dataprovider can send only Object[][]. Each row takes each run. if there is one row, with 3 columns, one run occurs with three input data.
+If there 3 rows with one column, three different run happens and testng reports 3 test cases ran. It all depends on how object[][] is defined. Look for example defined below:
+assume  excel has datasetup with one row and three columns and inorder to get the data and run in one time:
+
+hehe method return statement:
+
+Object[][] myobj = new Object[1][arrlstDataFromExcel.size()];
+		myobj[0][0] = arrlstDataFromExcel.get(0);
+		myobj[0][1] = arrlstDataFromExcel.get(1);
+		myobj[0][2] = arrlstDataFromExcel.get(2);
+		
+		return myobj;
+	
+	}
+	
+	@Test(dataProvider = "hehe")
+	public void hello(String t1, String t2, String t3) throws IOException {
+
+		assert true;
+	}
+
+output:
+
+PASSED: hello("SeleniumDemo", "Jeans", "sret")
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+
+example-2:
+
+hehe method return statement:
+
+return new Object[][] {{arrlstDataFromExcel.get(0)},{arrlstDataFromExcel.get(1)}, {arrlstDataFromExcel.get(2)}};
+
+
+@Test(dataProvider = "hehe")
+	public void hello(String t) throws IOException {
+
+		assert true;
+	}
+
+output:
+PASSED: hello("Jeans")
+PASSED: hello("SeleniumDemo")
+PASSED: hello("sret")
+Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
+
+
+************************************************************************
+selenium grid:
+
+to run in multiple machines for reducing overload and save time. 
+
+architecture is :
+
+https://www.selenium.dev/documentation/grid/components/  refer this link to read about how selenium grid works.
+
+once the command is given as mentioned in installation file, all the connecting ports and link for selenium will be displayed in cmd terminal itself.
+
+The only change is, in dawndusk or basetest file, remotewebdriver has to be incorporated. 
+
+Based on the chromeOptions or edgeOptions which contains browser version, OS type (windows or MAC), browser name etc,
+hub decides how to split the test cases across multiple laptops (and browsers).
+
+once connected, localhost:4444 can be checked for browser availability and number of test cases allowed.
+
+ChromeOptions objChromeOptions = new ChromeOptions();
+		EdgeOptions objEdgeOptions = new EdgeOptions();
+		if (strBrowserName.contains("chrome")) {
+			if (strBrowserName.contains("headless")) {
+				objChromeOptions.addArguments("headless");
+
+			}
+			objChromeOptions.setCapability("browserVersion", "109");
+			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objChromeOptions);
+		}
+
+URL address is provided in command terminal itself. sameway, edgebrowser and firefox also has to be defined.
+
+*******************************************
+chrome dev tools:
+
+these are the tools referring to network, console, performance etc when we click inspect in web browser.
+
+chromedevtools protocol (CDP):
+
+There are many methods in chrome dev to access the browser like, Network.clearBrowserCache, Network.clearBrowserCookies. Refer below link for more protocols.
+
+https://chromedevtools.github.io/devtools-protocol/tot/Network/
+
+Above protocols are referring to chrome browser. Selenium has come up with wrapper methods around these protocol, hence if we do via selenium, it is indirectly accessing to the above protocols.
+
+these are called CDP.
+
+
+Uses of cdp are:
+
+Capture, monitor and Stub the network request and responses
+inject session cookies and perform basic auth
+mock device coordinates for mobiles/tab view
+check and monitor the site performance
+mock geolocation of the user
+block the network requests
+mock faster/slower network speeds
+execute and debug java scipt
+view console logs.
+
+Basic example using cdp:
+
+Its the usual selenium coding. But chromedriver has to be used to get chromedevtool options for edge and chrome browser. note it is not availble for firefox and ie.
+getDevtools method can start session as mentioned in code below:
+
+public class ChromeDevToolsProtocol {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		ChromeDriver objChromeDriver = new ChromeDriver();
+		objChromeDriver.manage().window().maximize();
+		DevTools objDevTools = objChromeDriver.getDevTools();
+		objDevTools.createSession();
+		//select any domain from chromedev protocol link(in google) either network or emulation or anything:https://chromedevtools.github.io/devtools-protocol/tot/Emulation/
+		objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
+		//above line can be set to empty through autosuggestion as well like below:
+	//objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty()));
+		objChromeDriver.get("https://www.microsoft.com/");		
+		Thread.sleep(3000);
+		objChromeDriver.findElement(By.cssSelector(".c-uhfh-gcontainer-st button")).click();
+		Thread.sleep(3000);
+		objChromeDriver.findElement(By.cssSelector("#l0_Teams-mo")).click();
+	}
+
+}
+
+
+For certain methods in cdp, there are no selenium wrapper. In such case, objChromeDriver.executeCdpCommand("Emulation.setDeviceMetricsOverride", hashmapvariable);
+for eg: lets consider that, setDeviceMetricsOverride has no wrapper method in objDevTools(like Emulation. autopopulation of methods) is not present, in such case below direct execution of command is used.
+
+Note: in this direct method, devtool object is not required since we are not using that wrapper.
+ChromeDriver objChromeDriver = new ChromeDriver();
+//		DevTools objDevTools = objChromeDriver.getDevTools();
+//		objDevTools.createSession();
+		HashMap params = new HashMap();
+		params.put("width", 600);
+		params.put("height", 1000);
+		params.put("deviceScaleFactor", 50);
+		params.put("mobile", true);
+		objChromeDriver.executeCdpCommand("Emulation.setDeviceMetricsOverride", params);
+		objChromeDriver.get("https://www.microsoft.com");
+		
+
+
+network response:
+
+In below consumingResponse is a lamda expression and it represents the response data received from responseReceived() function. Data initialised inside the braces has life inside it only.
+below piece of code can be used to framework to display which api call got failed in run-time.
+
+objDevTool.addListener(Network.responseReceived(), consumingResponse -> {
+			String strURL = consumingResponse.getResponse().getUrl();
+			int intStatusCode = consumingResponse.getResponse().getStatus();
+		
+			if(intStatusCode>399) {System.out.println(strURL + "throws"+ intStatusCode);}
+		});
+
+
+Devtool Domains:
+
+Note: To use Network and Fetch Domains, it has to be enabled first like Fetch.enable(check in eclipse for params here)
+Emulation: It is to mock the screensize, geolocation, screencolour, orientation etc
+Network: To enable network and check api responses for each action in web page.
+Fetch: to mock the api urls inorder to get expected output in webpage.
+
+
+<class name="com.ae.shopping.testCases.FieldPresenceValidations" />
+			<class name="com.ae.shopping.testCases.ShopTops" />
+
+
+mocking/hacking api request as url:
+
+while clicking a button, output is a tabulation. If user wants only one row in tabulation so that, a message is displayed in top as only one row is present which needs to be verified.
+In such case, tester has to login with different login ID which has only one row. But with dev tools this can be done by just mocking the api which is being called when button is clicked.
+mocking in the sense, changing the keyvalue for example: authorname from shetty to badguy returns only one row as follows:
+
+devTools.send(Fetch.enable(Optional.empty(), Optional.empty()));
+		devTools.addListener(Fetch.requestPaused(), request->
+		{
+			if(request.getRequest().getUrl().contains("shetty"))
+			{
+				String mockedUrl =request.getRequest().getUrl().replace("=shetty", "=BadGuy");
+				
+				System.out.println(mockedUrl);
+				
+				
+				devTools.send(Fetch.continueRequest(request.getRequestId(), Optional.of(mockedUrl), Optional.of(request.getRequest().getMethod()),
+						Optional.empty(), Optional.empty()));
+			}
+			else {
+				
+				devTools.send(Fetch.continueRequest(request.getRequestId(), Optional.of(request.getRequest().getUrl()), Optional.of(request.getRequest().getMethod()),
+						Optional.empty(), Optional.empty()));
+				
+			}
+			
+		});
+		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
+		driver.findElement(By.cssSelector("button[routerlink*='library']")).click();
+		Thread.sleep(3000);
+		
+		System.out.println(driver.findElement(By.cssSelector("p")).getText());
+
+Networkfail:
+
+request to server can be failed to check if appropriate error message is displayed. Unlike above program where, every request is paused to check if shetty string is present,
+it can be filtered using patterns while enabling fetch request shown below:
+
+Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(new RequestPattern(Optional.of("*search?query*"), Optional.empty(), Optional.empty())));
+		objDevTools.send(Fetch.enable(patterns, Optional.empty()));
+		objDevTools.addListener(Fetch.requestPaused(), request -> {
+			objDevTools.send(Fetch.failRequest(request.getRequestId(), ErrorReason.FAILED));
+		});
+		objChromeDriver.get("https://www.ae.com");
+		objChromeDriver.findElement(By.id("onetrust-accept-btn-handler")).click();
+		objChromeDriver.findElement(By.cssSelector(".sidetray-search")).click();
+		objChromeDriver.findElement(By.cssSelector("[name='search']")).sendKeys("w", Keys.ENTER);		
+		
+		
+	}
+
+}
+
+Below piece of code is used to avoid unnecessary loading of images and videos when page is loading to save execution time.
+
+objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+objDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.png", "*jpg", "*video*")));
+
+Immutable list cannot be changed its size.
+
+
+Network.emulateNetworkConditions:
+
+Network request and response speed can be set (may be latent-slow) to understand the issues and explicit and implicit waits can be placed accordingly so that test suite can run without any issues both in offshore and onshore.
+precisely, this is to control internet speed so that test cases cannot fail under any geological location.
+Even cellular type can also be set like 2g, 3g, 4g etc.
+
+Note: While doing "Open Declaration" (right click the method or class name to dig deeper), if you see enum type, which means it has constants which cannot be changed and it has to be accessed as,
+ErrorReason.FAILED
+
+objDevTools.send(Network.enable(Optional.empty(), Optional.empty(),Optional.empty()));
+		objDevTools.send(Network.emulateNetworkConditions(false, 3000, 20000, 10000, Optional.of(ConnectionType.WIFI)));;
+		
+false defines, internet should be connected. True refers to disconnect it.
+
+20000 and 10000 refers to download and upload speed per mbps respectively.
+
+
+Basic authentication:
+
+This can be easily done by selenium without chromedevtools help. below is just an addon from chromedev. For simple acceptance of basic auth, refer after chromedev tools example:
+
+authentication window open like java alert to view the URL itself.  For this kind of scenario, selenium needs a predicate to check.
+URI is the class which can take host(url) as input.
+In below code, we are verifying first if the url carries expected string to confirm if it is a basic authenthication window.This check is made to prevent verifying each and every url for authentication.
+
+once the url is confirmed, using hasauthentication and usernameandpassword classes, above predicate is given as input and hence username and password is directly given if that particular url is being hit as part of execution.
+
+with chromedevtool:
+ChromeDriver driver = new ChromeDriver();
+		//predicate, consumer
+		Predicate<URI> uriPredicate =uri ->  uri.getHost().contains("httpbin.org");
+		
+		((HasAuthentication)driver).register(uriPredicate,UsernameAndPassword.of("foo", "bar"));
+		driver.get("http://httpbin.org/basic-auth/foo/bar");
+		
+
+Without chromedevtool:
+
+driver.get("https://username:password@siteurl");
+
+above line will invoke the siteurl first. Then, whenever basic auth window appears demanding for username and pwd,
+selenium will automatically give above credentials and click sign-in as well. Precisely, above line takes care of basic auth windows totally
+after hitting the URL. note: it can handle it irrespective of any number of times the auth window appears.
+
+**********************************************
+
+JDBC - mysql:
+here we gonna connect database to selenium. For that, local server acts as a server. We can create databases then tables and then columns to it.
+eg: qadbt is database
+SeleniumDemo is table
+rest details are columns and its values as show in be low example.
+install the needed things, now in workbench, write below query to create table, add columns and its variable type as below;
+
+
+create database qadbt;
+use qadbt;
+create table seleniumDemo(name varchar(25), id int, location varchar(20), age int);
+describe SeleniumDemo; //this will give table details not the values in table but just column name, variable type etc.
+insert into SeleniumDemo values("janani", 1, "spokane", 32);
+insert into SeleniumDemo values("darshini", 2, "ambattur", 7);
+insert into SeleniumDemo values("krishna", 3, "kkpm", 4);
+insert into SeleniumDemo values("dinesh", 4, "upkm", 34);
+select * from SeleniumDemo where id=2; //this is just to check sql code working.
+
+now to fetch location ambattur from db via java:
+
+package Verify;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+
+public class MySqlJDBC {
+
+	public static void main(String[] args) throws SQLException  {
+		// TODO Auto-generated method stub
+		//url is "jdbc:mysql://localhost:3306/qadbt" where 3306 is a port number and localhost is the host name(since its local machine, for other machine either ip address may be used, check this once you joined work) hence this should be written as:
+		Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qadbt", "root", "SanjeevKrish@01");
+		Statement objDBConnected = DBConn.createStatement();
+		ResultSet objResultSet = objDBConnected.executeQuery("select * from SeleniumDemo where id=2");
+		objResultSet.next(); //by default it is in base or null row, give next to get first output. just like excel data driver where row iterator. next is used to get first header itself.
+		System.out.println(objResultSet.getString("location"));
+		
+	}
+
+}
+
+
+*****************************
+
+AutoIt:
+
+it is desktop app automation tool which we use in selenium to do upload and download actions in desktop as selenium cannot do desktop actions like navigating to  folder and selecting a file.
+Go to the downloaded folder. Au3Info_x64 is like chropath. used to inspect the elements in desktop.
+SciTE folder has SciTE file. It is like eclipse editor for writing scripts to execute desktop automation.
+
+Now create a file save it as filename.au3. Open it using SciTE editor. start writing script
+
+example: //below script is to focus open dialogue box, give file name and click open button.
+ControlFocus("Open","","Edit1")
+ControlSetText("Open","","Edit1","C:\Users\jansr\Desktop\US Draft - Mr1675583816\US Draft - Mr. Dinesh Ganesan\Authorization Letter.pdf")
+ControlClick("Open","","Button1")
+
+Now right click the file and click compilescript(*86). This is now in exe format. copy this path.
+
+paste like how it is done below:
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class FileUploadAutoIt {
+	@Test
+	public void fileUpload() throws IOException {
+		WebDriver objWebDriver = new ChromeDriver();
+		objWebDriver.get("https://smallpdf.com/pdf-to-jpg");
+		objWebDriver.findElement(By.cssSelector(".ggoliT")).click();
+		Runtime.getRuntime().exec("C://Users//jansr//Downloads//SeleniumDemo.exe");
+		
+	}
+
+}
+
+above code, can now open pdftojpg converting website, click choosefile link and execute the exe which has the code to focus the open dialog edit text (where we give file name to upload or select), give file path and click open.
+
+Now, the website has the file uploaded. Now we can use selenium code to proceed further. This Runtime is a java class used in selenium.'
+
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.HashMap;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+public class FileUploadAutoIt {
+	@Test
+	public void fileUpload() throws IOException, InterruptedException {
+		ChromeOptions objChromeOptions = new ChromeOptions();
+		HashMap<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("download.default_directory", System.getProperty("user.dir"));		
+		WebDriver objWebDriver = new ChromeDriver(objChromeOptions);
+		objWebDriver.get("https://smallpdf.com/pdf-to-jpg");
+		objWebDriver.findElement(By.cssSelector(".ggoliT")).click();
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec("C://Users//jansr//Downloads//SeleniumDemo.exe");
+		Thread.sleep(3000);
+		WebDriverWait objExplicitWait = new WebDriverWait(objWebDriver, Duration.ofSeconds(10));
+//		System.out.println(objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.tagName("h1")))).getText());
+//		JavascriptExecutor jse = (JavascriptExecutor)objWebDriver;
+//		String javascript = "document.getElementsByClassName('sc-6ytb27-1 fnaLLy')[0]";    
+//		WebElement element = (WebElement) jse.executeScript(javascript);
+//		element.click();
+		//below code isn't working as below weblement is flex and it couldn't be accessed via jse as well. Just know how to download and verify the file exists or not as shown below.  to verify, refer FileExistsVerify class.
+		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.cssSelector(".sc-1mszb21-1.jmcfKp")))).click();
+		objWebDriver.findElement(By.xpath("//span[contains(text(),'option')]")).click();
+		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.linkText("Download")))).click();
+		File f = new File("user.dir"+"//Authorization Letter.jpg");
+		System.out.println(f.exists());
+		
+	}
+
+}
+
+**********************************
+browserstack testing:
+
+to test in different platforms, os, browsers...wide version, vendors like browserstack helps to make it.
+steps to do:
+
+MutableCapabilities caps = new MutableCapabilities();		
+WebDriver driver = new RemoteWebDriver(new URL("https://hub.browserstack.com/wd/hub"),caps);
+
+have these code in testcase.
+put a yaml file from browserstack website to project folder. These are the capabilities which will be auto updated using maven.
+
+in pom.xml, update the testng.xml and browserstack in surefire plugin.
+now to run, execute maven test in project. it will be automatically executed in browserstack. You must have an account in browserstack.
+
+*********************************
+
+JAVA tutorial section 35:
+
+to print date and time in expected format:
+
+		Date d = new Date();		
+		System.out.println(d.toString());
+		SimpleDateFormat sdf = new SimpleDateFormat("M/dd/YYYY");
+		System.out.println(sdf.format(d));
+Calendar cal = Calendar.getInstance();
+		System.out.println(cal.get(Calendar.MINUTE));
+		System.out.println(cal.get(Calendar.DAY_OF_MONTH));
+Note: calendare can be accessed with its instance only using getInstance method. If not, current date and time will not be displayed. calendar is advanced compared to date class.
+
+elements in arraylist can be printed using forEach as well:
+
+ArrayList<String> mylist1 = new ArrayList<String>();
+		mylist1.add("my name is janani");
+		mylist1.add("sanjeev krishna");
+		mylist1.forEach(System.out::println);
+
+Super keyword:
+
+super keyword is used if we have SAME variable name/method name in both parent and child class, if we run child class, by default child class variable is executed(preference will be given to local class variable). If we want parent class variable in child then, give super.variablename (this will print parent class variable). Similarly, do super.methodname (if parent class method name needs to be printed)
+
+superkeyword in constructor:
+by default, in child class, child constructor only gets executed. But if user wants, parent constructor also to get executed, under child constructor, just put super(). Ensure this super() should be the first line in child constructor. Now, first parent constructor exectes, then child constructor executes. Also, if user wants to send data from child to parent, parameterised super is used like super(objWebDriver)
+
+This keyword:
+
+this keyword access only class level objects or variables though same variable with different value is present in local method. for eg:
+
+assume a as 10 is a instance variable. Inside a method, same a variable with a as 11 is defined.
+if user prints the output for a, 11 is displayed. if prints, this.a, 10 is displayed since 10 is the value of global or instance variable of a class.
+
+
+Finally keyword:
+A Finally block is useful for running any code that must execute even if there is an exception. Control is passed to the Finally block regardless of how the Try...Catch block exits. The code in a Finally block runs even if your code encounters a Return statement in a Try or Catch block
+
+Final keyword:
+
+Any method or variable defined as final, cannot be changed at all.  If a class is declared final, it cannot be inherited as well.
+
+import:
+
+if user wanna access a class in other package by object, it can be done by importing the package first and then creating object of that class.
+
+syntax:
+import packagename.classname
+
+above syntax can give access only to class. But to get access to the variables and methods inside the class, user has to mention suitable access modifier like private, default, protected, public.
+
+Collections:
+
+Collections are basically interfaces which has a group of classes used for multiple functionalities over data.
+
+three main collections are:
+
+List
+Set
+Hashmap.
+
+List interface being implemented by below three classes:
+
+ArrayList
+LinkedList
+VectorList
+
+Note: Above three can even accept duplicate values.
+
+Set:
+
+Set interface being implemented by below three classes:
+
+Hashset
+treeset
+LinkedHashset
+
+in set duplicate values cannot be stored. program will still execute displaying only distinct elements. duplicates will be removed automatically. elements cannot be stored in sequential order.hence, it does not have methods like search by index
+This is mainly used if user wants to store only unique elements whereas arraylist can even store duplicate elements.
+
+hashset eg:
+
+HashSet<Integer> h = new HashSet<Integer>();
+		h.add(1);
+		h.add(1);
+		h.add(3);
+		System.out.println(h);
+
+output will be: [1, 3]
+
+hashset can use iterator to loop each element and display output like:
+
+1
+3
+
+Iterator<Integer> itrObj = h.iterator();
+		while(itrObj.hasNext()) {
+			System.out.println(itrObj.next());
+		}
+		
+
+HashMap vs HashTable:
+
+Hashmap isn't thread safe. hashtable viceversa
+Hashmap can also carry null values hashtable viceversa
+Hashmap can be looped using iterator. Hashtable using enumerator.
+
+Diamond problem:
+
+class A is a super class. Class B and C inherits class A. Class D inherits class B and C. this is diamond shape. suppose if class D has to call a method which exists both in B and C, then java doesn't know which method to give priority first. this shall be overcome by using interfaces instead of class. refer below link to learn more about this
+
+https://www.javatpoint.com/what-is-diamond-problem-in-java
+
+Static binding also means method overloading and dynamic binding refers run time execution method overriding. This is also called run time polymorphism.
+
+Abstraction hides the implementation details whereas encapsulation wraps code and data into a single unit using access modifiers.
+
+Is it possible to instantiate the abstract class?
+No, abstract class can never be instantiated. it can only be extended
+
+What is interface?
+
+Interface is a blueprint of a class that have static constants and abstract methods.It can be used to achieve fully abstraction and multiple inheritance.
+
+Can you declare an interface method static?
+
+No, because methods of an interface is abstract by default, and static and abstract keywords can't be used together.
+
+ Can an Interface be final?
+No, because its implementation is provided by another class.
+
+
+Composition vs inheritance:
+
+If there is any changes like new method returns bad variable or any security holes in super class, it will highly impact child or sub class. 
+
+by google: Composition is the design technique in object-oriented programming to implement has-a relationship between objects. Composition in java is achieved by using instance variables of other objects.
+
+whereas, in composition, since we create object, only selective methods are used and it will not impact
+
+example:
+
+initial way:
+
+package com.journaldev.java.examples;
+
+public class ClassA {
+
+	public void foo(){	
+	}
+}
+
+class ClassB extends ClassA{
+	public void bar(){
+		
+	}
+}
+
+now, say if we made add a new method in classA, it will impact and throws error.
+
+package com.journaldev.java.examples;
+
+public class ClassA {
+
+	public void foo(){	
+	}
+	
+	public int bar(){
+		return 0;
+	}
+}
+
+A simple example of ClassB implementation using Composition can be as below.
+
+class ClassB{
+	ClassA classA = new ClassA();
+	
+	public void bar(){
+		classA.foo();
+		classA.bar();
+	}
+}
+
+
+
+Defect tracking tool:
+
+Bugzilla is being used by rahulshetty.
+
+It is a repo to store, track and update defect details by qa, dev and business altogether.
+
+initial status of bug should be untriaged. Later business or dev would update the defect to triaged or the respective component the bug belongs to. like database or integration etc.
+
+priority: how sooner it has to be fixed.
+severity: how much it is affecting the application flow and how much user is getting impacted.

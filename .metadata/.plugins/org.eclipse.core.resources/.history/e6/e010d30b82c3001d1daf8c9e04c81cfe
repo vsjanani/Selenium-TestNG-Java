@@ -1,0 +1,22 @@
+
+public class Main {
+
+	public String checkerror(){
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+      String t = "hello";
+      return t;
+    } 
+	return null;
+    }
+	
+  public static void main(String[] args) {
+   
+   Main m = new Main();
+   String hi = m.checkerror();
+   System.out.println(hi);
+  }
+}

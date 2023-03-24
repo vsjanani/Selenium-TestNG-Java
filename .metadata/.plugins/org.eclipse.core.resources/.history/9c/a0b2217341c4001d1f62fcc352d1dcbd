@@ -1,0 +1,14 @@
+import java.util.HashSet;
+
+public class HashSet1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet<Integer> h = new HashSet<Integer>();
+		h.add(1);
+		h.add(1);
+		h.add(3);
+		System.out.println(h.size());
+	}
+
+}
