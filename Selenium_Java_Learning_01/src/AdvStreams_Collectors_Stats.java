@@ -39,6 +39,7 @@ public class AdvStreams_Collectors_Stats {
 		List numbers1 = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 		//checking git commands	
 		//second git commit hello
+		//third git commit hello
 		
 		
 	}
