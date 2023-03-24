@@ -13831,3 +13831,7 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2023-03-23 17:10:02,864 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\main\resources
 2023-03-23 17:10:02,870 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-03-23 17:10:02,870 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\test\resources
+2023-03-23 17:29:55,050 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 17:29:55,053 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-03-23 17:29:55,058 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 17:29:55,061 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
