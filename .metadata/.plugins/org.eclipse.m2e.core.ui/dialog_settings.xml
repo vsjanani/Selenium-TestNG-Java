@@ -19,6 +19,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\jansr\Downloads\Selenium-TestNG-Java"/>
 			<item value="C:\Users\jansr\eclipse-workspace\Selenium_Java_Learning_01\src\FileUploadAutoIt.java"/>
 			<item value="C:\Users\jansr\Downloads\eclipse-workspace-20221214T201514Z-001\eclipse-workspace\TestNG_Framework"/>
 			<item value="C:\Users\jansr\Downloads\eclipse-workspace-20221214T201514Z-001\eclipse-workspace\TestNG_Framework\testng3.xml"/>
@@ -45,12 +46,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="jenkinsgitintegration"/>
 			<item value="BrowserStack.CloudTesting"/>
 		</list>
 		<list key="groupId">
+			<item value="jenkins.git.maven.seleniumjava"/>
 			<item value="BrowserStack"/>
 		</list>
 		<list key="artifactId">
+			<item value="jenkinsgitintegration"/>
 			<item value="CloudTesting"/>
 		</list>
 		<list key="projectNameTemplate">

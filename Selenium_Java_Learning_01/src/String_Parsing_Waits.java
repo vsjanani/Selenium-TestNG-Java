@@ -34,7 +34,14 @@ public class String_Parsing_Waits {
 ////		mydrop.
 		
 	    StringBuilder str = new StringBuilder("Hello");
+	    
 	    System.out.println(str.reverse());
+	    String h = "hello";
+		System.out.println(h.length());
+		for(int i=h.length()-1; i>=0; i--)
+		{ 
+			System.out.print(h.charAt(i));}
+		
 	    
 	}
 

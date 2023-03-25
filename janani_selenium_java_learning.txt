@@ -2,6 +2,9 @@ The JVM is the runtime that hosts running programs.
 The JRE is the on-disk part of Java that creates the JVM and loads programs into them.
 The JDK provides the tools necessary to write Java programs that can be executed and run by the JVM and JRE.
 
+Compiler -> changes high level or user code to object code, compiles basic code level errors -> done by JDK.
+Interpreter -> converts object code to machine level code, executes, if there are any errors, execution is halted.
+
 Two ways of creating webdriver_obj:
 
 a: ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
@@ -21,7 +24,6 @@ b: WebDriver webdriver_obj = new ChromeDriver();
 
 browser invocation code:
 
-System.setProperty("webdriver.chrome.driver", "give chromedriver.exe path here");
 WebDriver webdriver_obj = new ChromeDriver();
 
 Variables:

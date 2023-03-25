@@ -47,6 +47,7 @@ public class Java_Basics {
 		String f = "hi hello";
 		String[] b = f.split(" ");
 		System.out.println(b[0]);
+		
 	
 		
 		

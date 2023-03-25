@@ -1,3 +1,25 @@
+Installation Summary:
+
+Java - add as env variable.
+Eclipse
+Maven - add as env variable.
+mysql(mysqlworkbench - ui name) - if you work on database.
+AutoIT
+TortoiseGit
+
+Plugins from maven repo:
+selenium
+testng
+maven surefire plugin
+apache io commons - Java utils
+jacksondatabind
+apache poi and ooxml
+extent report
+mysql java connector
+
+
+
+
 Download Java:
 download jdk latest version
 add system variable as JAVA_HOME giving jdk installed path.C:\Program Files\Java\jdk-18.0.2.1\
@@ -53,13 +75,13 @@ Add apache poi and ooxml dependancy for reading data in excel file.
 To run project via local command terminal:
 
 Install maven to run from command terminal. So far we ran using maven inbuilted in eclipse. But to run the code
-from local system, mave has to be installed. Follow steps in below link for installation:
+from local system, maven has to be installed. Follow steps in below link for installation:
 
 https://www.qamadness.com/knowledge-base/how-to-install-maven-and-configure-environment-variables/
 
 Now, testng.xml has to run in maven in local system terminal to execute scripts. For that, search "maven testng integration" in google.
 
-under maven.apache.org, copy the surefire plugin configuration under title "Using Suite XML Files". //this is to execute test cases from test folder in maven project.
+under maven.apache.org, copy the surefire plugin configuration under title "Using Suite XML Files". //this is to execute test cases from testng.xml in maven project.
 
 paste in your project's pom.xml file under <plugin>
 
@@ -75,7 +97,7 @@ now from local terminal, go to project folder(cd C:\Users\jansr\eclipse-workspac
 mvn test -P Regression //here -P refers to Profile tag. and Regression refers to ID.
 
 Reason behind placing <build> tag inside <Profile> is, in real-time, there may be 20 xml file. tester cannot go and edit name under <build> each time.
-Hence, <profile> tag is created and <build> is placed under it.
+Hence, <profile> tag is created and <build> is placed under it. While running, if no -P is defined, maven runs all the testng.xml mentioned under each sure fire plugin.
 
 commands:
 Go to project folder. 
@@ -89,6 +111,8 @@ only with surefire plugin, all the test case files will be executed, but if we a
 To run only a single test case via maven,
 mvn -Dtest=TestCircle test eg: mvn -Dtest=ErrorScenarioTest test
 
+to run using a specific browser:
+mvn -Dbrowser = chrome
 refer all these maven.apache.org documentation.
 
 ***************************************************************8
@@ -162,6 +186,7 @@ Rahulshetty had code and hub in same laptop. but still, hub address is needed to
 To close/shutdown hub:
 
 http://localhost:4444/lifecycle-manager?action=shutdown
+ctrl-c also should work.
 
 
 ******************************************************************
@@ -201,3 +226,5 @@ BrowserStack is not much to worry about. Check the learning notepad as it needs 
 Git:
 
 just install git and tortoise git. For command line git, see python learning notepad.
+
+
