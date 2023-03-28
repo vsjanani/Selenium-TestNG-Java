@@ -18,9 +18,7 @@ public class MegaMenuPage extends Reusable {
 		super(objWebDriver);
 		this.objWebDriver = objWebDriver;
 		PageFactory.initElements(objWebDriver, this);			
-	}
-	
-	
+	}	
 	
 //	By popup = By.cssSelector(".bx-close");
 	
@@ -46,8 +44,6 @@ public class MegaMenuPage extends Reusable {
 		optFrmLstWomenEle.click();
 		WomenTopsPage objWomenTopsPg = new WomenTopsPage(objWebDriver);
 		return objWomenTopsPg;
-		}
-
-	
+		}	
 	
 }

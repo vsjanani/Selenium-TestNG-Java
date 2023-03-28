@@ -8,6 +8,8 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="action"/>
+			<item value="Integer."/>
 			<item value="\"/>
 			<item value="checking this"/>
 			<item value="devTools"/>
@@ -21,8 +23,6 @@
 			<item value="HSSF"/>
 			<item value="Map"/>
 			<item value="getCellValueAsString"/>
-			<item value="\\"/>
-			<item value="BestSelling"/>
 		</list>
 		<list key="replacehistory">
 			<item value="//"/>

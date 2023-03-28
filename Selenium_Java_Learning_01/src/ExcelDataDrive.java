@@ -43,7 +43,7 @@ public class ExcelDataDrive {
 		System.out.println("column is" + objCellForHeading.getAddress().getColumn());
 		int intColumnContainsHeading = objCellForHeading.getAddress().getColumn();
 		while (objIteratorRow.hasNext()) {
-			Row nextRow = objIteratorRow.next();
+			Row nextRow = objIteratorRow.next();			
 //			nextRow.getLas
 			if (nextRow.getCell(intColumnContainsHeading).getStringCellValue().equalsIgnoreCase("SeleniumDemo")) {
 				// fetch other cell values in that row.

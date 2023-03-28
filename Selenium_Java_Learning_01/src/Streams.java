@@ -25,6 +25,8 @@ public class Streams {
 		long mycount = mylist2.stream().filter(s->s.startsWith("V")).count();
 		System.out.println(mycount);
 		mylist2.stream().filter(s->s.equals("hello")).map(s->s.toUpperCase()).forEach(System.out::println);
+		System.out.println("printing below");
+		mylist2.stream().map(s->s.length()).forEach(System.out::println);
 		List collectList = mylist2.stream().filter(s->s.startsWith("V")).collect(Collectors.toList());
 		System.out.println("my new list is " + collectList);
 		System.out.println(Stream.of("janani","dinesh", "krishna", "darshini").count());
@@ -64,7 +66,7 @@ public class Streams {
 		String mergedString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", "));
 		System.out.println("Merged String: " + mergedString);
 		List<String>mylist7 = Arrays.asList("janani", "dinesh", "krishna");
-		mylist7.sort(Comparator.reverseOrder());;
+		mylist7.sort(Comparator.reverseOrder());
 		System.out.println("comparator in string " + mylist7);
 		
 		

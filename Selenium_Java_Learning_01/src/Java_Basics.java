@@ -12,12 +12,19 @@ public class Java_Basics {
 			System.out.println(i);
 		}
 		System.out.println(mylist.length + "is the length of mylist");
+		Arrays.sort(mylist);
+		for(int i : mylist) {
+			System.out.println(i);
+		}
 		for(int i=0; i < mylist.length; i++) {
 			System.out.println(mylist[i]);
 		}
+		System.out.println("check here");
+		
+		
 		// ***********************If else*****************************;******
 		for(int i=0; i < mylist.length; i++) {
-			System.out.println(mylist[i]*2);
+			System.out.println("next one" + mylist[i]*2);
 		}
 		for(int i : mylist) { 
 			if (i != 100) {
@@ -32,8 +39,9 @@ public class Java_Basics {
 		mylist1.add("sanjeev krishna");
 		System.out.println(mylist1.size());
 		System.out.println(mylist1.isEmpty());
-		System.out.println("here it is" + mylist1.get(0));
-		System.out.println(mylist1);
+		System.out.println("here it is" + mylist1);
+		System.out.println(mylist1 + "checking");
+		mylist1.forEach(System.out::println);
 		for (String i : mylist1) {
 			String[] j = i.split(" ");
 			for (String k : j) {
@@ -47,7 +55,6 @@ public class Java_Basics {
 		String f = "hi hello";
 		String[] b = f.split(" ");
 		System.out.println(b[0]);
-		
 	
 		
 		

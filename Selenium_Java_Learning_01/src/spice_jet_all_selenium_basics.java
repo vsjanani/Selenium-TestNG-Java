@@ -22,10 +22,9 @@ public class spice_jet_all_selenium_basics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--disable-notifications");   
 //		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		options.addArguments("--start-maximized");

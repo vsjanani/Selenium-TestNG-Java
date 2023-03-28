@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FileUploadAutoIt">
+      <class name="Verify.ChildDemo1">
         <methods>
-          <include name="fileUpload"/>
+          <include name="invokeChrome"/>
+          <include name="Child1"/>
         </methods>
-      </class> <!-- FileUploadAutoIt -->
+      </class> <!-- Verify.ChildDemo1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

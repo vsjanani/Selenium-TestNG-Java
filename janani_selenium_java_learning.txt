@@ -16,7 +16,7 @@ a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" 
 Classes like ChromeDriver, EdgeDriver needs to use these methods and add their own codes to execute the methods from WebDriver interface.
 But in this line, ChromeDriver's own methods also can be used by webdriver_obj.getInputState etc along with WebDriver methods. But those ChromeDriver related methods may not be present in other browsers like firefox or ie.
 Note: WebDriver related methods is applicable across all browsers.
-Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.
+Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.hi
 
 b: WebDriver webdriver_obj = new ChromeDriver(); 
 	
@@ -102,11 +102,28 @@ driver.manage() has options for windown maximise and cookies(deletion and additi
 
 Locators:
 selector hub is the locator plugin for edge and firefox like chropath.
+plain traverse with only grand parents present:
+xpath: grandparent xpath/parent tagname[1](based on which number of element)/child tagname
+css: grandparent xpath/parent tagname:nth-child(1)(based on which number of element)/child tagname
 for both xpath and css, if chropath returns multiple matching webelements in different plots of a website, then, use parent-css/xpath  space child-css/xpath.
 for both xpath and css, if chropath returns multiple matching webelements in same plots or under same box, then use, css:nth-of-type() (in bracket use the index)
 for above scenario in xpath, (xpath)[1]
 if particular webelement is third sibling then try, xpath[3]. 
+nth-of-type vs nth-child in css:
+nth-of-type refers to the other element which has same css. it can either be its immediate sibiling or not immediate and where inside main tag.
+nth-child only refers to it own child in the same order mentioned.
+eg:
+<div>
+    <div >0</div>
+    <div >1</div>
+    <div >2</div>
+    <div >3</div>
+    <div >4</div>
+    <div >5</div>
+</div>
+this selector: div div:nth-child(1) will select the first child of the div but with another condition that child must be a div. here first child is a <div>0</div> but if the first child was a paragraph p: <p>0</p> this selector will not effect the page because there is no first child div the first child is p.
 
+but this selector: div div:nth-of-type(1) if the first child was a <div>0</div> will effect it, but if the first child is <p>0</p> now he will effect the second child <div>1</div> because it's the first child of his type div.
 CSS: Tagname
 if there are two same tag names and if you want to go the last tag name: button:last-of-type will work. To get first tag name, button:first-of-type will work
 to get some random type, nth-of-type to be used.
@@ -222,9 +239,9 @@ String inputText = "mum";
 		((JavascriptExecutor) driverObj).executeScript(js, myElement);
 
 
-1
-2
-3
+js.executeScript("document.getElementById('some id').value='someValue';");
+js.executeScript("document.getElementById('Email').value='SoftwareTestingMaterial.com';");
+
 JavascriptExecutor jse = ((JavascriptExecutor)driver);        	
 WebElement email = driver.findElement(By.id("useremail"));
 jse.executeScript("arguments[0].value='---your email id---';", email);
@@ -232,6 +249,8 @@ jse.executeScript("arguments[0].value='---your email id---';", email);
 JavascriptExecutor jse = (JavascriptExecutor)driverObj;
 		jse.executeScript("document.getElementById('elementID').setAttribute('value', 'new value for element')");
 		jse.executeScript("document.getElementByXpath('elementID')")
+
+
 
 
 static library for relative locators like above, below, toleftof, to rightof:
@@ -277,6 +296,21 @@ In webdriver wait, if 10 seconds is given, driver checks webelement for every mi
 But in fluent wait, if 10 seconds is waiting period and 2 seconds is polling then, driver checks only for 2 seconds once until 10 seconds duration.
 Hence if element found in 1st second, it has to wait for one more second. it is used under such rare condition.
 
+eg:
+
+//Declare and initialise a fluent wait
+FluentWait wait = new FluentWait(driver);
+//Specify the timout of the wait
+wait.withTimeout(5000, TimeUnit.MILLISECONDS);
+//Sepcify polling time
+wait.pollingEvery(250, TimeUnit.MILLISECONDS);
+//Specify what exceptions to ignore
+wait.ignoring(NoSuchElementException.class)
+
+//This is how we specify the condition to wait on.
+//This is what we will explore more in this chapter
+wait.until(ExpectedConditions.alertIsPresent());
+
 
 svg tag:
 
@@ -298,8 +332,15 @@ If there are 2 frames,
 first frame can be located using driver.switchTo.frame(0)
 driver.switchTo().defaultContent(); to get back to html from frames.
 
-opening links in separate tab:
-keys.chord(KEYS.c
+Keys:
+
+opening links in separate tab:o
+ Keys.chord(Keys.CONTROL, "a");
+sendKeys(Keys.CONTROL+"A");
+above codes clicks control a.
+keyDown -> holds a key eg: shift
+keyUp -> releases the hold.
+
 
 calendar:
 
@@ -360,7 +401,7 @@ SoftAssert softObj = new SoftAssert();
 //			String myLink = eachURLElement.findElement(By.tagName("i")).getAttribute("class").split("-")[1];
 			String eachURL = eachURLElement.getAttribute("href");
 			URL myURL = new URL(eachURL);
-			HttpURLConnection  = (HttpURLConnection) myURL.openConnection();
+			HttpURLConnection urlConnectObj  = (HttpURLConnection) myURL.openConnection();
 //			urlConnnectObj.setRequestMeturlConnectObjhod("HEAD");
 			urlConnectObj.connect();
 			softObj.assertTrue(urlConnectObj.getResponseCode() < 400, "is broken"); //simplified model for below if loop.
@@ -1936,3 +1977,8 @@ initial status of bug should be untriaged. Later business or dev would update th
 
 priority: how sooner it has to be fixed.
 severity: how much it is affecting the application flow and how much user is getting impacted.
+
+casting webdriver for:
+Javascriptexecutor
+TakesScreenshot
+HttpURLConnection - cast the URl (convert string to URL using URL class then cast that url)

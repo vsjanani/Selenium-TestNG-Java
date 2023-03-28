@@ -7,8 +7,7 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>			
-			<class name="com.ae.shopping.testCases.FieldPresenceValidations" />	
-			<class name="com.ae.shopping.testCases.ShopTops" />
+			
 			<class name="com.ae.shopping.testCases.ErrorScenario" />			
 		</classes>
 	</test> <!-- Test -->
