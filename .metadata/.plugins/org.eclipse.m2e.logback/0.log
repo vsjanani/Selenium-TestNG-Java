@@ -15866,3 +15866,4 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2023-03-28 21:02:20,558 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
 2023-03-28 21:02:20,561 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-03-28 21:02:20,563 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-03-28 22:18:18,242 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

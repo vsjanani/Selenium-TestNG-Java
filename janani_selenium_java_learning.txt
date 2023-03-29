@@ -1022,8 +1022,8 @@ When executed, code inside child is printed. Priority is given to local class if
 *****************************************************************************************
 Framework Map:
 
-Child	extends Parent  extends child	  child  extends Parent			  
-Listener-->  BaseTest <-- TestClass   PageObject -->  Utilities
+via testng Parent  extends child	  child  extends Parent			  
+Listener  BaseTest <-- TestClass   PageObject -->  Utilities
 
 DataSetup folder called in TestClass. HashMap method in BaseTest. List collected in TestClass and sent as object in to @Test methods under TestClasses
 ExtentNG(it has reporting utility) folder called in Listener.
@@ -1985,7 +1985,16 @@ initial status of bug should be untriaged. Later business or dev would update th
 priority: how sooner it has to be fixed.
 severity: how much it is affecting the application flow and how much user is getting impacted.
 
+*********************************
+important points to remember:
+
 casting webdriver for:
 Javascriptexecutor
 TakesScreenshot
 HttpURLConnection - cast the URl (convert string to URL using URL class then cast that url)
+
+final execution of certain methods:
+Actions class: .build().perform();
+SoftAssert class: objSoftAssert.assertAll();
+ExtentReports class: objExtentReports.flush();
+
