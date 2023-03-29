@@ -20,10 +20,13 @@ public class AdvStreams_Collectors_Stats {
 		int count = num.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("checking addition" + count);
 		System.out.println("adding all numbers" + num.addAll(0, num));
-		int sum = numbers.stream().mapToInt(s -> Integer.valueOf(s)).sum();
-		// above can be written as Integer::intValue
+		int sum = numbers.stream().mapToInt(s -> s).sum();		 
 		System.out.println(sum);
-		int sumAgain = numbers.stream().collect(Collectors.summingInt(Integer::intValue));
+		Integer[] tic = {1,2,3};
+		List<Integer> he = Arrays.asList(tic);
+		System.out.println(he.stream().mapToInt(s->s).sum());
+		int sumAgain = numbers.stream().collect(Collectors.summingInt(s->Integer.valueOf(s)));
+//		above can be written as Integer::intValue
 		System.out.println(sumAgain);
 		IntSummaryStatistics stats = numbers.stream().mapToInt((x) -> x).summaryStatistics();
 		System.out.println("Highest number in List : " + stats.getMax());

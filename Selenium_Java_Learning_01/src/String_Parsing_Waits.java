@@ -13,7 +13,7 @@ public class String_Parsing_Waits {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver webdriver_obj = new ChromeDriver();
 //		webdriver_obj.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
 		webdriver_obj.get("http://the-internet.herokuapp.com/dynamic_loading");
@@ -35,6 +35,10 @@ public class String_Parsing_Waits {
 		
 	    StringBuilder str = new StringBuilder("Hello");
 	    System.out.println(str.reverse());
+	    String he = "1hel@%lo3";
+		String ste = he.replaceAll("[^a-zA-Z0-9]", "");
+		System.out.println(ste);
+	
 	    
 	}
 

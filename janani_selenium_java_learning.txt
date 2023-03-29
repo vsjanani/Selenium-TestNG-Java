@@ -495,7 +495,7 @@ Integer[] a = {2,3,4,4,5,7};
 List<Integer> q = Arrays.asList(a); //here, array is changed to list of integer with no array format hence flat is not required
 System.out.println(q.stream().mapToInt(Integer::intValue).sum());
 
-Or, if int[] is used instead of Integer, then flatmap comes into pic.This is the commonly used datatype int[]
+Or, if int[][] is used instead of Integer, then flatmap comes into pic.This is the commonly used datatype int[][]
 int[] a = {2,3,4,4,5,7};
 List<int[]> q = Arrays.asList(a);// here it can convert only to int[] otherwise system throwing error. Hence flatmap is used.
 System.out.println(q.stream().flatMapToInt(s->IntStream.of(s)).sum()); // for any kind of function, flatmap is must here.
@@ -527,6 +527,13 @@ List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList())
 System.out.println(mylist6);
 mylist5.sort(Comparator.reverseOrder());
 System.out.println(mylist5);
+
+If plain sorting direct list comparator is enough, but if you need remove duplicates and then sort, in that case:
+List<Integer> mylist5 = Arrays.asList(2, 8, 5, 2, 8, 7, 5, 9, 3);
+List mylist8 = mylist5.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+System.out.println(mylist8 + "mylist8");
+
+output: [9, 8, 7, 5, 3, 2]mylist8
 
 List can also be used instead of ArrayList:
 List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
@@ -581,7 +588,7 @@ String string = "Item1 10 Item2 25 Item3 30 Item4 45";
 
 Integer.toString(number) -> this can be used to conver
 TestNG:
-Important note for tesng using inheritance: if testng is used, and the same class inherits from other class, then methods from other class can be directly accessed. Object creation is not required.
+
 It is similar to pytest. No public static void main is required. Still execution will occur. Each test cases should be inside method with @Test Annotations on top over it.
 Note: If a class has TestNG annotations, it should get executed via testng.xml.
  <classes>
@@ -787,7 +794,7 @@ MouseHover:
 Actions mouseHover = new Actions(driverObj);
 mouseHover.sendKeys(webElement target, charToSend) -> this type of sendkey can be used to directly move to the element and send keys in single step.
 
-**************************************************************************************************************8
+**************************************************************************************************************
 Frameworks
 ___________
 
@@ -903,7 +910,7 @@ create property file and load the file in dawndusk. getProperty of the key in pr
 
 Why not inheriting the page object class directly to java main class instead of object creation?
 
-I could see both in selenium python and java where inheritance is used between basetest and maintest or between pageobject and abstract but why the concept is not used to inherit page objects to test cases class (main class) as I could see one object is created in someother function which is difficult to track. Can someone help me to understand?
+If there is any security holes or issues in page object class, it will not impact main class. Also, cannot do multiple inheritance, means, cannot inherit both base class and page object in main class, it creates diamond problem. Refer, composition and diamond problem at the bottom to know more about this.
 
 *********************************************************************
 LESSONS LEARNT:

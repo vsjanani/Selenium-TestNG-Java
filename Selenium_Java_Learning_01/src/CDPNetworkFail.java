@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v108.fetch.Fetch;
-import org.openqa.selenium.devtools.v108.fetch.model.RequestPattern;
-import org.openqa.selenium.devtools.v108.network.Network;
-import org.openqa.selenium.devtools.v108.network.model.ErrorReason;
+import org.openqa.selenium.devtools.v111.fetch.Fetch;
+import org.openqa.selenium.devtools.v111.fetch.model.RequestPattern;
+import org.openqa.selenium.devtools.v111.network.Network;
+import org.openqa.selenium.devtools.v111.network.model.ErrorReason;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

@@ -48,6 +48,8 @@ public class Streams {
 //		System.out.println(value);
 		List<Integer> mylist5 = Arrays.asList(2, 8, 5, 2, 8, 7, 5, 9, 3);
 		List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList());
+		List mylist8 = mylist5.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		System.out.println(mylist8 + "mylist8");
 		int k = mylist5.stream().findFirst().orElse(null);
 		Optional<Integer> j = mylist5.stream().findAny();
 		if (j.isPresent()) {
@@ -68,6 +70,9 @@ public class Streams {
 		List<String>mylist7 = Arrays.asList("janani", "dinesh", "krishna");
 		mylist7.sort(Comparator.reverseOrder());
 		System.out.println("comparator in string " + mylist7);
+		
+		
+
 		
 		
 	}
