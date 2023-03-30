@@ -20,6 +20,7 @@ public class AdvStreams_Collectors_Stats {
 		int count = num.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("checking addition" + count);
 		System.out.println("adding all numbers" + num.addAll(0, num));
+		System.out.println(num);
 		int sum = numbers.stream().mapToInt(s -> s).sum();		 
 		System.out.println(sum);
 		Integer[] tic = {1,2,3};
@@ -36,6 +37,7 @@ public class AdvStreams_Collectors_Stats {
 		String string = "Item1 10 Item2 25 Item3 30 Item4 45";
 		Integer sum1 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.collect(Collectors.summingInt(Integer::parseInt));
+		//String ste = he.replaceAll("[^a-zA-Z0-9]", ""); this type of statement also works.
 		System.out.println(sum1);
 		Integer sum11 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.mapToInt(s -> Integer.parseInt(s)).sum(); // this can also be written as mapToInt(Integer::parseInt)

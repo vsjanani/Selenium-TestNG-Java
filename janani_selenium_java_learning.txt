@@ -2004,10 +2004,15 @@ report:
 Spark object, Report Object, Threadlocal object but only for below like that:
 
 ExtentTest objExtentTestDetails = objExtentReports.createTest(result.getMethod().getMethodName());
+objThreadLocal.set(objExtentTestDetails);
+		
 
 urlconnection:
 HttpURLConnection urlConnectObj  = (HttpURLConnection) myURL.openConnection();
 urlConnectObj.connect();
+
+autoit:
+Runtime.getRuntime().exec("C://Users//jansr//Downloads//SeleniumDemo.exe"); - autoit execution in selenium
 
 cdp:
 
@@ -2027,3 +2032,7 @@ Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qad
 		ResultSet objResultSet = objDBConnected.executeQuery("select * from SeleniumDemo where id=2");
 		objResultSet.next(); //by default it is in base or null row, give next to get first output. just like excel data driver where row iterator. next is used to get first header itself.
 		System.out.println(objResultSet.getString("location"));
+
+calendar:
+Calendar cal = Calendar.getInstance();
+		System.out.println(cal.get(Calendar.MINUTE));

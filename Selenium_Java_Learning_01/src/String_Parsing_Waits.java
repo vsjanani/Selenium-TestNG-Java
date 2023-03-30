@@ -1,4 +1,7 @@
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,8 +41,7 @@ public class String_Parsing_Waits {
 	    String he = "1hel@%lo3";
 		String ste = he.replaceAll("[^a-zA-Z0-9]", "");
 		System.out.println(ste);
-	
-	    
+		
 	}
 
 	public static WebElement getmystr(WebDriver webdriver_obj) {

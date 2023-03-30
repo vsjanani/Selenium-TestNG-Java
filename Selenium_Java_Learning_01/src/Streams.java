@@ -70,7 +70,11 @@ public class Streams {
 		List<String>mylist7 = Arrays.asList("janani", "dinesh", "krishna");
 		mylist7.sort(Comparator.reverseOrder());
 		System.out.println("comparator in string " + mylist7);
-		
+		String h = "heloz";
+		StringBuilder q = new StringBuilder("heloz");
+		char[] r = h.toCharArray();
+		Arrays.sort(r);
+		System.out.println(new String(r));
 		
 
 		
