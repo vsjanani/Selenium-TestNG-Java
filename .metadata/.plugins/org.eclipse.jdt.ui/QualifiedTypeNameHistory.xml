@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.network.model.ErrorReason"/>
-    <fullyQualifiedTypeName name="com.google.common.collect.ImmutableList"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.network.model.ConnectionType"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v106.network.Network"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="org.testng.ITestListener"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v110.fetch.Fetch"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v111.network.model.RequestPattern"/>
 </qualifiedTypeNameHistroy>

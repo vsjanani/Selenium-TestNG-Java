@@ -19,6 +19,7 @@ public class CDPNetworkSpeed {
 		objChromeDriver.get("https://www.google.com");
 		objChromeDriver.findElement(By.cssSelector(".gLFyf")).sendKeys("netflix", Keys.ENTER);
 		objChromeDriver.findElement(By.xpath("(//h3[contains(@class, 'LC20lb')])[1]")).click();
+		
 	}
 
 }

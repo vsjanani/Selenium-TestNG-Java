@@ -60,13 +60,13 @@ public class ExcelDataDrive {
 			}
 
 		}
-		Object[][] myobj = new Object[][] {{arrlstDataFromExcel.get(0)},{arrlstDataFromExcel.get(1)}, {arrlstDataFromExcel.get(2)}};
-
+//		Object[][] myobj = new Object[][] {{arrlstDataFromExcel.get(0)},{arrlstDataFromExcel.get(1)}, {arrlstDataFromExcel.get(2)}};
+		Object[][] myobj = new Object[][] {{arrlstDataFromExcel}};
 		System.out.println(arrlstDataFromExcel.size());
-		System.out.println("it is "+myobj.length);
-		System.out.println(myobj[0][0]);
-		System.out.println(myobj[1][0]);
-		System.out.println(myobj[2][0]);
+		System.out.println("myobj length is "+myobj.length);
+//		System.out.println(myobj[0][0]);
+//		System.out.println(myobj[1][0]);
+//		System.out.println(myobj[2][0]);
 	}
 	
 //	@Test(dataProvider = "hehe")

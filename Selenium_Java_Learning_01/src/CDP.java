@@ -16,6 +16,7 @@ public class CDP {
 		//select any domain from this link either network or emulation or anything:https://chromedevtools.github.io/devtools-protocol/tot/Emulation/
 		//few below options can be set to empty through autosuggestion itself.
 		objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty()));
+		
 		objChromeDriver.get("https://www.microsoft.com/");
 		Thread.sleep(3000);
 		objChromeDriver.findElement(By.cssSelector(".c-uhfh-gcontainer-st button")).click();

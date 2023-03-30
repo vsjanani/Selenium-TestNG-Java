@@ -16,8 +16,7 @@ a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" 
 Classes like ChromeDriver, EdgeDriver needs to use these methods and add their own codes to execute the methods from WebDriver interface.
 But in this line, ChromeDriver's own methods also can be used by webdriver_obj.getInputState etc along with WebDriver methods. But those ChromeDriver related methods may not be present in other browsers like firefox or ie.
 Note: WebDriver related methods is applicable across all browsers.
-Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.hi
-
+Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.
 b: WebDriver webdriver_obj = new ChromeDriver(); 
 	
 	If this piece of code is used, only WebDriver implementation of ChromeDriver is used. ChromeDriver methods are excluded.
@@ -1250,6 +1249,8 @@ Three files are required:
 2. .java file for step definition which is the same as testcase file in testng.
 3. .java file to integrate or connect above feature and java file and execute.
 
+refer below link for perfect example for perfect coding including all feature file, step definition and integrating both feature and step definition file.
+
 1. .feature file:
 Scenario (In cucumber test case should be called as scenario):
 
@@ -1275,6 +1276,8 @@ Feature: Title of your feature - business requirement
       | name  | value | status  |
       | name1 |     5 | success |
       | name2 |     7 | Fail    |
+
+note: if you have two examples, test will run twice.
 
 Feature file contains only one feature and carries one or many scenarios:
 
@@ -1324,7 +1327,12 @@ tags = {"@Android","@IOS"} // {","} - OR {"",""} - AND
 
 Note: both doesn't work though. only " or " works.
 
-Now add TestNGRunner in pom.xml by creating a profile ID with name for eg: CucumberFramework and add this as choice pa
+Now add TestNGRunner in pom.xml by creating a profile ID with name for eg: CucumberFramework and add this under configuration tag as shown below
+<configuration>
+								<includes>
+									<include>**/TestNGTestRunner.java</include>
+								</includes>
+							</configuration>
 
 ****************************************************************************
 
@@ -1364,15 +1372,7 @@ assume  excel has datasetup with one row and three columns and inorder to get th
 
 hehe method return statement:
 
-Object[][] myobj = new Object[1][arrlstDataFromExcel.size()];
-		myobj[0][0] = arrlstDataFromExcel.get(0);
-		myobj[0][1] = arrlstDataFromExcel.get(1);
-		myobj[0][2] = arrlstDataFromExcel.get(2);
-		
-		return myobj;
-	
-	}
-	
+Object[][] myobj = new Object[][] {{arrlstDataFromExcel}};	
 	@Test(dataProvider = "hehe")
 	public void hello(String t1, String t2, String t3) throws IOException {
 
@@ -1480,6 +1480,7 @@ public class ChromeDevToolsProtocol {
 		objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
 		//above line can be set to empty through autosuggestion as well like below:
 	//objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty()));
+//above auto suggestion for optional.empty() is possible if only needed parameters are given, error comes up to match the arguments, click the error to get auto-population.
 		objChromeDriver.get("https://www.microsoft.com/");		
 		Thread.sleep(3000);
 		objChromeDriver.findElement(By.cssSelector(".c-uhfh-gcontainer-st button")).click();
@@ -1527,11 +1528,6 @@ Emulation: It is to mock the screensize, geolocation, screencolour, orientation 
 Network: To enable network and check api responses for each action in web page.
 Fetch: to mock the api urls inorder to get expected output in webpage.
 
-
-<class name="com.ae.shopping.testCases.FieldPresenceValidations" />
-			<class name="com.ae.shopping.testCases.ShopTops" />
-
-
 mocking/hacking api request as url:
 
 while clicking a button, output is a tabulation. If user wants only one row in tabulation so that, a message is displayed in top as only one row is present which needs to be verified.
@@ -1539,7 +1535,7 @@ In such case, tester has to login with different login ID which has only one row
 mocking in the sense, changing the keyvalue for example: authorname from shetty to badguy returns only one row as follows:
 
 devTools.send(Fetch.enable(Optional.empty(), Optional.empty()));
-		devTools.addListener(Fetch.requestPaused(), request->
+devTools.addListener(Fetch.requestPaused(), request->
 		{
 			if(request.getRequest().getUrl().contains("shetty"))
 			{
@@ -1570,7 +1566,10 @@ Networkfail:
 request to server can be failed to check if appropriate error message is displayed. Unlike above program where, every request is paused to check if shetty string is present,
 it can be filtered using patterns while enabling fetch request shown below:
 
-Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(new RequestPattern(Optional.of("*search?query*"), Optional.empty(), Optional.empty())));
+		Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(new RequestPattern(Optional.of("*search?query*"), Optional.empty(), Optional.empty())));
+	Above line of code can be written as below two lines of code:
+		RequestPattern n = new RequestPattern(Optional.of("*search?query*"), java.util.Optional.empty(), java.util.Optional.empty());
+		Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(n));
 		objDevTools.send(Fetch.enable(patterns, Optional.empty()));
 		objDevTools.addListener(Fetch.requestPaused(), request -> {
 			objDevTools.send(Fetch.failRequest(request.getRequestId(), ErrorReason.FAILED));
@@ -1597,7 +1596,8 @@ Network.emulateNetworkConditions:
 
 Network request and response speed can be set (may be latent-slow) to understand the issues and explicit and implicit waits can be placed accordingly so that test suite can run without any issues both in offshore and onshore.
 precisely, this is to control internet speed so that test cases cannot fail under any geological location.
-Even cellular type can also be set like 2g, 3g, 4g etc.
+Even cellular type can also be set like 2g, 
+, 4g etc.
 
 Note: While doing "Open Declaration" (right click the method or class name to dig deeper), if you see enum type, which means it has constants which cannot be changed and it has to be accessed as,
 ErrorReason.FAILED
@@ -1643,7 +1643,7 @@ JDBC - mysql:
 here we gonna connect database to selenium. For that, local server acts as a server. We can create databases then tables and then columns to it.
 eg: qadbt is database
 SeleniumDemo is table
-rest details are columns and its values as show in be low example.
+rest details are columns and its values as show in below example.
 install the needed things, now in workbench, write below query to create table, add columns and its variable type as below;
 
 
@@ -1993,8 +1993,37 @@ Javascriptexecutor
 TakesScreenshot
 HttpURLConnection - cast the URl (convert string to URL using URL class then cast that url)
 
+
 final execution of certain methods:
 Actions class: .build().perform();
 SoftAssert class: objSoftAssert.assertAll();
 ExtentReports class: objExtentReports.flush();
 
+different creation:
+report:
+Spark object, Report Object, Threadlocal object but only for below like that:
+
+ExtentTest objExtentTestDetails = objExtentReports.createTest(result.getMethod().getMethodName());
+
+urlconnection:
+HttpURLConnection urlConnectObj  = (HttpURLConnection) myURL.openConnection();
+urlConnectObj.connect();
+
+cdp:
+
+DevTools objDevTools = objChromeDriver.getDevTools();
+		objDevTools.createSession();
+		objDevTools.send(
+				Network.enable(java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty()));
+		objDevTools.addListener(Network.loadingFailed(), consumingRequest -> {
+			System.out.println(consumingRequest.getErrorText());
+			System.out.println(consumingRequest.getTimestamp());
+		});
+
+jdbc:
+
+Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qadbt", "root", "SanjeevKrish@01");
+		Statement objDBConnected = DBConn.createStatement();
+		ResultSet objResultSet = objDBConnected.executeQuery("select * from SeleniumDemo where id=2");
+		objResultSet.next(); //by default it is in base or null row, give next to get first output. just like excel data driver where row iterator. next is used to get first header itself.
+		System.out.println(objResultSet.getString("location"));

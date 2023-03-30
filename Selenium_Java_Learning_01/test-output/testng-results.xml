@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-21T21:27:51 PDT" name="Default suite" finished-at="2023-03-21T21:28:00 PDT" duration-ms="8414">
+  <suite started-at="2023-03-29T14:38:59 PDT" name="Default suite" finished-at="2023-03-29T14:39:00 PDT" duration-ms="1186">
     <groups>
     </groups>
-    <test started-at="2023-03-21T21:27:51 PDT" name="Default test" finished-at="2023-03-21T21:28:00 PDT" duration-ms="8414">
-      <class name="Verify.ChildDemo1">
-        <test-method is-config="true" signature="invokeChrome()[pri:0, instance:Verify.ChildDemo1@31fa1761]" started-at="2023-03-21T21:27:51 PDT" name="invokeChrome" finished-at="2023-03-21T21:27:58 PDT" duration-ms="6418" status="PASS">
+    <test started-at="2023-03-29T14:38:59 PDT" name="Default test" finished-at="2023-03-29T14:39:00 PDT" duration-ms="1186">
+      <class name="ExcelDataDrive">
+        <test-method signature="hehe()[pri:0, instance:ExcelDataDrive@73e22a3d]" started-at="2023-03-29T14:38:59 PDT" name="hehe" finished-at="2023-03-29T14:39:00 PDT" duration-ms="1135" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invokeChrome -->
-        <test-method signature="Child1()[pri:0, instance:Verify.ChildDemo1@31fa1761]" started-at="2023-03-21T21:27:58 PDT" name="Child1" finished-at="2023-03-21T21:28:00 PDT" duration-ms="1960" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Child1 -->
-      </class> <!-- Verify.ChildDemo1 -->
+        </test-method> <!-- hehe -->
+      </class> <!-- ExcelDataDrive -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

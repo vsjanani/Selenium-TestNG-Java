@@ -26,7 +26,9 @@ public class CDPNetworkFail {
 		objDevTools.createSession();
 		objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 		objDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.png", "*jpg", "*video*")));
-		Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(new RequestPattern(Optional.of("*search?query*"), Optional.empty(), Optional.empty())));
+		RequestPattern n = new RequestPattern(Optional.of("*search?query*"), java.util.Optional.empty(), java.util.Optional.empty());
+		Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(n));
+//		Optional<List<RequestPattern>> patterns = Optional.of(Arrays.asList(new RequestPattern(Optional.of("*search?query*"), Optional.empty(), Optional.empty())));
 		objDevTools.send(Fetch.enable(patterns, Optional.empty()));
 		objDevTools.addListener(Fetch.requestPaused(), request -> {
 			objDevTools.send(Fetch.failRequest(request.getRequestId(), ErrorReason.FAILED));

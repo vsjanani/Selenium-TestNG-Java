@@ -16,7 +16,7 @@ class MultidimensionalArray {
 				{ "exptdOptFrmWomen", "Tops" }, { "exptdProdName", "AE Go Big Shirt" }
 
 		};
-//        System.out.println(a.length);
+        System.out.println("row length" + a.length);
 
 		String[][] b = new String[3][2];
 		int r = -1;
@@ -24,7 +24,7 @@ class MultidimensionalArray {
 		for (int i = 0; i < a.length; ++i) {
 			r++;
 			for (int j = 0; j < a[i].length; ++j) {
-				System.out.println(a[i].length);
+				System.out.println("column length"+ a[i].length);
 //                b[r][0] = a[i][j];
 //                b[r][1] = a[i][j];
 //                System.out.println(b[i][j]);
