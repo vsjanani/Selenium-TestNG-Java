@@ -24,7 +24,7 @@ public class spice_jet_all_selenium_basics {
 		// TODO Auto-generated method stub
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
+//		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--disable-notifications");   
 //		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		options.addArguments("--start-maximized");
@@ -72,8 +72,7 @@ public class spice_jet_all_selenium_basics {
 //		expWaitObj.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Search Flight']"))).click();
 		Actions mouseHover = new Actions(driverObj);
 		mouseHover.moveToElement(driverObj.findElement(By.xpath("//div[text()='Search Flight']"))).click().build()
-				.perform();
-		
+				.perform();		
 		driverObj.findElement(By.cssSelector(".r-1ww30s9")).click();
 		System.out.println(driverObj.findElement(By.cssSelector(".r-1ap4h1l")).isEnabled());
 		expWaitObj.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".r-1ap4h1l .r-zchlnj")));

@@ -64,7 +64,7 @@ public class ExcelDataDrive {
 		Object[][] myobj = new Object[][] {{arrlstDataFromExcel}};
 		System.out.println(arrlstDataFromExcel.size());
 		System.out.println("myobj length is "+myobj.length);
-//		System.out.println(myobj[0][0]);
+		System.out.println(myobj[0][0]);
 //		System.out.println(myobj[1][0]);
 //		System.out.println(myobj[2][0]);
 	}

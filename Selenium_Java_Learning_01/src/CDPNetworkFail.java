@@ -39,7 +39,7 @@ public class CDPNetworkFail {
 		objExpWait.until(ExpectedConditions.presenceOfElementLocated(By.id("onetrust-accept-btn-handler")));
 		objChromeDriver.findElement(By.id("onetrust-accept-btn-handler")).click();
 		objChromeDriver.findElement(By.cssSelector(".sidetray-search")).click();
-		objChromeDriver.findElement(By.cssSelector("[name='search']")).sendKeys("w", Keys.ENTER);
+		objChromeDriver.findElement(By.cssSelector("[name='search']")).sendKeys("tshirt", Keys.ENTER);
 		Long endTime = System.currentTimeMillis();
 		System.out.println(endTime-startTime);
 	}

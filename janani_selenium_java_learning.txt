@@ -2000,6 +2000,13 @@ SoftAssert class: objSoftAssert.assertAll();
 ExtentReports class: objExtentReports.flush();
 
 different creation:
+
+
+
+basic authentication:
+
+driver.get("https://admin:admin@the-internet.herokuapp.com/");
+
 report:
 Spark object, Report Object, Threadlocal object but only for below like that:
 
@@ -2036,3 +2043,5 @@ Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qad
 calendar:
 Calendar cal = Calendar.getInstance();
 		System.out.println(cal.get(Calendar.MINUTE));
+
+

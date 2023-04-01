@@ -17,7 +17,7 @@ public class RepetitionStreams {
 		
 		Integer[] a = {2,3,4,4,5,7};
 		List<Integer> q = Arrays.asList(a);		
-		HashSet<Integer> t = new HashSet();
+		HashSet t = new HashSet();
 		q.stream().filter(s->!t.add(s)).forEach(System.out::println);
 		Map<Integer, Integer> tic = q.stream().collect(Collectors.toMap(c->c, c->1, Integer::sum));
 		//instead of c->Function.identity() also can be used. both refers to Key of a map. whereas Integer::sum output gives value.
