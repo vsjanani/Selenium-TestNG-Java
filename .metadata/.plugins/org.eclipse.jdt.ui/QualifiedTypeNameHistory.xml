@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.network.model.ConnectionType"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v106.network.Network"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.network.Network"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.DevTools"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.console.Console"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.log.Log"/>
     <fullyQualifiedTypeName name="com.aventstack.extentreports.model.Log"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
     <fullyQualifiedTypeName name="org.testng.IInvokedMethodListener"/>
@@ -16,7 +13,6 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.runtime.Runtime"/>
     <fullyQualifiedTypeName name="java.lang.Runtime"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
+    <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v108.log.Log"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
 </qualifiedTypeNameHistroy>

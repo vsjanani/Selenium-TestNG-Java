@@ -9,7 +9,7 @@ class Person{
 
 }
 
-class Child{
+class ChildDemo1{
 
    public static void main(String args[]){
 

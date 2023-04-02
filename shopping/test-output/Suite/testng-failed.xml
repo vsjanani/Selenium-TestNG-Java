@@ -4,15 +4,8 @@
   <listeners>
     <listener class-name="com.ae.shopping.baseTest.Listener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="HappyPathTestCases(failed)">
     <classes>
-      <class name="com.ae.shopping.testCases.FieldPresenceValidations">
-        <methods>
-          <include name="launchApp"/>
-          <include name="F2301_AE_url_title" invocation-numbers="0 0"/>
-          <include name="makeItNull"/>
-        </methods>
-      </class> <!-- com.ae.shopping.testCases.FieldPresenceValidations -->
       <class name="com.ae.shopping.testCases.ErrorScenario">
         <methods>
           <include name="checkNetworkLoadingFailed"/>
@@ -22,16 +15,5 @@
         </methods>
       </class> <!-- com.ae.shopping.testCases.ErrorScenario -->
     </classes>
-  </test> <!-- Test(failed) -->
-  <test thread-count="5" name="Tesst(failed)">
-    <classes>
-      <class name="com.ae.shopping.testCases.Hi">
-        <methods>
-          <include name="launchApp"/>
-          <include name="micheck"/>
-          <include name="makeItNull"/>
-        </methods>
-      </class> <!-- com.ae.shopping.testCases.Hi -->
-    </classes>
-  </test> <!-- Tesst(failed) -->
+  </test> <!-- HappyPathTestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

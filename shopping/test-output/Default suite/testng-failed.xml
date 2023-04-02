@@ -5,10 +5,9 @@
     <classes>
       <class name="com.ae.shopping.testCases.FieldPresenceValidations">
         <methods>
-          <include name="F2301_AE_womenMenu_topsOption_display"/>
-          <include name="F2301_AE_product_display"/>
+          <include name="F2301_AE_product_display" invocation-numbers="0"/>
           <include name="launchApp"/>
-          <include name="F2301_AE_url_title"/>
+          <include name="F2301_AE_url_title" invocation-numbers="0 0"/>
           <include name="makeItNull"/>
         </methods>
       </class> <!-- com.ae.shopping.testCases.FieldPresenceValidations -->

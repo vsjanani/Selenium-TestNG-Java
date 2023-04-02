@@ -57,13 +57,13 @@ public class Listener implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		objThreadLocal.get().fail(result.getThrowable());
-		Listener objListen = new Listener();		
-		String strErrorCodeToReport = objListen.getInstantVariableFromTestCases(result, strNetworkError);		
-		if(strErrorCodeToReport != null){objThreadLocal.get().fail(strErrorCodeToReport);} 
-		String strLoadingFailedReasonToReport = objListen.getInstantVariableFromTestCases(result, strNetworkLoadingFailedReason);		
-		if(strLoadingFailedReasonToReport != null){objThreadLocal.get().fail(strLoadingFailedReasonToReport);} 
-		String strConsoleErrorToReport = objListen.getInstantVariableFromTestCases(result, strConsoleOutput);		
-		if(strConsoleErrorToReport != null){objThreadLocal.get().fail(strConsoleErrorToReport);} 
+		String[] errorArray = {strNetworkError,strNetworkLoadingFailedReason,strConsoleOutput};
+		for(String i : errorArray) {
+			String strErrorCodeToReport = getInstantVariableFromTestCases(result, i);
+			if(strErrorCodeToReport!=null) {
+				objThreadLocal.get().fail(strErrorCodeToReport);
+			}
+		} 
 		String strTestCaseName = result.getName();
 		try {
 			objWebDriver = (WebDriver) result.getTestClass().getRealClass().getField("objWebDriver")

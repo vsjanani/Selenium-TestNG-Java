@@ -27,7 +27,7 @@ public class WomenTopsPage extends Reusable{
 //	WebElement sptlthdrNowTrending;
 	
 	@FindBy(css=".top-content .spotlight-header")
-	private WebElement lblNowTrending;
+	private WebElement lblNowTrending; //it is changed now, check website and change label if this element using script has to be passed.
 	
 	@FindBy(xpath="(//div[@class='_wrapper_1c1emu'])[1] //h3")
 	private List<WebElement> lstNowTrendingProducts;

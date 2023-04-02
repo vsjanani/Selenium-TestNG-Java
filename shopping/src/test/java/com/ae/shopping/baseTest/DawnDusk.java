@@ -2,7 +2,6 @@ package com.ae.shopping.baseTest;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -19,28 +18,19 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v106.network.Network;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.devtools.v111.network.Network;
+import org.openqa.selenium.devtools.v111.log.Log;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.Augmenter;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.devtools.v108.log.Log;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 import com.ae.shopping.pageObjects.HomePage;
 import com.ae.shopping.pageObjects.MegaMenuPage;
@@ -55,6 +45,7 @@ public class DawnDusk {
 	public MegaMenuPage objMegaMenuPg;
 	public DevTools objDevTools;
 	public String strErrorCode, strLoadingFailedReason, strConsoleError;
+	
 
 	public void driverSetup() throws IOException {
 		Properties objProperties = new Properties();
@@ -73,9 +64,11 @@ public class DawnDusk {
 //			objChromeOptions.setBrowserVersion("109"); 
 			objChromeOptions.setPlatformName("Windows 11");
 			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objChromeOptions);
+			
 		}
 
 		else if (strBrowserName.equalsIgnoreCase("edge")) {
+			
 			objEdgeOptions.addArguments("--disable-notifications");
 			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objEdgeOptions);
 		}
@@ -91,7 +84,7 @@ public class DawnDusk {
 		objDevTools = ((HasDevTools) objWebDriver).getDevTools();
 		objDevTools.createSession();
 		objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-		objDevTools.send(org.openqa.selenium.devtools.v108.log.Log.enable());
+		objDevTools.send(Log.enable());
 		objDevTools.addListener(Network.responseReceived(), consumingResponse->{
 			String strURL = consumingResponse.getResponse().getUrl();
 			int intResponseStatusCode = consumingResponse.getResponse().getStatus();
@@ -135,14 +128,16 @@ public class DawnDusk {
 		strLoadingFailedReason = null;
 		strConsoleError =null;
 	}
-
-	public List<HashMap<String, String>> convertJsontoHashMap(String strFilePath) throws IOException {
+	
+	@DataProvider
+	public Object[][] exptdDataSetUp() throws IOException {
+		String strFilePath = System.getProperty("user.dir")+"/src/test/java/com/ae/shopping/dataSetUp/dataSetUp.json";
 		String strFileContent = FileUtils.readFileToString(new File(strFilePath), StandardCharsets.UTF_8);
 		ObjectMapper objMapper = new ObjectMapper();
 		List<HashMap<String, String>> hmExptdData = objMapper.readValue(strFileContent,
 				new TypeReference<List<HashMap<String, String>>>() {
 				});
-		return hmExptdData;
+		return new Object[][] {{hmExptdData.get(0)}};
 	}
 
 	@DataProvider

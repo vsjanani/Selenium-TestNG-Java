@@ -27,11 +27,5 @@ public class ShopTops extends DawnDusk {
 		Assert.assertEquals(strProductName, exptdDataSetUp.get("exptdProdName"));
 	}
 	
-	@DataProvider
-	public  Object[][] exptdDataSetUp() throws IOException {
-		List<HashMap<String, String>> hmExptdDataSetUp =  convertJsontoHashMap(System.getProperty("user.dir")+"/src/test/java/com/ae/shopping/dataSetUp/dataSetUp.json");
-		return new Object[][] {{hmExptdDataSetUp.get(0)}};
-		
-	}	
 	
 }

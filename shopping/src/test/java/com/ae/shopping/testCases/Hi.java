@@ -3,8 +3,8 @@ import java.util.HashMap;
 import java.util.Optional;
 
 import org.junit.Assert;
-import org.openqa.selenium.devtools.v108.network.Network;
-import org.openqa.selenium.devtools.v108.network.model.ConnectionType;
+import org.openqa.selenium.devtools.v111.network.Network;
+import org.openqa.selenium.devtools.v111.network.model.ConnectionType;
 import org.testng.annotations.Test;
 
 import com.ae.shopping.baseTest.DawnDusk;

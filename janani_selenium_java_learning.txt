@@ -1,3 +1,4 @@
+
 The JVM is the runtime that hosts running programs.
 The JRE is the on-disk part of Java that creates the JVM and loads programs into them.
 The JDK provides the tools necessary to write Java programs that can be executed and run by the JVM and JRE.

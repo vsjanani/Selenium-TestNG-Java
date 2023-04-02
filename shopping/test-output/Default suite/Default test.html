@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 21 21:20:46 PDT 2023</td>
+<td>Started on:</td><td>Sat Apr 01 20:54:30 PDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3421 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17546 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,42 +68,34 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.launchApp()'><b>launchApp</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations</td>
-<td><div><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
+<td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title()'><b>F2301_AE_url_title</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
+<td><div><pre>java.lang.AssertionError: expected [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagl] but found [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagle]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title(FieldPresenceValidations.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
@@ -120,35 +112,27 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1640296160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1640296160'><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
+</pre></div><a href='#' onClick='toggleBox("stack-trace795308615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace795308615'><pre>java.lang.AssertionError: expected [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagl] but found [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagle]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title(FieldPresenceValidations.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
@@ -166,31 +150,93 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
+<td>0</td>
+<td>com.ae.shopping.testCases.FieldPresenceValidations@534a5a98</td></tr>
+<tr>
+<td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_product_display()'><b>F2301_AE_product_display</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
+<td><div><pre>java.lang.AssertionError: Expected product name from Now Trending header is not present expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_product_display(FieldPresenceValidations.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1798165471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1798165471'><pre>java.lang.AssertionError: Expected product name from Now Trending header is not present expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_product_display(FieldPresenceValidations.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>com.ae.shopping.testCases.FieldPresenceValidations@534a5a98</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.makeItNull()'><b>makeItNull</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations</td>
+<td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_womenMenu_topsOption_display()'><b>F2301_AE_womenMenu_topsOption_display</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
 <td></td>
-<td>-1679458850</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
-<tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.makeItNull()'><b>makeItNull</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations</td>
-<td></td>
-<td>-1679458850</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
-<tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.makeItNull()'><b>makeItNull</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations</td>
-<td></td>
-<td>-1679458850</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
+<td>0</td>
+<td>com.ae.shopping.testCases.FieldPresenceValidations@534a5a98</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -200,129 +246,27 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_womenMenu_topsOption_display()'><b>F2301_AE_womenMenu_topsOption_display</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
-<td><div><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2107841088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2107841088'><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
-<tr>
 <td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title()'><b>F2301_AE_url_title</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
-<td><div><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
+<td><div><pre>java.lang.AssertionError: expected [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagl] but found [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagle]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title(FieldPresenceValidations.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
@@ -339,129 +283,27 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace23737789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace23737789'><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1006297128", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1006297128'><pre>java.lang.AssertionError: expected [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagl] but found [Men’s &amp; Women’s Jeans, Clothes &amp; Accessories | American Eagle]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_url_title(FieldPresenceValidations.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
-<tr>
-<td title='com.ae.shopping.testCases.FieldPresenceValidations.F2301_AE_product_display()'><b>F2301_AE_product_display</b><br>Test class: com.ae.shopping.testCases.FieldPresenceValidations<br>Parameters: {exptdUrlTitle=Men’s & Women’s Jeans, Clothes & Accessories | American Eagl, exptdOptFrmWomen=Tops, exptdProdName=AE Go Big Shirt}</td>
-<td><div><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace458890629", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace458890629'><pre>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://10.0.0.152:4444/session/f6483a4f2efe3e2257fdca4881e78a94/se/cdp
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.&lt;init&gt;(SeleniumCdpConnection.java:34)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.lambda$create$0(SeleniumCdpConnection.java:56)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:54)
-	at org.openqa.selenium.devtools.SeleniumCdpConnection.create(SeleniumCdpConnection.java:47)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:50)
-	at org.openqa.selenium.devtools.DevToolsProvider.getImplementation(DevToolsProvider.java:31)
-	at org.openqa.selenium.remote.Augmenter.augment(Augmenter.java:179)
-	at com.ae.shopping.baseTest.DawnDusk.driverSetup(DawnDusk.java:90)
-	at com.ae.shopping.baseTest.DawnDusk.launchApp(DawnDusk.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
@@ -480,7 +322,7 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.ae.shopping.testCases.FieldPresenceValidations@130c12b7</td></tr>
+<td>com.ae.shopping.testCases.FieldPresenceValidations@534a5a98</td></tr>
 </table><p>
 </body>
 </html>
