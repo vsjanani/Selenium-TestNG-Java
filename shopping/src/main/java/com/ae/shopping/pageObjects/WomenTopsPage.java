@@ -32,7 +32,7 @@ public class WomenTopsPage extends Reusable{
 	@FindBy(xpath="(//div[@class='_wrapper_1c1emu'])[1] //h3")
 	private List<WebElement> lstNowTrendingProducts;
 	
-	private By imgProduct = By.xpath("../../preceding-sibling::div");
+	private By imgProduct = By.xpath("../../preceding-sibling::div"); //.. refers to parent node.
 	
 	private By lblQuickShop = By.xpath("../../preceding-sibling::div/a[2]");
 	

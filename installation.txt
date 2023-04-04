@@ -7,10 +7,10 @@ mysql(mysqlworkbench - ui name) - if you work on database.
 AutoIT
 TortoiseGit
 
-Plugins from maven repo:
+dependancies from maven repo:
 selenium
 testng
-maven surefire plugin
+maven surefire plugin (only this is plugin, rest all dependencies)
 apache io commons - Java utils
 jacksondatabind
 apache poi and ooxml

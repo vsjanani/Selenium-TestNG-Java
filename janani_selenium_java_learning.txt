@@ -2046,3 +2046,65 @@ Calendar cal = Calendar.getInstance();
 		System.out.println(cal.get(Calendar.MINUTE));
 
 
+
+azure:
+
+al in all repo to build, plan n execute.
+
+install apache tomcat.
+in project, give mvn clean install. it executes, check for 0 errors and creates a war file inside target folder.
+paste the war fill inside webapps folder of tomcat folder.
+now to start start tomcat:
+go to tomcat folder -> bin ->startup.
+ then, give localhost:8080 in browser, to get server page, if received, tomcat is working fine. in real time, instead of localhost, ip address of respective host machine will be used. localhost means for ip address of the local machine.
+
+now, give webapp like, localhost:8080/webapp to see the project. Make the ip address of localhost public, if others wanna see the project.
+
+Continuous Integration:
+
+whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install.
+
+Continuous Delivery:
+
+Once war file is created, jenkins/azure should go to staging area where all unit and other testing occurs, if all success, project will be deployed to production. this whole process of delivering is called continuous delivery.
+
+Steps to create pipeline:
+Build Pipeline:
+
+It is to build and create artifacts of a project (manually, we created artifact - war file using mvn clean install command). It is performed based on instructios in yaml file.
+
+First, azure needs a repo link to get code and create artifact. follow below steps:
+
+login azure -> Go to Pipelines -> create Pipeline -> select Github (or svn or big bucket wherever we have the code) -> select github repository of your project -> select maven -> yaml file will now be displayed automatically -> save (do only save, instead of save and run) else, it will also run after saving. Now it got saved in github master branch where we have our project.
+
+this yaml file is important connector between github and azure to create war file. yaml file has package, and os details. By default, os mentioned is ubuntu in which our project will run. Trigger -> master. Any changes in pipeline, master branch will run and artifact (war file ) will be generated.
+
+
+Now again click pipeline -> run pipeline -> run 
+
+******Place yaml file from s to "a" folder and then from "a" folder to azure pipeline. *****
+
+To do above follow below steps:
+
+Now, our project code executes, webapp.war file gets created, work folder is also created contains two folders called s and a. 
+s-> source code, a->artifact
+ This webapp.war file should be placed in tomcat server so that build gets deployed in web server. For that, webapp file should be placed in "a" folder and then to azure pipeline.
+
+To do above, go to pipeline -> click last run pipeline -> edit ->  fill below details.
+
+1. task opened on rightside, give target (click info, copy the path, place it in target, it is nothing but path for "a" folder in ubuntu machine)
+
+2. contents give **/.war (this command is to search .war file from project, as it can be present under target folder which has path to cross, ** lets the system search even child folders of a project directory) -> add -> select add -> click add again. Now code is added in yaml file to move war file from s to "a" folder.
+
+3. To get war from "a" to azure, select "publish build artifacts" from task. Let the details remain same (by default "path to publish" is target only) -> click add.
+
+4. Again save all the changes and commit to git from azure.
+
+***********Build pipeline is over***********
+
+Release Pipeline:
+This is to place war file from azure to tomcat server so that it can be hosted in web.
+
+Follow below steps:
+
+Releases-> new pipeline -> Select a template (choose "azure app service deployment" -> this will deploy our war file in cloud, coz in realtime most of the deployments occurs in cloud) -> Apply -> Staging (give "QA Environment) ->now click on QA Environment
