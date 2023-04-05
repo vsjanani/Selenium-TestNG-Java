@@ -2062,11 +2062,14 @@ now, give webapp like, localhost:8080/webapp to see the project. Make the ip add
 
 Continuous Integration:
 
-whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install.
+whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install. Integration between my project, azure and github is called continuous integration it mainly happened through yaml file where trigger, artifact and publish codes are updated by filling details.
+Note: In artifact only master is updated.
 
 Continuous Delivery:
 
 Once war file is created, jenkins/azure should go to staging area where all unit and other testing occurs, if all success, project will be deployed to production. this whole process of delivering is called continuous delivery.
+
+Deploying my project pushed to tomcat server of a ubuntu or any machine machine provided by azure from scratch is called continous deployment.
 
 Steps to create pipeline:
 Build Pipeline:
@@ -2103,8 +2106,77 @@ To do above, go to pipeline -> click last run pipeline -> edit ->  fill below de
 ***********Build pipeline is over***********
 
 Release Pipeline:
-This is to place war file from azure to tomcat server so that it can be hosted in web.
+This pipeline is generally to deploy the build artifacts in agent machine (which is azure servers)
+end accomplished is to place war file from azure to tomcat server so that it can be hosted in web.But end of this lecture, it is ready to connect.
 
 Follow below steps:
 
-Releases-> new pipeline -> Select a template (choose "azure app service deployment" -> this will deploy our war file in cloud, coz in realtime most of the deployments occurs in cloud) -> Apply -> Staging (give "QA Environment) ->now click on QA Environment
+Releases-> new pipeline -> Select a template (choose "azure app service deployment" -> this will deploy our war file in cloud, coz in realtime most of the deployments occurs in cloud) -> Apply -> Staging (give "QA Environment) ->now click on c -> give azure subscription (its a big process, ask company for subscription details) -> click authorize and give credentials(my azure login details, again check with company), apptype->webapp on linux, service name->autopopulated ->now click on Deploy azure app service -> package name change from .zip to .war ---- So far, we have picked war file from azure and yet to be placed in webApp server (the one where we chose apptype as webapp in linux). This can be verified when we check our website of azure subscription with a url like rahulshetty/webapp, our war file should be there. It is stil not there.
+
+Now, go back release pipeline, select add an artifact and add our build pipeline. It will be user friendly in ui.
+now build pipeline is connected to QA environment folder which is release pipeline.
+
+******************release pipeline is over********************
+
+
+Create Release:
+This component helps to build end to end pipeline(connecting build and release pipeline) for ci/cd implementation.
+
+click create release in release pipeline page -> create -> it will run. now in rahulshetty/webapp webproject is launched by dev team. 
+
+****************create release is over**************************
+
+**************continuous integration is also over**********************
+
+
+Continous Delivery/Deployment:
+
+Just go to release -> click on a lightning symbol above artifact -> enable CD.
+
+To verify all working fine, just do minor changes to our project in github save it, refresh the azure webpage, could see new pipeline build created and running, now refresh rahulshetty/webapp to view changes. 
+Its like, doing one change in github, will directly reflects in deployment. Lets say code is deployed in QA region and lets assume rahulshetty/webapp is QA region to test webpage.
+
+***************continous deliver is over********************
+
+QA:
+
+Flow:
+
+My project name is : AEShopping
+
+AEShopping -> Github -> Azure Repos -> Artifacts (in Release) -> JananiAutomationTesting folder (Job name in Release) 
+
+DevAEShopping -> Github -> Build Pipeline -> Artifacts (in Release) -> QA Environment (dev deployed code which qa has to do automation test)
+
+Note: job created from QA environment is called JananiAutomationTesting which should carry QA automation code. Refer picture for quick reference.
+
+Artifacts(+)				QA environment (staging box)     JananiAutomationTesting
+--------------------------------------------------------------------------------------------
+dev war file				Add (this helps to add janani   Add				
+						automation test folder)
+						
+qa automation code    
+
+
+
+
+We can use azure as a repository like github to have our automation code. To import our qa automation code from github to azure,follow below steps:
+First go to Repos -> Under Import a repository, click import -> select repotype as git, and give git project repo url -> import. 
+
+Now our project is in azure repository. This has to be now added to our release pipeline QA environment folder. Follow below steps to do it:
+
+Go to Releases -> edit -> QA Environment folder -> Edit and just click on add under QA Environment folder -> click on Add Empty job -> Give a Stage name (any like JananiAutomationTesting) -> close it. Now a folder is created next to QA automation as JananiAutomationTesting.
+
+Now to add our project code from azure repo to release, click on + symbol in artifacts of release, to add our code as artifact just we added war file from build pipeline.
+
+so, click on + symbol -> give source as Azure repository (code is in azure repo now) -> give project name AEShopping, give azure repository name, and branch as master -> click add.
+
+Now our code is in artifacts under releases. This should go to JananiAutomationTesting
+
+Note: the above step is like developers moving code from build pipeline to release (or adding artifacts war file)
+
+Now, click on 1job under JananiAutomationTesting -> click + under Agent Job-> search maven(build test and deploy with apache maven) -> click three dots in pom label, select pom file from path -> under Goals give "test" (it is nothing but mvn test) ->click save
+
+Now if developers do any minor changes in their code, it will be deployed in QA Enviroment through war file and JananiAutomationTesting
+
+Finally, deployement in production from qa should occur. Now, under JananiAutomationTesting, click add -> Azure app service deployment ->apply->give stage name as production deployment -> close. -> now click again to give task - > for this, go to azure portal-> create a resource -> webapp
