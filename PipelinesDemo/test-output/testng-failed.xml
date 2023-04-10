@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="PipelinesDemo.AppTest4">
+        <methods>
+          <include name="shouldAnswerWithTrue3"/>
+        </methods>
+      </class> <!-- PipelinesDemo.AppTest4 -->
+      <class name="PipelinesDemo.AppTest3">
+        <methods>
+          <include name="shouldAnswerWithTrue2"/>
+        </methods>
+      </class> <!-- PipelinesDemo.AppTest3 -->
+      <class name="PipelinesDemo.AppTest">
+        <methods>
+          <include name="shouldAnswerWithTrue"/>
+        </methods>
+      </class> <!-- PipelinesDemo.AppTest -->
+      <class name="PipelinesDemo.AppTest2">
+        <methods>
+          <include name="shouldAnswerWithTrue1"/>
+        </methods>
+      </class> <!-- PipelinesDemo.AppTest2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

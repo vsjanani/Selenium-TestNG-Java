@@ -927,14 +927,14 @@ we declare in constructor hence it is made public instant variable.
 
 Page object class only contains webelements and its actions. It should not hold any data like username value or password value. 
 
-Access Modifier	within class	within package	outside package by subclass only	outside package
+Access Modifier	within class		within package	outside package by subclass only	outside package
 									(inheriting the class which has 
 									protected variable or method)
 
 Private			Y			N			N					N
 Default			Y			Y			N					N
 Protected			Y			Y			Y					N
-Public			Y			Y			Y					Y
+Public				Y			Y			Y					Y
 
 All webelements in webpage should have access modifier private. Ensure in framework, under pageobject classes, only action methods are public. If webelement is public, it can be easily accessible by other class. It is advisable to have only action methods accessible by other class as we have created webelements to be used for proper actions only not to access an element and click directly. 
 
@@ -2080,7 +2080,7 @@ First, azure needs a repo link to get code and create artifact. follow below ste
 
 login azure -> Go to Pipelines -> create Pipeline -> select Github (or svn or big bucket wherever we have the code) -> select github repository of your project -> select maven -> yaml file will now be displayed automatically -> save (do only save, instead of save and run) else, it will also run after saving. Now it got saved in github master branch where we have our project.
 
-this yaml file is important connector between github and azure to create war file. yaml file has package, and os details. By default, os mentioned is ubuntu in which our project will run. Trigger -> master. Any changes in pipeline, master branch will run and artifact (war file ) will be generated.
+this yaml file is important connector between github and azure to create war file. yaml file has package, and os details. By default, os mentioned is ubuntu in which our project will run. Trigger -> master. Any changes in master, pipeline gets triggered will run and artifact (war file ) will be generated.
 
 
 Now again click pipeline -> run pipeline -> run 
@@ -2136,6 +2136,12 @@ Just go to release -> click on a lightning symbol above artifact -> enable CD.
 To verify all working fine, just do minor changes to our project in github save it, refresh the azure webpage, could see new pipeline build created and running, now refresh rahulshetty/webapp to view changes. 
 Its like, doing one change in github, will directly reflects in deployment. Lets say code is deployed in QA region and lets assume rahulshetty/webapp is QA region to test webpage.
 
+Refer this for exact differences: https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+
+CI -> dev building and doing unit test
+Cdelivery -> building, testing and deploying to staging area of QA.
+Cdeployment: building, testing and deploying to staging, automation testing by qa and deployed to production.
+
 ***************continous deliver is over********************
 
 QA:
@@ -2157,9 +2163,6 @@ dev war file				Add (this helps to add janani   Add
 						
 qa automation code    
 
-
-
-
 We can use azure as a repository like github to have our automation code. To import our qa automation code from github to azure,follow below steps:
 First go to Repos -> Under Import a repository, click import -> select repotype as git, and give git project repo url -> import. 
 
@@ -2177,6 +2180,150 @@ Note: the above step is like developers moving code from build pipeline to relea
 
 Now, click on 1job under JananiAutomationTesting -> click + under Agent Job-> search maven(build test and deploy with apache maven) -> click three dots in pom label, select pom file from path -> under Goals give "test" (it is nothing but mvn test) ->click save
 
-Now if developers do any minor changes in their code, it will be deployed in QA Enviroment through war file and JananiAutomationTesting
+Now if developers do any minor changes in their code, it will be deployed in QA Enviroment through war file and JananiAutomationTesting will get triggered and run automatically.
 
-Finally, deployement in production from qa should occur. Now, under JananiAutomationTesting, click add -> Azure app service deployment ->apply->give stage name as production deployment -> close. -> now click again to give task - > for this, go to azure portal-> create a resource -> webapp
+Finally, deployement in production from qa should occur. Now, under JananiAutomationTesting, click add -> Azure app service deployment ->apply->give stage name as production deployment -> close. -> now click again to give task - > for this, go to azure portal-> create a resource -> webapp. So any changes in git will get deployed in production. This is called continous deployment.
+
+
+
+****************************azure over************************
+
+Docker:
+
+Docker is a computer program or tool which can create multiple OS in a laptop just like freshly installed OS where  QA can do parallel testing lik selenium grid. difference is, in selenium grid, few other laptops are required to distribute the test cases but in docker, one machine with multiple os is performed. Docker is advantageous than selenium grid. Slowness in grid due to many machines allocation. If 9 GB is required, it get splitted across 3 machines equally. but in docker since host itself is node, only working container gets memory and its light weighted compared to gird.
+ Each OS created is called container.
+
+Image:
+Image is to load the dependancies to run a automation testing like selenium java and other jar dependancies as package. Hence using this image, we can run the code in other machine also.
+
+Container is an instance of an image just like object is an instance of a class.
+Docker file helps to create docker image.
+
+Dockerhub is like github which has images stored. So if there is a requirement to run a suite in particular os version, chrome version, respective image from dockerhub is used.
+
+To start working:
+
+Note: In coding, only one change is made to run in docker which is url: http://localhost:4444/wd/hub this will connect to docker.
+
+task gonna do below: download selenium image from dockerhub, put it in container
+
+1.Open Dockerhub, search selenium, find selenium image by selenium, copy the image command next to it.
+now open command terminal, docker pull <copied image from dockerhub>:latest //latest is to get the latest version of chrome.
+
+give docker images command to check
+Note: if we download selenium, other dependancies like java and chrome also will be autodownloaded
+
+Now, this has to be pushed to container.
+
+docker ps //ps means process status. It gives the output if any container is working.
+docker pull selenium/standalone-chrome
+docker pull selenium/standalone-chrome:dev
+
+2. Open the github link under selenium image, find the selenium chrome standalone running command.
+docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:latest
+
+
+-d means debud
+-p port
+4444:4444 -> redirecting from localhost to container
+shm - shared memory
+
+3. Now have one script and execute
+
+public void shouldAnswerWithTrue() throws MalformedURLException
+    {
+    	ChromeOptions options = new ChromeOptions();
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        driver.get("https://www.amazon.com");
+    	System.out.println(driver.getCurrentUrl());
+    	Assert.assertTrue( true );
+    }
+
+Output:https://www.amazon.com/
+You cannot see output as it is running in container
+
+4. To run in multiple containers just like selenium grid with parallel testing:
+
+In this case, all hub and nodes are considered as separate containers.
+
+first stop the existing container:
+docker stop <container id of existing container> //can get the id by command: docker ps
+
+save docker-compose.yaml file to local from github of selenium image. docker-compose is a file which has instructions to download the image, run the container with image for all nodes and hub.
+open command terminal, go to the path where yaml file is located, give docker-compose.yaml. It will automatically, pull the image, put it in container and ready to use.
+
+Note: we can edit the yaml file for browser versions or any changes. It is the simplest way of using docker.
+
+To increase chrome container, again go to path of yaml file location in terminal, use docker-compose up scale chrome=3 (this will make the count to 3 chromes if there is only 1 chrome)
+
+5. in tesng file, if test is made parallel, then 
+containers holding the respective images will run.
+
+Agile:
+
+ Burndown Chart
+Definition
+A burndown chart is an important chart that helps Agile project managers track:
+
+The amount of work left in the project
+The time remaining to complete the work
+
+Burnup Chart
+Definition
+A burnup chart an important chart that helps project managers visualize: 
+
+The work the Scrum team has completed in the sprint
+The total amount of work in the project
+
+Epic:
+Project description high level business requirement which can be splitted into many user stories which can then split into many tasks.
+
+Now lets see how to use Azure for Agile way of working:
+
+It is totally self explanatory and easier like quality center
+
+Login azure -> Boards -> WorkItems -> Epic -> add necessary details and save (create mobile shopping page)
+
+Login azure -> Boards -> WorkItems -> issue -> give any userstory (View mobile products - it has many user stories like checkout, add to cart etc, this is oe for sample)
+
+Now link issue to respective epic -> Related work -> addlink -> existing item -> parent -> mobile shopping page
+
+Now all the user stories are sitting in backlog as it is not completed. We have to set sprint 1 duration and link user stories to it so that tester knows how long to take to complete for one user story.
+
+To do that, click sprint 1 in backlog page. It goes to Sprint link -> click set dates -> set dates and now go back to backlog where sprint 1 is updated with dates. drag and drop user story to sprint according to discussion happened in scrum meeting.
+
+Similarly, + symobol to create sprint 2 and do same process.
+
+Sprints tab -> select any one user story-> taskboard link-> add tasks for each user story here
+
+Based on completion, move the task in taskboard to doing category or done category
+
+Queries link is used to fetch details based on inputs like, doing task, done task etc etc. 
+
+Also, like git, code can be pushed, pull request can be raised, lead can review approve, and merge.
+If particular piece code which is tied to a workitem is moved to master, then in Board section having epic it will be automatically moved to done state.
+
+Resume:
+
+Java and Python
+Selenium
+Selenium Grid
+TestNG
+Extent Reports, logging - Client html reports
+Excel DataDriven
+Pytest
+Maven
+MySQL
+AutoIT - Desktop automation tool
+DataBase testing with Selenium
+Git
+Jenkins
+Azure
+Docker
+Cucumber BDD using TestNG
+BrowserStack
+Manual Testing - Requirement -> Scenarios -> Test Cases -> Do functional testing -> raise bugs, do retest -> Regression testing
+RTM, Test Scenario, Test Case, Test Data, Defect Report, Test Summary Report
+
+
+

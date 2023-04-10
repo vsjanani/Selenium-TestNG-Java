@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-03T13:36:51 PDT" name="Suite" finished-at="2023-04-03T13:36:51 PDT" duration-ms="139">
+  <suite started-at="2023-04-06T13:07:01 PDT" name="Suite" finished-at="2023-04-06T13:07:15 PDT" duration-ms="14636">
     <groups>
     </groups>
-    <test started-at="2023-04-03T13:36:51 PDT" name="Test" finished-at="2023-04-03T13:36:51 PDT" duration-ms="139">
+    <test started-at="2023-04-06T13:07:01 PDT" name="helo" finished-at="2023-04-06T13:07:07 PDT" duration-ms="6782">
+      <class name="PipelinesDemo.AppTest2">
+        <test-method signature="shouldAnswerWithTrue1()[pri:0, instance:PipelinesDemo.AppTest2@712625fd]" started-at="2023-04-06T13:07:01 PDT" name="shouldAnswerWithTrue1" finished-at="2023-04-06T13:07:07 PDT" duration-ms="6723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue1 -->
+      </class> <!-- PipelinesDemo.AppTest2 -->
+    </test> <!-- helo -->
+    <test started-at="2023-04-06T13:07:01 PDT" name="Test" finished-at="2023-04-06T13:07:08 PDT" duration-ms="7064">
       <class name="PipelinesDemo.AppTest">
-        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:PipelinesDemo.AppTest@3c7f66c4]" started-at="2023-04-03T13:36:51 PDT" name="shouldAnswerWithTrue" finished-at="2023-04-03T13:36:51 PDT" duration-ms="25" status="PASS">
+        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:PipelinesDemo.AppTest@5e600dd5]" started-at="2023-04-06T13:07:01 PDT" name="shouldAnswerWithTrue" finished-at="2023-04-06T13:07:08 PDT" duration-ms="7012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldAnswerWithTrue -->
       </class> <!-- PipelinesDemo.AppTest -->
     </test> <!-- Test -->
+    <test started-at="2023-04-06T13:07:01 PDT" name="hello" finished-at="2023-04-06T13:07:09 PDT" duration-ms="8159">
+      <class name="PipelinesDemo.AppTest4">
+        <test-method signature="shouldAnswerWithTrue3()[pri:0, instance:PipelinesDemo.AppTest4@19e4653c]" started-at="2023-04-06T13:07:01 PDT" name="shouldAnswerWithTrue3" finished-at="2023-04-06T13:07:09 PDT" duration-ms="8109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue3 -->
+      </class> <!-- PipelinesDemo.AppTest4 -->
+    </test> <!-- hello -->
+    <test started-at="2023-04-06T13:07:01 PDT" name="he" finished-at="2023-04-06T13:07:15 PDT" duration-ms="14636">
+      <class name="PipelinesDemo.AppTest3">
+        <test-method signature="shouldAnswerWithTrue2()[pri:0, instance:PipelinesDemo.AppTest3@3a7442c7]" started-at="2023-04-06T13:07:01 PDT" name="shouldAnswerWithTrue2" finished-at="2023-04-06T13:07:15 PDT" duration-ms="14582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue2 -->
+      </class> <!-- PipelinesDemo.AppTest3 -->
+    </test> <!-- he -->
   </suite> <!-- Suite -->
 </testng-results>

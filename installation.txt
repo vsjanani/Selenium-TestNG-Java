@@ -228,3 +228,10 @@ Git:
 just install git and tortoise git. For command line git, see python learning notepad.
 
 
+Azure:
+Nothing to install. Its enough if code is present in github.
+
+Docker:
+Just download docker desktop for windows.
+
+just subscribe in dockerhub to push images.	

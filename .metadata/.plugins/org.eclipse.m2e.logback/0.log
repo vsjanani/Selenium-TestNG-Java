@@ -16935,3 +16935,148 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact asm:asm:jar:j
 2023-04-04 14:59:31,696 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
 2023-04-04 14:59:31,700 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-04-04 14:59:31,702 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-05 15:24:48,779 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-05 16:49:32,777 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-05 18:48:02,348 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-05 18:48:02,464 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-05 18:48:02,472 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-05 18:48:02,472 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-05 18:48:31,806 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-05 18:48:31,807 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-05 18:48:31,813 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-05 18:48:31,813 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 10:03:26,462 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-06 12:01:32,607 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:01:32,708 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:01:32,713 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:01:32,713 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:01:50,641 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:01:50,641 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:01:50,643 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:01:50,644 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:05:35,731 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:05:35,731 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:05:35,734 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:05:35,734 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:08:40,930 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:40,931 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:08:40,934 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:40,934 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:08:44,392 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:44,394 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:08:44,397 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:44,398 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:08:48,092 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:48,093 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:08:48,098 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:08:48,099 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:09:22,349 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:22,349 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:09:22,351 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:22,351 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:09:40,374 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:40,374 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:09:40,378 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:40,379 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:09:57,676 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:57,676 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:09:57,678 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:09:57,678 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:10:08,719 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:10:08,720 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:10:08,722 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:10:08,722 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:10:31,359 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:10:31,360 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:10:31,361 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:10:31,362 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:11:03,404 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:11:03,404 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:11:03,406 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:11:03,406 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:14:53,300 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:14:53,301 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:14:53,305 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:14:53,305 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:22:32,811 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:22:32,811 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:22:32,815 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:22:32,815 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:30:18,182 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:30:18,183 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:30:18,184 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:30:18,185 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:31:36,802 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:31:36,804 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:31:36,811 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:31:36,811 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:35:43,605 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:35:43,606 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:35:43,608 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:35:43,608 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:38:43,941 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:38:43,942 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:38:43,945 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:38:43,945 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:40:02,719 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:40:02,719 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:40:02,721 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:40:02,721 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:44:45,298 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:44:45,298 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:44:45,301 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:44:45,302 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:44:58,413 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:44:58,413 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:44:58,415 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:44:58,415 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:45:11,620 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:45:11,620 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:45:11,622 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:45:11,623 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:45:21,803 [Worker-49: Launching PipelinesDemo_testng.xml] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:45:21,803 [Worker-49: Launching PipelinesDemo_testng.xml] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:45:21,805 [Worker-49: Launching PipelinesDemo_testng.xml] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:45:21,806 [Worker-49: Launching PipelinesDemo_testng.xml] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:46:17,757 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:46:17,757 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:46:17,759 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:46:17,759 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:46:31,401 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:46:31,402 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:46:31,405 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:46:31,405 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:47:06,097 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:47:06,097 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:47:06,099 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:47:06,099 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:47:12,706 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:47:12,706 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:47:12,708 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:47:12,709 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:53:37,820 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:37,822 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:53:37,825 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:37,825 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:53:44,888 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:44,888 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:53:44,891 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:44,891 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:53:46,661 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:46,661 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:53:46,665 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:46,665 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:53:53,472 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:53,473 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:53:53,476 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:53,476 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-06 12:53:58,345 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:58,345 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-06 12:53:58,346 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-06 12:53:58,347 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-07 13:18:43,777 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-07 14:02:38,568 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-07 14:02:38,574 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-07 14:02:38,578 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-07 14:02:38,578 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-10 12:03:18,812 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
