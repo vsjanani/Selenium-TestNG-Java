@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="HappyPathTestCases(failed)" verbose="0">
     <classes>
-      <class name="com.ae.shopping.testCases.FieldPresenceValidations">
+      <class name="com.ae.shopping.testCases.ErrorScenario">
         <methods>
+          <include name="checkNetworkLoadingFailed"/>
+          <include name="checkDevToolsBrokenLink"/>
           <include name="launchApp"/>
-          <include name="F2301_AE_product_display" invocation-numbers="0"/>
-          <include name="F2301_AE_url_title" invocation-numbers="0"/>
           <include name="makeItNull"/>
         </methods>
-      </class> <!-- com.ae.shopping.testCases.FieldPresenceValidations -->
+      </class> <!-- com.ae.shopping.testCases.ErrorScenario -->
     </classes>
   </test> <!-- HappyPathTestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,11 @@
+# Created at 2023-04-12T19:04:20.750
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=112.0.1722.39)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [bba16c28d22a9ed14aaf5b1824e44862, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.39, ms:edgeOptions: {debuggerAddress: localhost:63716}, msedge: {msedgedriverVersion: 112.0.1722.39 (e40a520f851f..., userDataDir: C:\Users\jansr\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63716/devtoo..., se:cdpVersion: 112.0.1722.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bba16c28d22a9ed14aaf5b1824e44862
+

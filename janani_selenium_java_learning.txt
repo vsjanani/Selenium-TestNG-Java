@@ -804,7 +804,7 @@ Why Maven?
 •	Flexibility in Integrating with CI tools
 •	Plugins for Test framework execution
 
-
+-d -> define -p -> profile
 Create Maven Project ->refer installation notepad for how to make it.
 
 Page Object Model and Page Factory:
@@ -2051,7 +2051,7 @@ azure:
 
 al in all repo to build, plan n execute.
 
-install apache tomcat.
+install apache tomcat ->web server
 in project, give mvn clean install. it executes, check for 0 errors and creates a war file inside target folder.
 paste the war fill inside webapps folder of tomcat folder.
 now to start start tomcat:
@@ -2129,7 +2129,7 @@ click create release in release pipeline page -> create -> it will run. now in r
 **************continuous integration is also over**********************
 
 
-Continous Delivery/Deployment:
+Continous Delivery:
 
 Just go to release -> click on a lightning symbol above artifact -> enable CD.
 
@@ -2223,7 +2223,7 @@ docker pull selenium/standalone-chrome:dev
 docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:latest
 
 
--d means debud
+-d means debug
 -p port
 4444:4444 -> redirecting from localhost to container
 shm - shared memory
@@ -2250,7 +2250,7 @@ first stop the existing container:
 docker stop <container id of existing container> //can get the id by command: docker ps
 
 save docker-compose.yaml file to local from github of selenium image. docker-compose is a file which has instructions to download the image, run the container with image for all nodes and hub.
-open command terminal, go to the path where yaml file is located, give docker-compose.yaml. It will automatically, pull the image, put it in container and ready to use.
+open command terminal, go to the path where yaml file is located, give docker-compose up. It will automatically, pull the image, put it in container and ready to use.
 
 Note: we can edit the yaml file for browser versions or any changes. It is the simplest way of using docker.
 
@@ -2303,6 +2303,28 @@ Queries link is used to fetch details based on inputs like, doing task, done tas
 Also, like git, code can be pushed, pull request can be raised, lead can review approve, and merge.
 If particular piece code which is tied to a workitem is moved to master, then in Board section having epic it will be automatically moved to done state.
 
+Program Increment -> 4-5 iteration or sprint
+scrum master, product owner
+
+discussion on epic -> user stories
+
+Scrum team:
+user stories-> task (planet focuer, tshirt point)
+
+qmetry
+
+Defect: discuss with BA, assign with dev or pending with review.
+review
+open 
+in progress
+done
+closed
+
+Test Result -> Test evidence, test summary report
+
+retrospective -> sprint, what went wrong, betterment, what went well
+
+
 Resume:
 
 Java and Python
@@ -2325,5 +2347,39 @@ BrowserStack
 Manual Testing - Requirement -> Scenarios -> Test Cases -> Do functional testing -> raise bugs, do retest -> Regression testing
 RTM, Test Scenario, Test Case, Test Data, Defect Report, Test Summary Report
 
+
+cyber security
+siem
+soc
+edr
+
+
+
+testing deliverables, tier-1 tier-2 estimation
+jenkins
+
+job applied in:
+Dice
+Metrostar
+veeva
+conduent
+tixr
+
+Test Plan:
+https://www.softwaretestinghelp.com/test-plan-sample-softwaretesting-and-quality-assurance-templates/
+
+It has Who gonna test, what kind of testings all covered like func, regr, smoke etc understanding of these testing in this project, how we gonna execute those testings, hardware req, environment requirement, schedules, dependancies, approvals
+
+
+Test Strategy:
+https://www.softwaretestinghelp.com/writing-test-strategy-document-template/
+Step #1: Scope And Overview
+Step #2: Test Approach
+Step #3: Test Environment
+Step #4: Testing Tools
+Step #5: Release Control
+Step #6: Risk Analysis
+Step #7: Review And Approvals
+features importantly
 
 

@@ -25,6 +25,7 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.v111.network.Network;
 import org.openqa.selenium.devtools.v111.log.Log;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -64,13 +65,15 @@ public class DawnDusk {
 //			objChromeOptions.setBrowserVersion("109"); 
 			objChromeOptions.setPlatformName("Windows 11");
 			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objChromeOptions);
+//			objWebDriver = new ChromeDriver(objChromeOptions);
 			
 		}
 
 		else if (strBrowserName.equalsIgnoreCase("edge")) {
 			
 			objEdgeOptions.addArguments("--disable-notifications");
-			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objEdgeOptions);
+//			objWebDriver = new RemoteWebDriver(new URL("http://10.0.0.152:4444"), objEdgeOptions);
+			objWebDriver = new EdgeDriver(objEdgeOptions);
 		}
 
 		else {
