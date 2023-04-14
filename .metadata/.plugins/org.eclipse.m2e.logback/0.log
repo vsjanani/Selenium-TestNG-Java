@@ -17117,3 +17117,21 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact asm:asm:jar:j
 2023-04-12 18:56:21,432 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\main\resources
 2023-04-12 18:56:21,438 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-04-12 18:56:21,438 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\test\resources
+2023-04-13 17:30:32,578 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-13 17:30:45,920 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:45,920 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\CloudTesting\src\main\resources
+2023-04-13 17:30:45,933 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:45,933 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\CloudTesting\src\test\resources
+2023-04-13 17:30:49,470 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:49,470 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\main\resources
+2023-04-13 17:30:49,470 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:49,470 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\PipelinesDemo\src\test\resources
+2023-04-13 17:30:53,207 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-13 17:30:53,209 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-13 17:30:53,214 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-13 17:30:53,214 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-13 17:30:55,581 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:55,581 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\main\resources
+2023-04-13 17:30:55,598 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-13 17:30:55,598 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping\src\test\resources
+2023-04-14 16:20:44,837 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
