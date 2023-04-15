@@ -18,8 +18,6 @@ extent report
 mysql java connector
 
 
-
-
 Download Java:
 download jdk latest version
 add system variable as JAVA_HOME giving jdk installed path.C:\Program Files\Java\jdk-18.0.2.1\
@@ -55,7 +53,7 @@ To take screenshot, search for above in mvn repository. paste the commons io dep
 To create new Maven Project:
 
 Download Maven in google. Go to apache download maven. Get the binary zip file. download it. Go to the installed folder, copy the path, add it ias system variable as MAVEN_HOME just like JAVA_HOME.
-Now, go to path in that system variable dialogue box, paste the apache-mave > bin installed folder path.
+Now, go to path in that system variable dialogue box, paste the apache-maven > bin installed folder path.
 
 File->New->Maven->Maven Project -> use default location -> Group-ID: org.apache.maven.archetypes; artifact-ID: maven-archetype-quickstart (It is a framework) -> Next-> give group-id (com.amazon), artificat-Id: shopping or prime or aws and change package name to artifact-ID -> Finish.
 
