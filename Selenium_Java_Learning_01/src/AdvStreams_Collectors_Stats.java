@@ -21,12 +21,12 @@ public class AdvStreams_Collectors_Stats {
 		System.out.println("checking addition" + count);
 		System.out.println("adding all numbers" + num.addAll(0, num));
 		System.out.println(num);
-		int sum = numbers.stream().mapToInt(s -> s).sum();		 
+		int sum = numbers.stream().mapToInt(s -> s).sum();
 		System.out.println(sum);
-		Integer[] tic = {1,2,3};
+		Integer[] tic = { 1, 2, 3 };
 		List<Integer> he = Arrays.asList(tic);
-		System.out.println(he.stream().mapToInt(s->s).sum());
-		int sumAgain = numbers.stream().collect(Collectors.summingInt(s->Integer.valueOf(s)));
+		System.out.println(he.stream().mapToInt(s -> s).sum());
+		int sumAgain = numbers.stream().collect(Collectors.summingInt(s -> Integer.valueOf(s)));
 //		above can be written as Integer::intValue
 		System.out.println(sumAgain);
 		IntSummaryStatistics stats = numbers.stream().mapToInt((x) -> x).summaryStatistics();
@@ -37,7 +37,8 @@ public class AdvStreams_Collectors_Stats {
 		String string = "Item1 10 Item2 25 Item3 30 Item4 45";
 		Integer sum1 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.collect(Collectors.summingInt(Integer::parseInt));
-		//String ste = he.replaceAll("[^a-zA-Z0-9]", ""); this type of statement also works.
+		// String ste = he.replaceAll("[^a-zA-Z0-9]", ""); this type of statement also
+		// works.
 		System.out.println(sum1);
 		Integer sum11 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.mapToInt(s -> Integer.parseInt(s)).sum(); // this can also be written as mapToInt(Integer::parseInt)
@@ -52,7 +53,7 @@ public class AdvStreams_Collectors_Stats {
 		List numbers1 = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 		int[][] t = { { 4, 2, 3 }, { 9, 1, 6 }, { 7, 8, 9 } };
 		List<int[]> hello = Arrays.asList(t);
-		int hi = hello.stream().flatMapToInt(s->IntStream.of(s)).min().getAsInt();
+		int hi = hello.stream().flatMapToInt(s -> IntStream.of(s)).min().getAsInt();
 //		OptionalInt hi = hello.stream().flatMapToInt(Arrays::stream).min();
 		// above two lines are valid only. Can use both.
 		// below is to get largest number in a column which has the lowest number in the
@@ -70,17 +71,17 @@ public class AdvStreams_Collectors_Stats {
 		}
 		System.out.println(mylist.stream().mapToInt(x -> x).max());
 		System.out.println(hi + "check");
-		
-		List<String> subList = new ArrayList<String>();  
-        subList.add("Maths");  
-        subList.add("English");  
-        subList.add("French");  
-        subList.add("Sanskrit");
-        subList.add("Abacus");
-        System.out.println("------------Subject List--------------"); 
-        
-        subList.forEach(sub -> System.out.println(sub));
-        System.out.println(subList);
+
+		List<String> subList = new ArrayList<String>();
+		subList.add("Maths");
+		subList.add("English");
+		subList.add("French");
+		subList.add("Sanskrit");
+		subList.add("Abacus");
+		System.out.println("------------Subject List--------------");
+
+		subList.forEach(sub -> System.out.println(sub));
+		System.out.println(subList);
 		List<Product> productsList = new ArrayList<Product>();
 		// Adding Products
 		productsList.add(new Product(1, "HP Laptop", 25000f));
@@ -88,6 +89,7 @@ public class AdvStreams_Collectors_Stats {
 		productsList.add(new Product(3, "Lenevo Laptop", 28000f));
 		productsList.add(new Product(4, "Sony Laptop", 28000f));
 		productsList.add(new Product(5, "Apple Laptop", 90000f));
+		System.out.println(productsList);
 		List<Float> productPriceList2 = productsList.stream().filter(p -> p.price > 30000)// filtering data
 				.map(p -> p.price) // fetching price
 				.collect(Collectors.toList()); // collecting as list

@@ -17344,3 +17344,395 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact asm:asm:jar:j
 2023-04-18 12:08:52,570 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-04-18 12:08:52,573 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
 2023-04-19 12:03:13,058 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-19 14:27:18,747 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:27:18,752 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:27:18,757 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:27:18,758 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:34:08,025 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:08,028 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:34:08,035 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:08,037 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:34:18,128 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:18,131 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:34:18,136 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:18,139 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:34:43,057 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:43,064 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:34:43,094 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:34:43,097 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:37:04,519 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:04,521 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:37:04,527 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:04,529 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:37:15,590 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:15,593 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:37:15,597 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:15,599 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:37:27,028 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:27,031 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:37:27,035 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:37:27,036 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:41:35,043 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:41:35,045 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:41:35,055 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:41:35,057 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:42:02,182 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:02,197 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:42:02,197 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:02,197 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:42:40,455 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:40,458 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:42:40,462 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:40,464 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 14:42:55,493 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:55,522 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 14:42:55,526 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 14:42:55,528 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:54:02,781 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:54:02,784 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:54:02,788 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:54:02,790 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:56:02,537 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:56:02,539 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:56:02,543 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:56:02,545 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:56:48,387 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:56:48,389 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:56:48,395 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:56:48,398 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:57:39,043 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:57:39,046 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:57:39,054 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:57:39,057 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:59:13,132 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:59:13,244 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:59:13,250 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:59:13,252 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 15:59:44,287 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:59:44,289 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 15:59:44,293 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 15:59:44,295 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:00:36,453 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:00:36,453 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:00:36,457 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:00:36,463 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:01:37,167 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:37,169 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:01:37,176 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:37,179 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:01:42,035 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:42,037 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:01:42,042 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:42,044 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:01:52,582 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:52,584 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:01:52,591 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:01:52,594 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:02:17,462 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:02:17,463 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:02:17,467 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:02:17,470 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:02:48,458 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:02:48,460 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:02:48,463 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:02:48,464 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:03:40,397 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:03:40,399 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:03:40,402 [Worker-48: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:03:40,404 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:04:43,648 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:04:43,650 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:04:43,654 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:04:43,657 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:04:59,768 [Worker-50: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:04:59,770 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:04:59,774 [Worker-50: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:04:59,776 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:05:26,395 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:05:26,398 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:05:26,402 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:05:26,404 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:05:48,928 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:05:48,931 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:05:48,934 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:05:48,936 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:06:39,481 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:06:39,482 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:06:39,487 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:06:39,489 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:06:55,771 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:06:55,773 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:06:55,777 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:06:55,779 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:13:39,622 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:13:39,626 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:13:39,630 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:13:39,633 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:19:48,106 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:19:48,108 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:19:48,113 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:19:48,116 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:23:01,180 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:23:01,182 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:23:01,186 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:23:01,188 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:35:34,643 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:35:34,645 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:35:34,649 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:35:34,652 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 16:47:16,220 [Worker-69: Launching AdvStreams_Collectors_Stats] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:47:16,223 [Worker-69: Launching AdvStreams_Collectors_Stats] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 16:47:16,227 [Worker-69: Launching AdvStreams_Collectors_Stats] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:47:16,229 [Worker-69: Launching AdvStreams_Collectors_Stats] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 16:47:54,012 [Worker-69: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:47:54,014 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 16:47:54,082 [Worker-69: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 16:47:54,084 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 17:02:48,816 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:02:48,818 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 17:02:48,821 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:02:48,823 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 17:09:35,233 [Worker-75: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:09:35,235 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:09:35,240 [Worker-75: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:09:35,243 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:10:35,321 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:10:35,323 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:10:35,326 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:10:35,328 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:11:42,303 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:11:42,305 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:11:42,309 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:11:42,312 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:11:47,166 [Worker-74: Launching strtry] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:11:47,170 [Worker-74: Launching strtry] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:11:47,176 [Worker-74: Launching strtry] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:11:47,180 [Worker-74: Launching strtry] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:12:19,853 [Worker-77: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:12:19,855 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:12:19,859 [Worker-77: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:12:19,861 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:12:58,911 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:12:58,913 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:12:58,917 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:12:58,920 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:13:14,466 [Worker-77: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:14,470 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:13:14,473 [Worker-77: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:14,475 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:13:17,032 [Worker-76: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:17,034 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:13:17,038 [Worker-76: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:17,039 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:13:49,109 [Worker-73: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:49,111 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:13:49,114 [Worker-73: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:13:49,115 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:14:34,405 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:14:34,407 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:14:34,409 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:14:34,410 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:23:15,398 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:15,400 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:23:15,404 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:15,407 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:23:26,639 [Worker-80: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:26,642 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:23:26,647 [Worker-80: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:26,649 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:23:35,475 [Worker-78: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:35,476 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 17:23:35,480 [Worker-78: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:23:35,482 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-19 17:30:45,644 [Worker-82: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:30:45,646 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 17:30:45,649 [Worker-82: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:30:45,650 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 17:31:44,676 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:31:44,678 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 17:31:44,681 [Worker-74: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 17:31:44,683 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:02:44,958 [Worker-82: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:02:44,964 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:02:44,969 [Worker-82: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:02:44,971 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:03:15,152 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:15,154 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:03:15,159 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:15,161 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:03:27,415 [Worker-88: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:27,417 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:03:27,421 [Worker-88: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:27,423 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:03:45,206 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:45,209 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:03:45,213 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:03:45,215 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:05:03,662 [Worker-88: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:05:03,665 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:05:03,669 [Worker-88: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:05:03,671 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:06:51,935 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:06:51,937 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:06:51,940 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:06:51,942 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:08:19,475 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:08:19,477 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:08:19,481 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:08:19,482 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:08:57,420 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:08:57,422 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:08:57,429 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:08:57,431 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:09:46,773 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:09:46,776 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:09:46,780 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:09:46,782 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:10:27,469 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:10:27,471 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:10:27,475 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:10:27,477 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:10:45,364 [Worker-91: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:10:45,365 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:10:45,369 [Worker-91: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:10:45,371 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:11:02,566 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:11:02,567 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:11:02,571 [Worker-89: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:11:02,573 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:11:38,950 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:11:38,952 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-19 19:11:38,956 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:11:38,958 [Worker-90: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-19 19:13:45,603 [Worker-91: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:13:45,605 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\main\resources
+2023-04-19 19:13:45,609 [Worker-91: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-19 19:13:45,611 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\Selenium-TestNG-Java\Selenium_Java_Learning_01\src\test\resources
+2023-04-20 14:52:20,581 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-20 14:54:16,649 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:54:16,654 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 14:54:16,659 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:54:16,661 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 14:54:29,180 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:54:29,182 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 14:54:29,188 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:54:29,191 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 14:56:38,993 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:56:38,995 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 14:56:38,999 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:56:39,001 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 14:57:20,491 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:57:20,493 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 14:57:20,497 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 14:57:20,499 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:00:36,812 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:00:36,815 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:00:36,820 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:00:36,822 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:00:53,563 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:00:53,565 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:00:53,570 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:00:53,573 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:02:20,452 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:02:20,455 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:02:20,458 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:02:20,477 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:03:28,668 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:28,671 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:03:28,677 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:28,678 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:03:31,830 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:31,831 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:03:31,836 [Worker-36: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:31,838 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:03:53,375 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:53,377 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:03:53,381 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:03:53,383 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:05:05,727 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:05:05,729 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:05:05,730 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:05:05,753 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:05:48,937 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:05:48,940 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:05:48,944 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:05:48,947 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:06:05,070 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:06:05,072 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:06:05,076 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:06:05,078 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:34:11,083 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:34:11,087 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:34:11,092 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:34:11,095 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:36:22,886 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:36:22,888 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:36:22,893 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:36:22,895 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:37:09,432 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:37:09,434 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:37:09,440 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:37:09,441 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:38:06,140 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:38:06,142 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:38:06,147 [Worker-22: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:38:06,149 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:38:58,333 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:38:58,334 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:38:58,339 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:38:58,340 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:42:14,959 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:42:14,962 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:42:14,967 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:42:14,969 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:45:32,689 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:45:32,691 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:45:32,694 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:45:32,696 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:46:18,132 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:46:18,134 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:46:18,138 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:46:18,140 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:48:39,110 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:48:39,112 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:48:39,117 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:48:39,119 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 15:48:45,159 [Worker-48: Launching DynamicJson] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:48:45,161 [Worker-48: Launching DynamicJson] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 15:48:45,166 [Worker-48: Launching DynamicJson] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 15:48:45,170 [Worker-48: Launching DynamicJson] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 19:30:31,918 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-20 19:40:25,772 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:40:25,777 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 19:40:25,786 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:40:25,788 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 19:43:17,209 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:43:17,211 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 19:43:17,217 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:43:17,220 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 19:57:52,336 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:57:52,338 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 19:57:52,343 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 19:57:52,344 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 20:02:07,888 [Worker-38: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: API_Testing:RESTAPILearning:0.0.1-SNAPSHOT @ C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\pom.xml.
+2023-04-20 20:02:08,459 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:02:08,461 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 20:02:08,466 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:02:08,468 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 20:02:10,176 [Worker-38: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: API_Testing:RESTAPILearning:0.0.1-SNAPSHOT @ C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\pom.xml.
+2023-04-20 20:02:10,669 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:02:10,671 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 20:02:10,673 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:02:10,692 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 20:13:35,817 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:13:35,820 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 20:13:35,907 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:13:35,909 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 20:15:13,568 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:15:13,571 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 20:15:13,575 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:15:13,577 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
+2023-04-20 20:15:40,131 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:15:40,133 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\main\resources
+2023-04-20 20:15:40,137 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-20 20:15:40,139 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\test\resources
