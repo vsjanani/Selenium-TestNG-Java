@@ -7,3 +7,4 @@ import io.cucumber.testng.CucumberOptions;
 		"html:target.cucumber.html" }, tags = "@NegativeScenario or @SmokeTestCucumber")
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 }
+

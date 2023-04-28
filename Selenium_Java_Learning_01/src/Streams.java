@@ -50,6 +50,10 @@ public class Streams {
 		List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList());
 		List mylist8 = mylist5.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 		System.out.println(mylist8 + "mylist8");
+		int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+	            11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+	  int sum = 0;
+	
 		int k = mylist5.stream().findFirst().orElse(null);
 		Optional<Integer> j = mylist5.stream().findAny();
 		if (j.isPresent()) {

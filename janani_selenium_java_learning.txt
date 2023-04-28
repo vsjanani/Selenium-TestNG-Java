@@ -1,4 +1,3 @@
-
 The JVM is the runtime that hosts running programs.
 The JRE is the on-disk part of Java that creates the JVM and loads programs into them.
 The JDK provides the tools necessary to write Java programs that can be executed and run by the JVM and JRE.
@@ -391,7 +390,7 @@ File srcFile = ((TakesScreenshot)webdriver_obj).getScreenshotAs(OutputType.FILE)
 File desFile = new File("C:\\Users\\jansr\\Documents\\myScreenshot");
 FileUtils.moveFile(srcFile, desFile); //can use copyFile as well.
 
-To open all the URLs and check if there are any broken links(404 error or error not found ):
+To open  the URLs andall check if there are any broken links(404 error or error not found ):
 
 If you want to get all the urls under href tag, it is not possible to directly access href tag.
 Hence, get the list of weblements using anchor a tag and then, from each element in anchor a tag(use for loop), use, .getAttribute("href") to get the URLs.
@@ -705,6 +704,11 @@ thread-count:
 Thread-count number represents the maximum of number methods (browsers) or allowed to run when parallel is defined. if thread-count is 2, only 2 methods would execute parallely. means only two browsers can get opened parallely.
 
 @BeforeClass(alwaysRun=true):
+
+Hard dependencies. All the methods you depend on must have run and succeeded for you to run. If at least one failure occurred in your dependencies, you will not be invoked and marked as a SKIP in the report.
+Soft dependencies. You will always be run after the methods you depend on, even if some of them have failed. This is useful when you just want to make sure that your test methods are run in a certain order but their success doesn't really depend on the success of others. A soft dependency is obtained by adding "alwaysRun=true" in your @Test annotation.
+
+
 If certain test cases are grouped with some name like, "negative test cases". in that case, before or after class methods in dawndusk class will not execute as it is not grouped.
 alwaysRun=true will run, even if the test case is not grouped.
 
@@ -799,7 +803,7 @@ Frameworks
 ___________
 
 Why Maven?
-•	Central repository to get dependencies
+•	Central repository to get dependencies - POM project object model
 •	Maintaining common structure across the organization
 •	Flexibility in Integrating with CI tools
 •	Plugins for Test framework execution
@@ -934,7 +938,7 @@ Access Modifier	within class		within package	outside package by subclass only	ou
 Private			Y			N			N					N
 Default			Y			Y			N					N
 Protected			Y			Y			Y					N
-Public				Y			Y			Y					Y
+Public			Y			Y			Y					Y
 
 All webelements in webpage should have access modifier private. Ensure in framework, under pageobject classes, only action methods are public. If webelement is public, it can be easily accessible by other class. It is advisable to have only action methods accessible by other class as we have created webelements to be used for proper actions only not to access an element and click directly. 
 
