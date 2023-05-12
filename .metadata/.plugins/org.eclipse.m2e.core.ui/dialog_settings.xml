@@ -19,6 +19,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\jansr\Downloads\Selenium-TestNG-Java\shopping"/>
 			<item value="C:\Users\jansr\Downloads\Selenium-TestNG-Java"/>
 			<item value="C:\Users\jansr\eclipse-workspace\Selenium_Java_Learning_01\src\FileUploadAutoIt.java"/>
 			<item value="C:\Users\jansr\Downloads\eclipse-workspace-20221214T201514Z-001\eclipse-workspace\TestNG_Framework"/>
@@ -46,14 +47,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="rahulshettyShopping"/>
 			<item value="PipelinesDemo"/>
 			<item value="BrowserStack.CloudTesting"/>
 		</list>
 		<list key="groupId">
+			<item value="com.rahulshetty"/>
 			<item value="AzureMaven"/>
 			<item value="BrowserStack"/>
 		</list>
 		<list key="artifactId">
+			<item value="rahulshettyShopping"/>
 			<item value="PipelinesDemo"/>
 			<item value="CloudTesting"/>
 		</list>
@@ -90,6 +94,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\jansr\Downloads\REST_Assured_API\REST_API_Demo\src\Learning_Demo"/>
 			<item value="C:\Users\jansr\Downloads\REST_Assured_API"/>
 		</list>
 		<list key="projectNameTemplate">

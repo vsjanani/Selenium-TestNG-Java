@@ -57,6 +57,7 @@ Now, go to path in that system variable dialogue box, paste the apache-maven > b
 
 File->New->Maven->Maven Project -> use default location -> Group-ID: org.apache.maven.archetypes; artifact-ID: maven-archetype-quickstart (It is a framework) -> Next-> give group-id (com.amazon), artificat-Id: shopping or prime or aws and change package name to artifact-ID -> Finish.
 
+
 Add selenium-java and testng dependancies to pom.xml file in maven project..
 
 Add  io.github.bonigarcia » webdrivermanager dependacy from mvn repo to pom.xml. - not required as selenium is upgraded with no webdriver manager like geckodriver or chromedriver.
@@ -68,6 +69,13 @@ Add apache io commons dependancy to access files. (to access class called FileUt
 Add extent report dependancy for reporting.
 
 Add apache poi and ooxml dependancy for reading data in excel file.
+
+Just for learning:
+To create maven project via terminal: mvn archetype:generate -DgroupID=<your groupID> -DartifactID = <your arti if> -DarchetypeArtifactId=maven-archetype-quickstart -DInteractiveMode =false
+
+usually we create via eclipse only. this is just for learning.
+
+now project is created in local. now go pom.xml location in terminal and give mvn eclipse:eclipse to integrate maven with eclipse (creating classpath files in project folder). Now if we import this maven project in eclipse, it gets integrated. this is just in case, if project is created in local not in eclipse editor.
 
 *******************************************************8
 To run project via local command terminal:
