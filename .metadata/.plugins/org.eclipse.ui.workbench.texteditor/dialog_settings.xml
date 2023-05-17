@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="attach"/>
+		<item key="selection" value=".body("/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="attach"/>
-			<item value="comment"/>
-			<item value="action"/>
-			<item value="Integer."/>
-			<item value="\"/>
-			<item value="checking this"/>
-			<item value="devTools"/>
-			<item value="driver"/>
-			<item value="devtools"/>
-			<item value="objDevTools"/>
-			<item value="objChromeDriver"/>
-			<item value="fail"/>
-			<item value="null"/>
-			<item value="sure"/>
-			<item value="HSSF"/>
+			<item value=".body("/>
+			<item value="spec("/>
+			<item value="spec"/>
+			<item value="given()."/>
+			<item value="given().spec"/>
+			<item value="given"/>
+			<item value="URL"/>
+			<item value="p&gt;"/>
+			<item value="&lt;p"/>
+			<item value="html"/>
+			<item value="html&gt;"/>
+			<item value="Headers"/>
+			<item value="&lt;html&gt;"/>
+			<item value="&lt;p&gt;"/>
+			<item value="\\"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="/"/>
 			<item value="//"/>
 			<item value="objDevTools"/>
 			<item value="objChromeDriver"/>
@@ -33,18 +35,16 @@
 			<item value="Optional.empty()"/>
 			<item value="XSSF"/>
 			<item value="HashMap"/>
-			<item value=""/>
-			<item value="/"/>
 			<item value="NowTrending"/>
 			<item value="BestSelling"/>
 			<item value="objWebDriver"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="294"/>
-		<item key="DIALOG_Y_ORIGIN" value="134"/>
+		<item key="DIALOG_X_ORIGIN" value="1150"/>
+		<item key="DIALOG_Y_ORIGIN" value="578"/>
 		<item key="DIALOG_WIDTH" value="511"/>
-		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_HEIGHT" value="291"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
