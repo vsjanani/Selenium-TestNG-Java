@@ -1,3 +1,14 @@
+Passwords:
+
+jenkins:
+janani
+Kels3road
+
+Git:
+vsjanani
+Sanjeevkrish@01
+file:///C:/Program%20Files/Git/ReleaseNotes.html
+
 Installation Summary:
 
 Java - add as env variable.
@@ -135,8 +146,9 @@ parameters
 custom workspace if not from git
 build steps.
 
-BuildSteps -> invoke top level maven project -> goals- test -P "$Profile" -D browser="$Browser" //while running from local system terminal,  mvn test -P Regression -D Chrome is used. But here
+BuildSteps -> invoke top level maven project -> goals- test -P $Profile -D browser=$Browser //while running from local system terminal,  mvn test -P Regression -D Chrome is used. But here
 we are giving choice parameters and those saved variables are used for reference like $Browser $Profile.
+Quotes are not required. But rahul taught as "$Profile" and "$Browser"
 
 Now, click httpPort:8080/configure search Global properties and add name as JAVA_HOME and value as local JAVA_HOME path from control panel.
 

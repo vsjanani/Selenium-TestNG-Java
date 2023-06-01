@@ -1024,10 +1024,14 @@ If same method name, argument type and count inherited from parent is again defi
 When executed, code inside child is printed. Priority is given to local class if same method is used which is called overriding.
 
 *****************************************************************************************
-Framework Map:
+Framework creation or Framework structure or Framework architecture or Framework diagram:
 
-via testng Parent  extends child	  child  extends Parent			  
-Listener  BaseTest <-- TestClass   PageObject -->  Utilities
+   		objcreation	via testng Parent  		  extends  child     objcreation     child  extends Parent			  
+extentreport --->		Listener  BaseTest + dataproviders <--   TestClass   	<---	    PageObject -->  Utilities
+						^		^
+						|		|					
+				retryfailedtest.class datasetup.Json or any excel																			
+
 
 DataSetup folder called in TestClass. HashMap method in BaseTest. List collected in TestClass and sent as object in to @Test methods under TestClasses
 ExtentNG(it has reporting utility) folder called in Listener.
@@ -1044,6 +1048,8 @@ baseTest - browser invocation, closure, screenshot, hashmap methods.
 testCases - control steps for what next and assertions, hashmap dataprovider to send json file and split
 dataSetUp.
 dataSetUp - has json file which has data to process in testCases.
+
+
 
 
 
@@ -1231,6 +1237,19 @@ HOURS Hours in one day (0-23)
 DAYMONTH Day in a month (1-31)
 MONTH Month in a year (1-12)
 DAYWEEK Day of the week (0-7) where 0 and 7 are sunday
+
+open command prompt, go to war downloaded path, give command as: java -jar jenkins.war
+
+Item name in jenkins should not have spaces. Should be separated by -. eg: American-Eagle-Shopping
+
+fields to fill on the whole are:
+parameters
+custom workspace if not from git
+build steps.
+
+BuildSteps -> invoke top level maven project -> goals- test -P $Profile -D browser=$Browser //while running from local system terminal,  mvn test -P Regression -D Chrome is used. But here
+we are giving choice parameters and those saved variables are used for reference like $Browser $Profile.
+Quotes are not required. But rahul taught as "$Profile" and "$Browser"
  
 
 ****************************************************************
@@ -2146,7 +2165,17 @@ CI -> dev building and doing unit test
 Cdelivery -> building, testing and deploying to staging area of QA.
 Cdeployment: building, testing and deploying to staging, automation testing by qa and deployed to production.
 
+
+
 ***************continous deliver is over********************
+
+CI and CD in jenkins according to SDET in youtube:
+
+Create sample 4 jobs build, deploy, test and release (for deploy, test and release alone, select "trigger after a project is built" and select the previouse job, for eg: for deploy select option as build and for test select project name as deploy it goes on). Install build pipeline plugin. Select + sign, add pipeline, run pipeline. see all 4 running.this is CI.
+
+CD is just view of boxes. same + sign, select delivery pipe line view. Only image is shown.
+
+***************************************
 
 QA:
 
@@ -2386,32 +2415,55 @@ Step #6: Risk Analysis
 Step #7: Review And Approvals
 features importantly
 
+Terms used in agile automation:
+squad, tribe, Return on investment
+octane-> like qc but can have code as well.
+PO should approve story acceptance task. Final action once spirint is over.
+
+TAD - Technical Analysis Document
+FAD- Functional Analysis Document
+
+difference between == and .equals:
+String w1 ="Sarat";
+ String w2 ="Sarat";
+ String w3 = new String("Sarat");
+
+ System.out.println(w1.hashCode());   //3254818
+ System.out.println(w2.hashCode());   //3254818
+ System.out.println(w3.hashCode());   //3254818
+
+ System.out.println(System.identityHashCode(w1)); //prints 705927765
+ System.out.println(System.identityHashCode(w2)); //prints 705927765
+ System.out.println(System.identityHashCode(w3)); //prints 366712642
 
 
-java.lang.IllegalArgumentException: path must exist: C:\Users\jansr\Downloads\REST_Assured_API\cucumber\src\test\java\bddFramework\cucumber\featureFiles\LearningDemo
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.junit.Cucumber.<init>(Cucumber.java:156)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:29)
-	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:21)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:26)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:90)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:76)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:49)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:513)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+ if(w1==w2)   //  (705927765==705927765)
+ {
+   System.out.println("true");
+ }
+ else
+ {
+   System.out.println("false");
+ }
+ //prints true
 
+ if(w2==w3)   //  (705927765==366712642)
+ {
+   System.out.println("true");
+ }
+ else
+ {
+   System.out.println("false");
+ }
+ //prints false
+
+
+ if(w2.equals(w3))   //  (Content of 705927765== Content of 366712642)
+ {
+   System.out.println("true");
+ }
+ else
+ {
+   System.out.println("false");
+ }
+ //prints true
