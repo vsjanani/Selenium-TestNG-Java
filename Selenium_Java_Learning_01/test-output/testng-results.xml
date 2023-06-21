@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-23T12:21:50 PDT" name="Default suite" finished-at="2023-05-23T12:21:50 PDT" duration-ms="75">
+  <suite started-at="2023-06-20T22:09:42 PDT" name="Default suite" finished-at="2023-06-20T22:09:43 PDT" duration-ms="1441">
     <groups>
     </groups>
-    <test started-at="2023-05-23T12:21:50 PDT" name="Default test" finished-at="2023-05-23T12:21:50 PDT" duration-ms="75">
+    <test started-at="2023-06-20T22:09:42 PDT" name="Default test" finished-at="2023-06-20T22:09:43 PDT" duration-ms="1441">
       <class name="TestngCheck">
-        <test-method signature="hi()[pri:0, instance:TestngCheck@47faa49c]" started-at="2023-05-23T12:21:50 PDT" name="hi" finished-at="2023-05-23T12:21:50 PDT" duration-ms="14" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hi -->
-        <test-method signature="testAnnotationCheck()[pri:0, instance:TestngCheck@47faa49c]" started-at="2023-05-23T12:21:50 PDT" name="testAnnotationCheck" finished-at="2023-05-23T12:21:50 PDT" duration-ms="1" status="PASS">
+        <test-method signature="testAnnotationCheck()[pri:1, instance:TestngCheck@22bb5646]" started-at="2023-06-20T22:09:42 PDT" name="testAnnotationCheck" finished-at="2023-06-20T22:09:43 PDT" duration-ms="1349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAnnotationCheck -->
+        <test-method signature="checkagain()[pri:2, instance:TestngCheck@22bb5646]" started-at="2023-06-20T22:09:43 PDT" name="checkagain" finished-at="2023-06-20T22:09:43 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkagain -->
       </class> <!-- TestngCheck -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

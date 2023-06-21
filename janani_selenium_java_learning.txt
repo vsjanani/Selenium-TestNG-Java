@@ -7,7 +7,7 @@ Interpreter -> converts object code to machine level code, executes, if there ar
 
 Two ways of creating webdriver_obj:
 
-a: ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
+a: ChromeDriver webdriver_obj = neew ChromeDriver(); # add "implements WebDriver" public class line
 b: WebDriver webdriver_obj = new ChromeDriver();
 
 a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
@@ -25,7 +25,7 @@ browser invocation code:
 
 WebDriver webdriver_obj = new ChromeDriver();
 
-Variables:
+datatypes:
 int, float(double, both are same), char, String, boolean (to store true or false into a variable. Note: true and false is not a string. it is a boolean)
 
 Print Statment:
@@ -319,7 +319,7 @@ if a tagname is not accessbile, it can accessed with the help of local-name() at
 
 capslock:
 mouseHover.moveToElement(FamilyCheck).keyDown(Keys.SHIFT).sendKeys("hello")
-
+2 
 keys entered will be HELLO in browser.
 
 frames:
@@ -931,14 +931,14 @@ we declare in constructor hence it is made public instant variable.
 
 Page object class only contains webelements and its actions. It should not hold any data like username value or password value. 
 
-Access Modifier	within class		within package	outside package by subclass only	outside package
-									(inheriting the class which has 
-									protected variable or method)
+Access Modifier	within class within package   outside package by subclass only outside package
+					   (inheriting the class which has 
+					    protected variable or method)
 
-Private			Y			N			N					N
-Default			Y			Y			N					N
-Protected			Y			Y			Y					N
-Public			Y			Y			Y					Y
+Private		Y			N			N	N
+Default		Y			Y			N	N
+Protected	Y			Y			Y	N
+Public		Y			Y			Y	Y
 
 All webelements in webpage should have access modifier private. Ensure in framework, under pageobject classes, only action methods are public. If webelement is public, it can be easily accessible by other class. It is advisable to have only action methods accessible by other class as we have created webelements to be used for proper actions only not to access an element and click directly. 
 
@@ -949,7 +949,8 @@ Element Visible checks whether element is in visible state or not, if element is
 
 
 variables in java:A
-instance variables - also called as non-static variable. created inside a class but outside method. can be used only by creating object. like, create object for a class inside main method (even if it is the same class having instance variable), now use that object to access variable like obj1.variable.
+instance variables - also called as non-static variable. created inside a class but outside method. can be used only by creating object. like, create object for a class inside main method (even if it is the same class having instance variable), main method should use that object to access variable like obj1.variable.other non-main methods can access instance variables directly.
+
 It is called as instance variable because it can be accessed only by creating object or instance. If no value is assigned, it is default to 0. For eg: int i.  i prints output 0.
 
 local variables - only inside a method.
@@ -1026,14 +1027,15 @@ When executed, code inside child is printed. Priority is given to local class if
 *****************************************************************************************
 Framework creation or Framework structure or Framework architecture or Framework diagram:
 
-   		objcreation	via testng Parent  		  extends  child     objcreation     child  extends Parent			  
+   	  objcreation		via testng Parent  		  extends  child     objcreation     child  extends Parent			  
 extentreport --->		Listener  BaseTest + dataproviders <--   TestClass   	<---	    PageObject -->  Utilities
-						^		^
-						|		|					
-				retryfailedtest.class datasetup.Json or any excel																			
+							^          	  ^
+							|	   	  |					
+				 		 datasetup.Json 	retryfailedtest.class					
+						  or any excel														
 
 
-DataSetup folder called in TestClass. HashMap method in BaseTest. List collected in TestClass and sent as object in to @Test methods under TestClasses
+DataSetup folder called in basetest. HashMap method in BaseTest. List collected in basetest and sent as object in to @Test methods under TestClasses
 ExtentNG(it has reporting utility) folder called in Listener.
 Global property file called in BaseTest for browser details.
 
@@ -1204,7 +1206,7 @@ String strBrowserName = System.getProperty("browserName")!= null? System.getProp
 
 Condition checks if command-line output is not null. If some value is given like firefox or edge, that will get stored under strBrowserName. otherwise, value given in globalProperties file will be stored.
 
-To run using command line arguments, mvn test -D edge -P Regression 
+To run using command line arguments, mvn test -DbrowserName=edge -P Regression 
 *************************************************
 To run in headless mode:
 maximise using chrome option as below:
@@ -1930,6 +1932,10 @@ Static binding also means method overloading and dynamic binding refers run time
 
 Abstraction hides the implementation details whereas encapsulation wraps code and data into a single unit using access modifiers.
 
+For example, you have an attribute that is not visible from the outside of an object. You bundle it with methods that provide read or write access. Encapsulation allows you to hide specific information and control access to the object’s internal state.
+
+If you’re familiar with any object-oriented programming language, you probably know these methods as getter and setter methods. As the names indicate, a getter method retrieves an attribute and a setter method changes it. Depending on the methods that you implement, you can decide if an attribute can be read and changed. You may also control if the attribute is read-only or not visible at all. Later, we’ll show you how you can also use the setter method to implement additional validation rules to ensure that your object always has a valid state.
+
 Is it possible to instantiate the abstract class?
 No, abstract class can never be instantiated. it can only be extended
 
@@ -2085,7 +2091,7 @@ now, give webapp like, localhost:8080/webapp to see the project. Make the ip add
 
 Continuous Integration:
 
-whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install. Integration between my project, azure and github is called continuous integration it mainly happened through yaml file where trigger, artifact and publish codes are updated by filling details.
+whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install. Integration between my project, azure and github is called continuous integration it mainly happened through ml file where trigger, artifact and publish codes are updated by filling details.
 Note: In artifact only master is updated.
 
 Continuous Delivery:
@@ -2317,7 +2323,7 @@ It is totally self explanatory and easier like quality center
 
 Login azure -> Boards -> WorkItems -> Epic -> add necessary details and save (create mobile shopping page)
 
-Login azure -> Boards -> WorkItems -> issue -> give any userstory (View mobile products - it has many user stories like checkout, add to cart etc, this is oe for sample)
+Login azure -> Boards -> WorkItems -> issue -> give any userstory (View mobile products - it has many user stories like checkout, add to cart etc, this is obe for sample)
 
 Now link issue to respective epic -> Related work -> addlink -> existing item -> parent -> mobile shopping page
 
@@ -2378,7 +2384,8 @@ Docker
 Cucumber BDD using TestNG
 BrowserStack
 Manual Testing - Requirement -> Scenarios -> Test Cases -> Do functional testing -> raise bugs, do retest -> Regression testing
-RTM, Test Scenario, Test Case, Test Data, Defect Report, Test Summary Report
+
+RTM, Test Scenario, Test Case, Test Data, Test Evidence, Defect Report, Test Summary Report
 
 
 cyber security
@@ -2467,3 +2474,40 @@ String w1 ="Sarat";
    System.out.println("false");
  }
  //prints true
+
+
+defect lifecycle:
+open
+fix in progress
+review
+reopen
+done
+close
+
+Defect triage is a process to prioritize the defects based on severity, risk, frequency of occurrence.
+
+to uma:
+to whom we will send the docs.
+what is test plan
+do we have separate requirement docs for each epic
+smoke testing
+
+
+PI -> epic discussion
+committed and uncommited
+iteration or spirint
+innovation and planning
+
+fundamentals of webdesign:
+https://www.feelingpeaky.com/9-principles-of-good-web-design/
+
+sprint
+system testing
+deliverables
+integration testing
+regression
+release testing
+automation testing (selenium, rest assured, postman
+
+
+

@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
-    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-    <fullyQualifiedTypeName name="io.opentelemetry.api.internal.StringUtils"/>
-    <fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
-    <fullyQualifiedTypeName name="io.restassured.parsing.Parser"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="pojoFiles.Pojo_Json_Deserialisation"/>
     <fullyQualifiedTypeName name="pojoFiles.Pojo_Json_Serialisation"/>
     <fullyQualifiedTypeName name="io.restassured.builder.ResponseSpecBuilder"/>
-    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="rahulshettyShopping.pojo.Login"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.SerializationFeature"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="rahulshettyShopping.pojo.ListPlaceOrders"/>
     <fullyQualifiedTypeName name="rahulshettyShopping.pojo.PlaceOrder"/>
@@ -28,15 +16,12 @@
     <fullyQualifiedTypeName name="io.cucumber.java.en.When"/>
     <fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="io.restassured.builder.RequestSpecBuilder"/>
     <fullyQualifiedTypeName name="io.restassured.filter.log.RequestLoggingFilter"/>
     <fullyQualifiedTypeName name="io.restassured.filter.log.ResponseLoggingFilter"/>
     <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.POJO.AddSerialisation"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.POJO.Location"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.PayLoad.BodyForAddAPI"/>
     <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
     <fullyQualifiedTypeName name="io.restassured.specification.ResponseSpecification"/>
@@ -45,7 +30,6 @@
     <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
     <fullyQualifiedTypeName name="io.restassured.filter.log.ErrorLoggingFilter"/>
     <fullyQualifiedTypeName name="io.restassured.http.ContentType"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.output.WriterOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -60,4 +44,20 @@
     <fullyQualifiedTypeName name="io.restassured.response.Response"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.resources.Utilities"/>
     <fullyQualifiedTypeName name="io.cucumber.java.After"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Row"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.DataFormatter"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
 </qualifiedTypeNameHistroy>

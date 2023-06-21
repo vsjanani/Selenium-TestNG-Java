@@ -19,6 +19,7 @@ public class IntStreamRange {
 
 		
 		System.out.println(hi.size());
+		System.out.println(hi.get(0).email);
 	
 		IntStream.range(0, hi.size())
         .filter(i -> i % 2 == 0)
@@ -29,16 +30,17 @@ public class IntStreamRange {
 		
 	}
 	public static class Employee {
-
+		
+		private String name;
+	    private String email;
+	    private int age;
 	    public Employee(String name, String email, int age) {
 			// TODO Auto-generated constructor stub
 	    	this.name = name;
 	    	this.email = email;
 	    	this.age = age;
 		}
-		private String name;
-	    private String email;
-	    private int age;
+		
 	}
 
 }

@@ -77,6 +77,7 @@ public class StreamsBasic{
 		System.out.println("comparator in string " + mylist7);
 		String h = "heloz";
 		StringBuilder q = new StringBuilder("heloz");
+		System.out.println("using stringbuilder" + q.reverse());
 		char[] r = h.toCharArray();
 		Arrays.sort(r);
 		System.out.println(new String(r));

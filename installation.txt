@@ -197,7 +197,7 @@ Note: publishing event is the sender of message via topic. Topic sends the messa
 Now write code in a laptop where:
 Hub URL is -  http://10.0.0.152:4444,which can be seen in below line after giving this command -java -jar selenium-server-4.8.0.jar hub that making a laptop as hub laptop (Note: code can be in one laptop, hub can be in one laptop and node can be in one laptop)
 
-Rahulshetty had code and hub in same laptop. but still, hub address is needed to given under remotewebdriver(see selenium_java_learning.txt for using remotewebdriver)
+Rahulshetty had node and hub in same laptop. but still, hub address is needed to given under remotewebdriver(see selenium_java_learning.txt for using remotewebdriver)
 
 10:20:01.110 INFO [Hub.execute] - Started Selenium Hub 4.8.0 (revision 267030adea): http://10.0.0.152:4444
 

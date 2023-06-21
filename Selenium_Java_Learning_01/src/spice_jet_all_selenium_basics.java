@@ -22,10 +22,10 @@ public class spice_jet_all_selenium_basics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--remote-allow-origins=*");
-		options.addArguments("--disable-notifications");   
+		options.addArguments("--disable-notifications");
 //		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		options.addArguments("--start-maximized");
 		options.setAcceptInsecureCerts(true);
@@ -57,12 +57,11 @@ public class spice_jet_all_selenium_basics {
 
 		}
 		driverObj.findElement(By.xpath("//div[@data-testid='home-page-travellers']")).click();
-		
 
 		WebElement FamilyCheck = driverObj.findElement(By.xpath(
 				"//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']"));
 		getcount(FamilyCheck);
-	
+
 		FamilyCheck.click();
 		getcount(driverObj.findElement(By.xpath(
 				"//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']")));
@@ -72,16 +71,14 @@ public class spice_jet_all_selenium_basics {
 //		expWaitObj.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Search Flight']"))).click();
 		Actions mouseHover = new Actions(driverObj);
 		mouseHover.moveToElement(driverObj.findElement(By.xpath("//div[text()='Search Flight']"))).click().build()
-				.perform();		
+				.perform();
 		driverObj.findElement(By.cssSelector(".r-1ww30s9")).click();
 		System.out.println(driverObj.findElement(By.cssSelector(".r-1ap4h1l")).isEnabled());
 		expWaitObj.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".r-1ap4h1l .r-zchlnj")));
 		mouseHover.moveToElement(driverObj.findElement(By.cssSelector(".r-1ap4h1l .r-zchlnj"))).click().build()
 				.perform();
-		JavascriptExecutor js = (JavascriptExecutor)driverObj;
+		JavascriptExecutor js = (JavascriptExecutor) driverObj;
 		js.executeScript("window.scrollBy(0,10000)");
-		
-		
 
 //		((JavascriptExecutor) driverObj).executeScript("arguments[0].click();", driverObj.findElement(By.cssSelector(".r-1ap4h1l .r-zchlnj")));
 
@@ -105,9 +102,7 @@ public class spice_jet_all_selenium_basics {
 		} else {
 			System.out.println("g is not present, it is not selected");
 		}
-	
 
 	}
-	
 
 }
