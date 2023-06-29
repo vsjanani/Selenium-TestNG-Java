@@ -2511,3 +2511,20 @@ automation testing (selenium, rest assured, postman
 
 
 
+
+
+SELECT concat(Name, ",", Surname) as "Full name" , count(PurchaseID) from Clients, Purchases where Clients.ClientID = Purchases.ClientID and count(PurchaseID)>1
+
+-3 9 -3 27 -3 81
+
+4x=20
+s=5
+p=20
+2(x) = p
+
+a-b
+-c
+a-d
+b-c
+b-d
+d-c

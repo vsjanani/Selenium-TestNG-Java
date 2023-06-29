@@ -48,18 +48,23 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="rest.excelDataDriven"/>
+			<item value="rest.exceldatadriven"/>
 			<item value="bddFramework.cucumber"/>
 			<item value="rahulshettyShopping"/>
 			<item value="PipelinesDemo"/>
 			<item value="BrowserStack.CloudTesting"/>
 		</list>
 		<list key="groupId">
+			<item value="rest"/>
 			<item value="bddFramework"/>
 			<item value="com.rahulshetty"/>
 			<item value="AzureMaven"/>
 			<item value="BrowserStack"/>
 		</list>
 		<list key="artifactId">
+			<item value="excelDataDriven"/>
+			<item value="exceldatadriven"/>
 			<item value="cucumber"/>
 			<item value="rahulshettyShopping"/>
 			<item value="PipelinesDemo"/>
