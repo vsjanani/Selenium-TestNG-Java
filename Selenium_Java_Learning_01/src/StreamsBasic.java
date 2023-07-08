@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -75,7 +76,8 @@ public class StreamsBasic{
 		List<String>mylist7 = Arrays.asList("janani", "dinesh", "krishna");
 		mylist7.sort(Comparator.reverseOrder());
 		System.out.println("comparator in string " + mylist7);
-		String h = "heloz";
+		String h = " heloz";
+		System.out.println(h.strip());
 		StringBuilder q = new StringBuilder("heloz");
 		System.out.println("using stringbuilder" + q.reverse());
 		char[] r = h.toCharArray();
@@ -86,10 +88,11 @@ public class StreamsBasic{
 		System.out.println(users.indexOf("dinesh"));
 //		users.stream().map(user -> user)
 //			    .collect(Collectors.toList()).ind
-			    
-		
-		
+		String inputValues="799, 719, 720, 850, 1200";
+		String[] str = inputValues.split(", ");
+		System.out.println(str[0]);
+		List<String> myli = Arrays.asList(str);
+		OptionalInt hi = myli.stream().mapToInt(s->Integer.parseInt(s)).min();
+		System.out.println(hi);		
 	}
-	
-
 }

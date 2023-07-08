@@ -2094,6 +2094,18 @@ Continuous Integration:
 whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install. Integration between my project, azure and github is called continuous integration it mainly happened through ml file where trigger, artifact and publish codes are updated by filling details.
 Note: In artifact only master is updated.
 
+CI via jenkins:
+
+In github:
+open the github code repo, go to settings -> webhook -> give jenkins url under paylod url -> content-> application/json -> submit.
+
+In jenkins:
+
+build settings -> source code management -> give github repo
+under build triggers ->github hook trigger.
+
+Now, any change in that repo, will trigger jenkins.
+
 Continuous Delivery:
 
 Once war file is created, jenkins/azure should go to staging area where all unit and other testing occurs, if all success, project will be deployed to production. this whole process of delivering is called continuous delivery.

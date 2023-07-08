@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ShellScript">
+      <class name="test">
         <methods>
-          <include name="hello"/>
+          <include name="testMethod"/>
         </methods>
-      </class> <!-- ShellScript -->
+      </class> <!-- test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
