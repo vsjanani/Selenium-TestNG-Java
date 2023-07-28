@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.PrintStream"/>
-    <fullyQualifiedTypeName name="bddFramework.cucumber.POJO.AddSerialisation"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.POJO.Location"/>
     <fullyQualifiedTypeName name="bddFramework.cucumber.PayLoad.BodyForAddAPI"/>
     <fullyQualifiedTypeName name="io.restassured.specification.ResponseSpecification"/>
@@ -44,7 +42,6 @@
     <fullyQualifiedTypeName name="io.cucumber.java.en.Given"/>
     <fullyQualifiedTypeName name="io.cucumber.java.en.When"/>
     <fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="rahulshettyShopping.pojo.DeleteBookSerialisation"/>
     <fullyQualifiedTypeName name="pojoFiles.Del"/>
     <fullyQualifiedTypeName name="pojoFiles.Create"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="java.util.OptionalInt"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v114.emulation.Emulation"/>
 </qualifiedTypeNameHistroy>

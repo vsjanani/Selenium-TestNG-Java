@@ -2,9 +2,9 @@ import java.util.Optional;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v111.log.Log;
-import org.openqa.selenium.devtools.v111.network.Network;
-import org.openqa.selenium.devtools.v111.network.model.ConnectionType;
+import org.openqa.selenium.devtools.v114.log.Log;
+import org.openqa.selenium.devtools.v114.network.Network;
+import org.openqa.selenium.devtools.v114.network.model.ConnectionType;
 
 
 public class CDPConsoleErrorLogs {

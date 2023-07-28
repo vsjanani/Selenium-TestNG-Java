@@ -54,7 +54,8 @@ public class DawnDusk {
 				System.getProperty("user.dir") + "//src//main//java//com//ae//shopping//resources//GlobalData.properties");
 		objProperties.load(objFIS);		
 		String strBrowserName = System.getProperty("browserName") != null ? System.getProperty("browserName")
-				: objProperties.getProperty("browserName");
+				: objProperties.getProperty("browserName"
+						+ "");
 		ChromeOptions objChromeOptions = new ChromeOptions();
 		EdgeOptions objEdgeOptions = new EdgeOptions();
 		if (strBrowserName.contains("chrome")) {

@@ -34,7 +34,7 @@ public class String_Parsing_Waits {
 //		String mystr = webdriver_obj.findElement(By.cssSelector("#finish h4")).getAttribute("textContent");
 		System.out.println(mystr);	
 //		Select mydrop = new Select(webdriver_obj.findElement(By.partialLinkText("that is hidden")));
-////		mydrop.
+////		mydrop
 		
 	    StringBuilder str = new StringBuilder("Hello");
 	    System.out.println(str.reverse());
@@ -42,7 +42,7 @@ public class String_Parsing_Waits {
 		String ste = he.replaceAll("[^a-zA-Z0-9]", "");
 		System.out.println(ste);
 		
-	}
+	} 
 
 	public static WebElement getmystr(WebDriver webdriver_obj) {
 		

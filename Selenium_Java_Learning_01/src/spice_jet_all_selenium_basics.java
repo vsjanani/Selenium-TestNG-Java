@@ -65,7 +65,7 @@ public class spice_jet_all_selenium_basics {
 		FamilyCheck.click();
 		getcount(driverObj.findElement(By.xpath(
 				"//div[text() = 'Family & Friends']/parent::div/preceding-sibling::div //*[local-name()='svg']")));
-
+		
 //		driverObj.findElement(By.xpath("//div[text()='Search Flight']")).click();
 //	
 //		expWaitObj.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Search Flight']"))).click();

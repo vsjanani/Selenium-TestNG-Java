@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class Java_Basics {
 	public static void main(String[] args) {
@@ -55,6 +57,13 @@ public class Java_Basics {
 		String f = "hi hello";
 		String[] b = f.split(" ");
 		System.out.println(b[0]);
+		
+		HashMap<String, Integer> myMap = new HashMap<String, Integer>();
+		myMap.put("apple", 10);
+		myMap.put("orange", 20);
+		for(Entry<String, Integer> my : myMap.entrySet()) {
+		System.out.println(my.getKey()+"costs"+ my.getValue());
+		}
 	
 		
 		

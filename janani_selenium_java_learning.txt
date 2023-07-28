@@ -1,13 +1,13 @@
 The JVM is the runtime that hosts running programs.
 The JRE is the on-disk part of Java that creates the JVM and loads programs into them.
-The JDK provides the tools necessary to write Java programs that can be executed and run by the JVM and JRE.
+The JDK provides the tools necessary to write Java ` that can be executed and run by the JVM and JRE.
 
 Compiler -> changes high level or user code to object code, compiles basic code level errors -> done by JDK.
 Interpreter -> converts object code to machine level code, executes, if there are any errors, execution is halted.
 
 Two ways of creating webdriver_obj:
 
-a: ChromeDriver webdriver_obj = neew ChromeDriver(); # add "implements WebDriver" public class line
+a: ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
 b: WebDriver webdriver_obj = new ChromeDriver();
 
 a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" public class line
@@ -92,6 +92,29 @@ Hence, methods should be class level (outside main block braces)
 public: access level. respective class or method can be accessed across all classes.If a method inside a class should not get accessed by other classes, it can be defined as private.
 static: if a method is declared static, it can be accessed without creating objects. Respective method can be accessed with just method name; object creation is not required.
 void: if a method or class does not return anything, it should be defined void. If a method gonna return a string, it should be: public static string main or public static string getData()
+main: The Java main method is always named main. When a Java program starts, it always looks for the main method. The following example code shows a main method renamed to myMain:
+
+Output
+Error: Main method is not static in class Test, please define the `main` method as:
+   public static void main(String[] args)
+
+string args:
+
+It is to read user's input and process it. for eg:
+
+for(String s : args){
+System.out.println(s);}
+
+javac Test.java 
+java Test 1 2 3 "Testing the main method"
+
+Output
+1
+2
+3
+Testing the main method
+
+it	
 
 driver options:
 driver.manage().maximise()
@@ -100,6 +123,87 @@ thread.sleep(1000); #argument should be in milliseconds. 1000ms = 1sec
 driver.manage() has options for windown maximise and cookies(deletion and addition)
 
 Locators:
+
+----------------------------------------------------------
+Locators: find_element(s)_by_:
+
+id
+name
+xpath
+css
+classname
+linkText
+Partiallinktext
+tag name
+
+CSS:
+----------------------------------------------------------------
+tagname[attribute="value"] or [attribute="value"] or #ID or .classname
+eg: input[name="valuename"]
+in console:
+$("tagname[attribute="value"])
+
+
+
+            Your provided Email 123@123.com has already been used. Please use another Email address.
+          
+
+xpath:
+----------------------------------------------------------------------
+//tagname[@attribute="value"]
+
+in console: $x("//tagname[@attribute="value"]")
+
+$x("//div[@id='auth-error-message-box']")
+
+$x("//li[contains(@id,'p_n_feature_nineteen_browse-bin/')]")
+
+<a class="product-item-link" href="https://www.ulamart.com/sugar-salt/raw-natural-seasalt-non-iodised">
+ 
+$x("//a[@href="https://www.ulamart.com/sugar-salt/raw-natural-seasalt-non-iodised"]")                                                                                                                                                                                                  
+
+if there is only text in html, webelement can be identified using text as below:
+
+//span[contains(text(),'Sign up')] - this works.
+or //tagname[text() = "text"]
+
+
+if multiple class names present in html for a single web element, pick one class name and write in regular expression(RegEx) as below:
+
+css:
+tagname[class*='anyone classname']
+
+xpath:
+//tagname[contains(@attribute, 'value')]
+
+traversing through tags if no proper attribute is present:
+
+xpath: parent xpath/child tag
+css: parent xpath child tag
+
+plain traverse with only grand parents present:
+xpath: grandparent xpath/parent tagname[1](based on which number of element)/child tagname
+css: grandparent xpath/parent tagname:nth-child(1)(based on which number of element)/child tagname
+
+
+traversing from child to parent:
+
+childxpath/parent::parenttagname/parent::parenttagname.....until the required parent tag is arrived.
+
+
+traversing to sibling:
+
+syntax:
+childxpath/following-sibling::siblingtagnname
+
+
+addToCart = webdriverObj.find_elements(By.XPATH, '//a[@href="javascript:void(0)"]')
+for eachAddToCart in addToCart:
+    print(eachAddToCart.find_element(By.XPATH, "parent::div/parent::figcaption/parent::div/parent::div/following-sibling::div/strong/a").text)
+    eachAddToCart.click()
+
+
+
 selector hub is the locator plugin for edge and firefox like chropath.
 plain traverse with only grand parents present:
 xpath: grandparent xpath/parent tagname[1](based on which number of element)/child tagname
@@ -125,7 +229,8 @@ this selector: div div:nth-child(1) will select the first child of the div but w
 but this selector: div div:nth-of-type(1) if the first child was a <div>0</div> will effect it, but if the first child is <p>0</p> now he will effect the second child <div>1</div> because it's the first child of his type div.
 CSS: Tagname
 if there are two same tag names and if you want to go the last tag name: button:last-of-type will work. To get first tag name, button:first-of-type will work
-to get some random type, nth-of-type to be used.
+to get some random type, nth-of-type 
+ be used.
 if value of an attribute keeps changing, tagname[attribute* = 'value'] to be used. For eg, in html, <input type = "password">, lets assume this password value changes often by developers from password to passwd or pass or passwords. In that case, only pass is stable word. 
 Hence write css as: input[type*='pass']
 if there are multiple values for attribute class, then use .classname.classname.classname. (separate classnames by .)
@@ -379,6 +484,8 @@ Chrome options:
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		options.addArguments("--start-maximized");
+		options.add_argument("--headless")
+		options.add_argument("--ignore-certificate-errors")
 		options.setAcceptInsecureCerts(true); -->accept https security advanced certifications internally and directly loads the website
 		WebDriver driverObj = new ChromeDriver(options);
 
@@ -397,11 +504,9 @@ Hence, get the list of weblements using anchor a tag and then, from each element
 
 SoftAssert softObj = new SoftAssert();
 		for (WebElement eachURLElement : mylist) {
-//			String myLink = eachURLElement.findElement(By.tagName("i")).getAttribute("class").split("-")[1];
 			String eachURL = eachURLElement.getAttribute("href");
 			URL myURL = new URL(eachURL);
 			HttpURLConnection urlConnectObj  = (HttpURLConnection) myURL.openConnection();
-//			urlConnnectObj.setRequestMeturlConnectObjhod("HEAD");
 			urlConnectObj.connect();
 			softObj.assertTrue(urlConnectObj.getResponseCode() < 400, "is broken"); //simplified model for below if loop.
 			
@@ -654,17 +759,19 @@ TestNG runs in alphabetical order. But, flow of execution and test case name can
 
 Parameters:
 
+This is mainly used to perform cross browser testing.
 Data driving mechanism from xml file:
 
 <suite name="Suite">
-<parameter name="URL" value="amazon.com"></parameter>
+<parameter name="browser" value="chrome"></parameter>
 <parameter name="username" value="jansree"></parameter>
   <test thread-count="5" name="Test">
  <classes>
 
-@Parameters({"URL", "username"})
+@Parameters({"browser", "username"})
 	@Test
-	public void demo21(String URL, String username){
+	public void demo21(String browserName, String username){
+		if(browserName.equals("chrome"){WebDriver driver = new ChromeDriver();}
 		System.out.println("demo21" + URL + username);
 		
 	}
@@ -1724,7 +1831,7 @@ Now create a file save it as filename.au3. Open it using SciTE editor. start wri
 example: //below script is to focus open dialogue box, give file name and click open button.
 ControlFocus("Open","","Edit1")
 ControlSetText("Open","","Edit1","C:\Users\jansr\Desktop\US Draft - Mr1675583816\US Draft - Mr. Dinesh Ganesan\Authorization Letter.pdf")
-ControlClick("Open","","Button1")
+ControlClick("Open","","Button1") //under Basic Control Info - Class lable concat Instance Label - Button and 1
 
 Now right click the file and click compilescript(*86). This is now in exe format. copy this path.
 
@@ -2031,6 +2138,8 @@ ExtentReports class: objExtentReports.flush();
 
 different creation:
 
+jse:
+JavascriptExecutor jse = (JavascriptExecutor)driver;
 
 
 basic authentication:
@@ -2126,7 +2235,7 @@ this yaml file is important connector between github and azure to create war fil
 
 Now again click pipeline -> run pipeline -> run 
 
-******Place yaml file from s to "a" folder and then from "a" folder to azure pipeline. *****
+*****Place yaml file from s to "a" folder and then from "a" folder to azure pipeline. *****
 
 To do above follow below steps:
 
@@ -2540,3 +2649,16 @@ a-d
 b-c
 b-d
 d-c
+
+Exceptions:
+
+NoSuchWindowException
+NoSuchFrameException
+NoSuchElementException
+NoAlertPresentException
+InvalidSelectorException
+TimeoutException
+ElementNotVisibleException
+ElementNotSelectableException
+NoSuchSessionException
+StaleElementReferenceException
