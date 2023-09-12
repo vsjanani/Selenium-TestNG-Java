@@ -11,11 +11,12 @@ import java.util.function.IntPredicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+BeforeTest
 
 public class AdvStreams_Collectors_Stats {
 	public static void main(String[] args) {
-
-		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+		Integer[] arr = {3, 2, 2, 3, 7, 3, 5};
+		List<Integer> numbers = Arrays.asList(arr);
 		ArrayList<Integer> num = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 		int count = num.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("checking addition" + count);

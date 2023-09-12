@@ -89,6 +89,9 @@ public class StreamsBasic{
 //		users.stream().map(user -> user)
 //			    .collect(Collectors.toList()).ind
 		String inputValues="799, 719, 720, 850, 1200";
+		int i = 4000;
+		Integer.toString(i);
+		System.out.println(i+"hello");
 		String[] str = inputValues.split(", ");
 		System.out.println(str[0]);
 		List<String> myli = Arrays.asList(str);

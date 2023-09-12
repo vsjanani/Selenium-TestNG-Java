@@ -2,9 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+	  <groups>
+		  <run>
+			  <include name="hello"></include>
+		  </run>
+	  </groups>
     <classes>
-      <class name="Verify.ChildDemo1"/>
-      <class name="Verify.ChildDemo2"/>
+      <class name="Verify.ListeningMain"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

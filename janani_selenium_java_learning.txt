@@ -839,6 +839,50 @@ By default all the testcases has priority 0. means all have equal priority and e
 
 In our test case, we started first test method with priority-1.
 
+dataProvider vs dataproviderClass:
+
+dataProvider is a method. there can be multiple methods tagged as @DataProvider. To use any one method from that class, below format is used. If there is only one @DataProvider and it is present inside the baseclass itself, then just dataProvider alone is enough.
+
+@Test(dataProviderClass = TestNGDataProvider.class, dataProvider = "testSumInput")
+public void testSum(int a, int b) {
+System.out.println("@Test : testSum()");
+int result = service.sum(a, b);
+Assert.assertEquals(result, a + b);
+}
+@Test(dataProviderClass = TestNGDataProvider.class, dataProvider = "testMultipleInput")
+public void testMultiple(int a, int b) {
+System.out.println("@Test : testMultiple()");
+int result = service.multiply(a, b);
+Assert.assertEquals(result, a * b);
+}
+
+
+description:
+
+this is used to describe the test case and it can be only used with @Test annotation but not with any of the @Before/@After annotations.
+
+for eg:
+@Test(description = "this is testng training")
+	public void test1() {
+		System.out.println("Test Case 1");
+	}
+
+output:
+
+PASSED: test1
+        this is testng training
+
+But @BeforeMethod(description = "this is testng training") will not work and cannot be updated anywhere in reports.
+
+expectedExceptions:
+The list of exceptions that a test method is expected to throw. If no exception or a different than one on this list is thrown, this test will be marked a failure.
+
+@Test(expectedExceptions = {IOException.class})
+	public void checkExceptions() throws IOException {
+		throw new IOException();
+		
+	}
+
 *******************************************************************************************************************
 
 Interface:
@@ -1069,6 +1113,8 @@ int i =0;
 String hello;
 }
 
+
+
 static methods accepts only static variables.
 
 multiple window handles:
@@ -1130,6 +1176,15 @@ all three methods execute separately based on what argument we use to call the m
 Function Overriding:
 If same method name, argument type and count inherited from parent is again defined in child with different coding.
 When executed, code inside child is printed. Priority is given to local class if same method is used which is called overriding.
+
+To avoid code coverage highlights in pink for all the programs inside a package:
+This is activated because of code coverage. If you want to remove it then follow these steps.
+
+Go to "Windows -> Show View -> Coverage" Select it. Click on "Open".
+Open the "Coverage" view.
+There are "X" and "XX" signs at upper right side. The "X" sign for remove single active session and "XX" for to remove all active sessions.
+Click on one of them as per your requirement to remove the coverage session.
+Refer the screenshot for more details.
 
 *****************************************************************************************
 Framework creation or Framework structure or Framework architecture or Framework diagram:
@@ -2662,3 +2717,4 @@ ElementNotVisibleException
 ElementNotSelectableException
 NoSuchSessionException
 StaleElementReferenceException
+
