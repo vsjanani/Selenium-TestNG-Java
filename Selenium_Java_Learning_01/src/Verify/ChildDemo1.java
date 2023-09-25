@@ -8,5 +8,6 @@ public class ChildDemo1 extends ParentDemo {
 		System.out.println("Child1");
 		driver.findElement(By.cssSelector("#nav-cart-text-container")).click();
 		System.out.println(driver.getTitle());
+		
 	}
 }

@@ -52,6 +52,7 @@ public class spice_jet_all_selenium_basics {
 			Assert.assertTrue(false);
 		}
 		driverObj.findElement(By.xpath("//div[@data-testid='home-page-travellers']")).click();
+		
 		for (int i = 1; i < 6; i++) {
 			driverObj.findElement(By.xpath("//div[@data-testid='Adult-testID-plus-one-cta']")).click();
 

@@ -9,7 +9,7 @@ public class TestNGAnnotaionsMisc {
 	public void checkExceptions() throws IOException {
 		throw new IOException();
 		
-	@Test(invocationCount=3, invocationTimeOut)
+//	@Test(invocationCount=3, invocationTimeOut)
 		
 	}
 

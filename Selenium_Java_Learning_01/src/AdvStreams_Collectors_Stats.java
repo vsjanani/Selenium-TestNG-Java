@@ -11,21 +11,39 @@ import java.util.function.IntPredicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-BeforeTest
 
 public class AdvStreams_Collectors_Stats {
 	public static void main(String[] args) {
-		Integer[] arr = {3, 2, 2, 3, 7, 3, 5};
+
+		Integer[] arr = { 3, 2, 2, 3, 7, 3, 5 };
 		List<Integer> numbers = Arrays.asList(arr);
+		int toi = numbers.stream().mapToInt(s -> s).sum();
+		System.out.println("toi value is " + toi);
+		
+		int[] brr = { 3, 2, 2, 3, 7, 3, 5 };
+		List<int[]> number = Arrays.asList(brr);
+		int yoi = number.stream().flatMapToInt(s->IntStream.of(s)).sum();
+		System.out.println("yoi value is " + yoi);
+
+
+		List<Integer> tap = Arrays.asList(1, 2, 3);
+		int hoi = tap.stream().mapToInt(s -> s).sum();
+		System.out.println("hoi value is" + hoi);
+
 		ArrayList<Integer> num = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 		int count = num.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("checking addition" + count);
 		System.out.println("adding all numbers" + num.addAll(0, num));
 		System.out.println(num);
+
 		int sum = numbers.stream().mapToInt(s -> s).sum();
 		System.out.println(sum);
+
 		Integer[] tic = { 1, 2, 3 };
-		List<Integer> he = Arrays.asList(tic);		
+		int gotit = Arrays.stream(tic).mapToInt(s -> s).sum();
+		System.out.println("using Arrays.stream" + gotit);
+		List<Integer> he = Arrays.asList(tic);
+
 		System.out.println(he.stream().mapToInt(s -> s).sum());
 		int sumAgain = numbers.stream().collect(Collectors.summingInt(s -> Integer.valueOf(s)));
 //		above can be written as Integer::intValue
@@ -40,7 +58,7 @@ public class AdvStreams_Collectors_Stats {
 				.collect(Collectors.summingInt(Integer::parseInt));
 		// String ste = he.replaceAll("[^a-zA-Z0-9]", ""); this type of statement also
 		// works.
-		System.out.println(sum1);
+		System.out.println("printing alphanumeric"+sum1);
 		Integer sum11 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.mapToInt(s -> Integer.parseInt(s)).sum(); // this can also be written as mapToInt(Integer::parseInt)
 		System.out.println(sum11);
@@ -51,10 +69,18 @@ public class AdvStreams_Collectors_Stats {
 		// To print biggest number in a matrix. Use flatMapToInt to convert all the
 		// matrix elements into a flat one single array of elements like
 		// {1,2,3,4,5,6,7,89}
-		List numbers1 = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
+		Integer[][] q = { { 4, 2, 3 }, { 9, 1, 6 }, { 7, 8, 9 } };
+		List<Integer[]> bello = Arrays.asList(q);
+		int bi = bello.stream().flatMap(s->Arrays.stream(s)).flatMapToInt(s->IntStream.of(s)).min().getAsInt();
+		
+		//can also be written simply as below
 		int[][] t = { { 4, 2, 3 }, { 9, 1, 6 }, { 7, 8, 9 } };
 		List<int[]> hello = Arrays.asList(t);
-		int hi = hello.stream().flatMapToInt(s -> IntStream.of(s)).min().getAsInt();
+		int hi = hello.stream().flatMapToInt(s->IntStream.of(s)).min().getAsInt();
+		
+		
+		System.out.println("hi value of integer[]"+ hi);
 //		OptionalInt hi = hello.stream().flatMapToInt(Arrays::stream).min();
 		// above two lines are valid only. Can use both.
 		// below is to get largest number in a column which has the lowest number in the

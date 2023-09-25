@@ -12,11 +12,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.asserts.SoftAssert;
 
 public class BrokenLinks {
-
+	
+	
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		// TODO Auto-generated method stub
 //		System.setProperty("webdriver.chrome.driver",
 //				"C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--start-maximized");
 		option.addArguments("--disable-notifications");

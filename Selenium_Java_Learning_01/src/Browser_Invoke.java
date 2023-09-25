@@ -15,7 +15,7 @@ public class Browser_Invoke {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jansr\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver webdriver_obj = new ChromeDriver();
 		webdriver_obj.get("https://www.google.com");
 		webdriver_obj.manage().window().maximize();

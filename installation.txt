@@ -170,7 +170,7 @@ install chrome tidy gherkin plugin to convert feature into java code.
 
 selenium grid:
 
-download selenium grid file. open local terminal go to downloaded path as cd c//downloads or something and give below command:
+download selenium grid file. open local terminal go to downloaded path(C:\Users\jansr\Selenium Grid)  or something and give below command:
 cd Selenium Grid
 
 java -jar selenium-server-4.8.0.jar hub

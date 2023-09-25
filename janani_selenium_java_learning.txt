@@ -23,10 +23,11 @@ b: WebDriver webdriver_obj = new ChromeDriver();
 
 browser invocation code:
 
+
 WebDriver webdriver_obj = new ChromeDriver();
 
 datatypes:
-int, float(double, both are same), char, String, boolean (to store true or false into a variable. Note: true and false is not a string. it is a boolean)
+int, float - 32bits, double -64bits, char, String, boolean (to store true or false into a variable. Note: true and false is not a string. it is a boolean)
 
 Print Statment:
 int num = 5;
@@ -141,12 +142,9 @@ CSS:
 tagname[attribute="value"] or [attribute="value"] or #ID or .classname
 eg: input[name="valuename"]
 in console:
-$("tagname[attribute="value"])
+$("tagname[attribute="value"])S
 
-
-
-            Your provided Email 123@123.com has already been used. Please use another Email address.
-          
+       
 
 xpath:
 ----------------------------------------------------------------------
@@ -406,7 +404,7 @@ eg:
 FluentWait wait = new FluentWait(driver);
 //Specify the timout of the wait
 wait.withTimeout(5000, TimeUnit.MILLISECONDS);
-//Sepcify polling time
+//Specify polling time
 wait.pollingEvery(250, TimeUnit.MILLISECONDS);
 //Specify what exceptions to ignore
 wait.ignoring(NoSuchElementException.class)
@@ -464,7 +462,7 @@ break;
 javascript executor:
 
 it is used when some unique operations to be executed. 
-DUring headless mode execution, window scrolling is required to avoid test cases failure for the script which executed in browser mode.
+During headless mode execution, window scrolling is required to avoid test cases failure for the script which executed in browser mode.
 operations like window scrolling , table scroll up, left, down etc also can be performed with javascript executor.
 JavascriptExecutor js = (JavascriptExecutor)webdriver_obj;
 js.executeScript("window.scrollBy(0,10000)");
@@ -474,23 +472,35 @@ below code is scroll the table present in the webpage. Above code is to scroll t
 eg: js.executeScript("document.querySelector('.css-1dbjc4n.r-18u37iz.r-1g40b8q').scrollTop=5000");
 
 		
-Convert string to integer:
+Convert string to int:
 Integer.parseInt(String value)
+
+Convert string to Integer:
+Integer.valueOf(String value)
+
+Integer vs int:
+int is a primitive data type whereas Integer is a wrapper class.
+Using Integer, we can find min, max value, parse the string, compares with other integer using .equals etc.
+check below link:
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/int-vs-Integer-java-difference-comparison-primitive-object-types#:~:text=The%20key%20difference%20between%20the,included%20in%20the%20Java%20API.
+
 
 Debug mode:
 Add toggle breakpoint for any line of code. during debug mode of execution, right click and click watch under debug mode to do real run time validation.
 
 Chrome options:
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-		options.addArguments("--start-maximized");
-		options.add_argument("--headless")
-		options.add_argument("--ignore-certificate-errors")
+		options.addArguments("disable-notifications");
+		options.addArguments("start-maximized");
+		options.add_argument("headless")
+		options.add_argument("ignore-certificate-errors")
 		options.setAcceptInsecureCerts(true); -->accept https security advanced certifications internally and directly loads the website
 		WebDriver driverObj = new ChromeDriver(options);
 
 for detailed chrome options like proxy setting etc, refer the below website:
-https://chromedriver.chromium.org/capabilities
+https://peter.sh/experiments/chromium-command-line-switches/
+
+Note: -- is not required anymore.
 
 To take screenshot:
 File srcFile = ((TakesScreenshot)webdriver_obj).getScreenshotAs(OutputType.FILE);
@@ -531,7 +541,8 @@ In the case of Soft Assert, the errors are accumulated in each @Test execution a
 **************************************************************************
 Stream:
 
-Stream works only with Lists and  ArrayList. Hence output of stream can only be stored in a list. It greatly optimises the processing for loop in a single piece of code.
+Stream works 
+ with Lists and  ArrayList. Hence output of stream can only be stored in a list. It greatly optimises the processing for loop in a single piece of code.
 for eg: to print only strings that starts with alphabet A, in a list of array can be written in one line code.
 
 Stream is a class used to create stream array directly (eg: Stream.of(1,2,3)) or Array.stream(arr) and any list provided needs to be converted to stream to work as stream.
@@ -604,16 +615,37 @@ int[] a = {2,3,4,4,5,7};
 List<int[]> q = Arrays.asList(a);// here it can convert only to int[] otherwise system throwing error. Hence flatmap is used.
 System.out.println(q.stream().flatMapToInt(s->IntStream.of(s)).sum()); // for any kind of function, flatmap is must here.
 
+int vs Integer in streams:
 
+Integer works for all function for arrays having numbers.
+
+best example from my experience:
+
+Integer[] arr = { 3, 2, 2, 3, 7, 3, 5 };
+		List<Integer> numbers = Arrays.asList(arr);
+		int toi = numbers.stream().mapToInt(s -> s).sum();
+		System.out.println("toi value is " + toi);
+		
+int[] brr = { 3, 2, 2, 3, 7, 3, 5 };
+		List<int[]> number = Arrays.asList(brr);
+		int yoi = number.stream().flatMapToInt(s->IntStream.of(s)).sum();
+		System.out.println("yoi value is " + yoi);
+
+Note: always use int[][] for 2*2 matrix since, for Integer[][] while converting it becomes Integer[] and cannot be changed further only using Arrays::stream which is complicated.
+
+
+explanation for above from stackoverflow:
+
+When you pass an array of primitives (int[] in your case) to Arrays.asList, it creates a List<int[]> with a single element - the array itself. T
+A further explanation :
+
+The signature of asList is List<T> asList(T...). A primitive can't replace a generic type parameter. Therefore, when you pass to this method an int[], the entire int[] array replaces T and you get a List<int[]>. On the other hand, when you pass an Integer[] to that method, Integer replaces T and you get a List<Integer>.
 
 ArrayList update:
 ArrayList<Integer> answers = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
 
 ArrayList vs List:
 ArrayList has dynamic memory allocation. New element can be added, modified or removed in arraylist.
-
-Why List over ArrayList:
-Collectors output can only be stored in List. Either list is created or Array list needs to be casted which makes the code looks little messy.
 
 In List, array cannot be resized.
 
@@ -643,7 +675,7 @@ List can also be used instead of ArrayList:
 List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
 
 AssertEquals with failure message:
-Assert.assertEquals(expList, actualList, "This is not equal");
+Assert.assertEquals(actualList, expectedList, "This is not equal");
 
 Beautiful piece of code using do while:
 
@@ -816,8 +848,10 @@ Hard dependencies. All the methods you depend on must have run and succeeded for
 Soft dependencies. You will always be run after the methods you depend on, even if some of them have failed. This is useful when you just want to make sure that your test methods are run in a certain order but their success doesn't really depend on the success of others. A soft dependency is obtained by adding "alwaysRun=true" in your @Test annotation.
 
 
-If certain test cases are grouped with some name like, "negative test cases". in that case, before or after class methods in dawndusk class will not execute as it is not grouped.
+If certain test cases are grouped with some name like, "negative test cases". in that case, before or after class methods in dawndusk class will not execute as it did not tag like "negative test cases". Hence it will not run. 
 alwaysRun=true will run, even if the test case is not grouped.
+
+Note: alwaysRun is designed only for groups and softdependancy purpose.
 
 eg:
 @BeforeClass(alwaysRun=true)
@@ -1042,7 +1076,8 @@ In test class:
 @DataProvider
 	public  Object[][] exptdDataSetUp() throws IOException {
 		List<HashMap<String, String>> hmExptdDataSetUp =  convertJsontoHashMap(System.getProperty("user.dir")+"/src/test/java/com/ae/shopping/dataSetUp/dataSetUp.json");
-		return new Object[][] {{hmExptdDataSetUp.get(0)}}; //returning array {{}} using Object coz, Object is the parent or super class of all datatypes like Integer, String, Long etc hence it can hold data combined with int, string etc. Otherwise, datasetup should be either only int or string. 
+		return new Object[][] {{hmExptdDataSetUp.get(0)}}; 
+returning array {{}} using Object coz, Object is the parent or super class of all datatypes like Integer, String, Long etc hence it can hold data combined with int, string etc. Otherwise, datasetup should be either only int or string. 
 
 @Test(dataProvider= "exptdDataSetUp", groups = {"chromeinvokation"})
 	public void F2301_AE_url_title(HashMap<String, String> exptdDataSetUp)  {
@@ -1100,13 +1135,14 @@ Element Visible checks whether element is in visible state or not, if element is
 
 
 variables in java:A
-instance variables - also called as non-static variable. created inside a class but outside method. can be used only by creating object. like, create object for a class inside main method (even if it is the same class having instance variable), main method should use that object to access variable like obj1.variable.other non-main methods can access instance variables directly.
+instance variables - also called as non-static variable. created inside a class but outside method. can be used only by creating object. like, create object for a class inside main method (even if it is the same class having instance variable), main method should use that object to access variable like obj1.variable.other non-main methods and @Test methods can access instance variables directly.
 
 It is called as instance variable because it can be accessed only by creating object or instance. If no value is assigned, it is default to 0. For eg: int i.  i prints output 0.
 
 local variables - only inside a method.
 
-static variables - also called class variables, object creation is not required.Static variables are created when the program starts and destroyed when the program stops. Variable is purely belongs to class and it cannot be accessed using object like, object.variable. Hence it is called class variable. if there are many static variable, static block can be used as shown below.
+static variables - also called class variables, object creation is not required.Static variables are created when the program starts and 
+ when the program stops. Variable is purely belongs to class and it cannot be accessed using object like, object.variable. Hence it is called class variable. if there are many static variable, static block can be used as shown below.
 
 static {
 int i =0;
@@ -1215,9 +1251,6 @@ dataSetUp - has json file which has data to process in testCases.
 
 
 
-
-
-
 *************************************************************************
 
 
@@ -1315,9 +1348,9 @@ objThreadLocal.set(objExtentTestDetails);
 under ontest failure:
 String strTestCaseName = result.getName();
 objExtentTestDetails.fail(result.getThrowable());
-		objExtentTestDetails.addScreenCaptureFromPath(strScreenShotPath, strTestCaseName); //screenshot path is given here.
+objExtentTestDetails.addScreenCaptureFromPath(strScreenShotPath, strTestCaseName); //screenshot path is given here.
 objThreadLocal.get().fail(result.getThrowable());
-		objThreadLocal.get().addScreenCaptureFromPath(strScreenShotPath, strTestCaseName);
+objThreadLocal.get().addScreenCaptureFromPath(strScreenShotPath, strTestCaseName);
 
 
 under onfinish:
@@ -1369,6 +1402,20 @@ String strBrowserName = System.getProperty("browserName")!= null? System.getProp
 Condition checks if command-line output is not null. If some value is given like firefox or edge, that will get stored under strBrowserName. otherwise, value given in globalProperties file will be stored.
 
 To run using command line arguments, mvn test -DbrowserName=edge -P Regression 
+
+Note above system.getproperty works only for a maven project. But for a simple java program to get value in command line:
+javac filename.java //this is to compile the program
+java filename //to view the output results.
+Note: if you need to give values during run time, java filename giveValuesHere //no need of quotes as well.
+
+eg:
+below is the program:
+
+String check = args[0].equals("try")? "output from iternory expression" : "not fine";
+System.out.println(check);
+
+In eclipse, click runas->run configuration -> select above program holding class name and under arguments label give "try", output will:
+output from iternory expression
 *************************************************
 To run in headless mode:
 maximise using chrome option as below:
@@ -1429,6 +1476,8 @@ BDD is recommended for below two reasons:
 3. Manual testing and automation will have same test cases.
 4. Cucumber is a tool that can perform BDD by using feature file linked with code.
 
+
+
 Cucumber is behaviour driven development(BDD) testing using Gherkin language shown below:
 
 Three files are required:
@@ -1448,6 +1497,10 @@ And (can have n number of And)
 Then
 And (can have n number of And)
 But (negative output)
+
+To get below details automatically:
+
+Create a project right click -> configure -> convert to cucumber project
 
 @tag
 Feature: Title of your feature - business requirement
@@ -1499,8 +1552,7 @@ for eg:
 
 3. .java file - this file is used to integrate feature file with step definition file. Also to integrate cucumber to read testNG code like assertions. 
 
-@CucumberOptions(features = "src/test/java/com/ae/shopping/cucumber", glue = "com.ae.shopping.stepDefinitions", monochrome = true, plugin = {
-		"html:target.cucumber.html" }, tags = "@NegativeScenario or @SmokeTestCucumber")
+@CucumberOptions(features = "src/test/java/com/ae/shopping/cucumber", glue = "com.ae.shopping.stepDefinitions", monochrome = true, plugin = {"html:target.cucumber.html" }, tags = "@NegativeScenario or @SmokeTestCucumber")
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 }
 
@@ -1517,10 +1569,10 @@ Note: both doesn't work though. only " or " works.
 
 Now add TestNGRunner in pom.xml by creating a profile ID with name for eg: CucumberFramework and add this under configuration tag as shown below
 <configuration>
-								<includes>
-									<include>**/TestNGTestRunner.java</include>
-								</includes>
-							</configuration>
+<includes>
+<include>**/TestNGTestRunner.java</include>
+</includes>
+</configuration>
 
 ****************************************************************************
 
@@ -1611,7 +1663,7 @@ hub decides how to split the test cases across multiple laptops (and browsers).
 once connected, localhost:4444 can be checked for browser availability and number of test cases allowed.
 
 ChromeOptions objChromeOptions = new ChromeOptions();
-		EdgeOptions objEdgeOptions = new EdgeOptions();
+EdgeOptions objEdgeOptions = new EdgeOptions();
 		if (strBrowserName.contains("chrome")) {
 			if (strBrowserName.contains("headless")) {
 				objChromeOptions.addArguments("headless");
@@ -1665,7 +1717,8 @@ public class ChromeDevToolsProtocol {
 		DevTools objDevTools = objChromeDriver.getDevTools();
 		objDevTools.createSession();
 		//select any domain from chromedev protocol link(in google) either network or emulation or anything:https://chromedevtools.github.io/devtools-protocol/tot/Emulation/
-		objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
+		objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.e
+mpty(), Optional.empty(), Optional.empty(), Optional.empty()));
 		//above line can be set to empty through autosuggestion as well like below:
 	//objDevTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty(), java.util.Optional.empty()));
 //above auto suggestion for optional.empty() is possible if only needed parameters are given, error comes up to match the arguments, click the error to get auto-population.
@@ -1791,7 +1844,7 @@ Note: While doing "Open Declaration" (right click the method or class name to di
 ErrorReason.FAILED
 
 objDevTools.send(Network.enable(Optional.empty(), Optional.empty(),Optional.empty()));
-		objDevTools.send(Network.emulateNetworkConditions(false, 3000, 20000, 10000, Optional.of(ConnectionType.WIFI)));;
+objDevTools.send(Network.emulateNetworkConditions(false, 3000, 20000, 10000, Optional.of(ConnectionType.WIFI)));;
 		
 false defines, internet should be connected. True refers to disconnect it.
 
@@ -1861,7 +1914,7 @@ public class MySqlJDBC {
 
 	public static void main(String[] args) throws SQLException  {
 		// TODO Auto-generated method stub
-		//url is "jdbc:mysql://localhost:3306/qadbt" where 3306 is a port number and localhost is the host name(since its local machine, for other machine either ip address may be used, check this once you joined work) hence this should be written as:
+		//url is "jdbc:mysql://localhost:3306/qadbt" where 3306 is a port number and localhost is the host name(since its local machine, for other machine either ip address may be used, check this once you joined work - you will, one day :) ) hence this should be written as:
 		Connection DBConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qadbt", "root", "SanjeevKrish@01");
 		Statement objDBConnected = DBConn.createStatement();
 		ResultSet objResultSet = objDBConnected.executeQuery("select * from SeleniumDemo where id=2");
@@ -1884,7 +1937,7 @@ SciTE folder has SciTE file. It is like eclipse editor for writing scripts to ex
 Now create a file save it as filename.au3. Open it using SciTE editor. start writing script
 
 example: //below script is to focus open dialogue box, give file name and click open button.
-ControlFocus("Open","","Edit1")
+ControlFocus("Open","","Edit1")  //where tool expects title, text, controlID. title is Open. title is a label present in Au3Info_x64 tool. when we inspect an element in desktop, title will be autopopulated. next is text which can be left blank. next is controlID which is again present in Au3Info_x64. It is the combination of class and instance label under Basic Control info label in Au3Info_x64 tool.
 ControlSetText("Open","","Edit1","C:\Users\jansr\Desktop\US Draft - Mr1675583816\US Draft - Mr. Dinesh Ganesan\Authorization Letter.pdf")
 ControlClick("Open","","Button1") //under Basic Control Info - Class lable concat Instance Label - Button and 1
 
@@ -2255,13 +2308,17 @@ now, give webapp like, localhost:8080/webapp to see the project. Make the ip add
 
 Continuous Integration:
 
+https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+
+Please refer above link for clear picture.
+
 whenever a new code is pushed to git, git should notify jenkins or azure, unit test cases should run automatically to confirm no blockings due to new push and a new war is created automatically by automatically running the command mvn clean install. Integration between my project, azure and github is called continuous integration it mainly happened through ml file where trigger, artifact and publish codes are updated by filling details.
 Note: In artifact only master is updated.
 
 CI via jenkins:
 
 In github:
-open the github code repo, go to settings -> webhook -> give jenkins url under paylod url -> content-> application/json -> submit.
+open the github code repo, go to settings -> webhook -> give jenkins url under paylod url as jenkinsURL/github-webhook/-> content-> application/json -> submit.
 
 In jenkins:
 
