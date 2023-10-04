@@ -59,9 +59,12 @@ public class AdvStreams_Collectors_Stats {
 		// String ste = he.replaceAll("[^a-zA-Z0-9]", ""); this type of statement also
 		// works.
 		System.out.println("printing alphanumeric"+sum1);
+		
 		Integer sum11 = Arrays.stream(string.split(" ")).filter(s -> s.matches("\\d+"))
 				.mapToInt(s -> Integer.parseInt(s)).sum(); // this can also be written as mapToInt(Integer::parseInt)
 		System.out.println(sum11);
+		
+		
 		List<Integer> mynum = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 		Double value = mynum.stream().collect(Collectors.averagingInt(Integer::intValue));
 		System.out.println(value);
@@ -75,7 +78,8 @@ public class AdvStreams_Collectors_Stats {
 		int bi = bello.stream().flatMap(s->Arrays.stream(s)).flatMapToInt(s->IntStream.of(s)).min().getAsInt();
 		
 		//can also be written simply as below
-		int[][] t = { { 4, 2, 3 }, { 9, 1, 6 }, { 7, 8, 9 } };
+		int[][] t = { { 4, 2, 3}, { 9, 1, 6 }, { 7, 8, 9 } };
+		System.out.println("length of t matrix is"+t[0].length);
 		List<int[]> hello = Arrays.asList(t);
 		int hi = hello.stream().flatMapToInt(s->IntStream.of(s)).min().getAsInt();
 		
@@ -96,7 +100,7 @@ public class AdvStreams_Collectors_Stats {
 				}
 			}
 		}
-		System.out.println(mylist.stream().mapToInt(x -> x).max());
+		System.out.println(mylist.stream().mapToInt(x -> x).max() + "is the matrix output");
 		System.out.println(hi + "check");
 
 		List<String> subList = new ArrayList<String>();
@@ -116,7 +120,7 @@ public class AdvStreams_Collectors_Stats {
 		productsList.add(new Product(3, "Lenevo Laptop", 28000f));
 		productsList.add(new Product(4, "Sony Laptop", 28000f));
 		productsList.add(new Product(5, "Apple Laptop", 90000f));
-		System.out.println(productsList);
+//		System.out.println(productsList +"productlist");
 		List<Float> productPriceList2 = productsList.stream().filter(p -> p.price > 30000)// filtering data
 				.map(p -> p.price) // fetching price
 				.collect(Collectors.toList()); // collecting as list

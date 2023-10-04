@@ -21,7 +21,7 @@ public class verifying {
 //		objWebDriver.get("https://www.google.com");
 //		System.out.println(objWebDriver.getTitle());
 		EdgeDriver driver = new EdgeDriver();
-		driver.maybeGetBiDi()
+//		driver.maybeGetBiDi()
 		
 	}
 

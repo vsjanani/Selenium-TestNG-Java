@@ -14,6 +14,8 @@ public class RepetitionStreams {
 		// TODO Auto-generated method stub
 		
 		Integer[] a = {2,3,4,4,5,7};
+		long see = Arrays.stream(a).map(s->s).count();
+		System.out.println(see);
 		List<Integer> q = Arrays.asList(a);		
 		HashSet t = new HashSet();
 		q.stream().filter(s->!t.add(s)).forEach(System.out::println);

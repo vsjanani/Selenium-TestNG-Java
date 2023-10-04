@@ -9,6 +9,10 @@ vsjanani
 Sanjeevkrish@01
 file:///C:/Program%20Files/Git/ReleaseNotes.html
 
+MySQL Workbench:
+root
+SanjeevKrish@01
+
 Installation Summary:
 
 Java - add as env variable.
@@ -19,6 +23,8 @@ AutoIT
 TortoiseGit
 
 dependancies from maven repo:
+remove <scope> tag inside <dependancy> if present so that, dependancies work
+
 selenium
 testng
 maven surefire plugin (only this is plugin, rest all dependencies)

@@ -4,6 +4,7 @@ public class ClassA {
 	}
 	public int bar(){
 		return 0;
+		
 	}
 }
 

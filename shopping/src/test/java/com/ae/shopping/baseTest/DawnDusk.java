@@ -87,6 +87,7 @@ public class DawnDusk {
 		objWebDriver = objAug.augment(objWebDriver);
 		objDevTools = ((HasDevTools) objWebDriver).getDevTools();
 		objDevTools.createSession();
+		//Network, Log and Fetch domains should be enabled first before using
 		objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 		objDevTools.send(Log.enable());
 		objDevTools.addListener(Network.responseReceived(), consumingResponse->{
@@ -100,6 +101,7 @@ public class DawnDusk {
 			strLoadingFailedReason = consumingResponse.getErrorText();
 					
 		});
+		
 		objDevTools.addListener(Log.entryAdded(), consumingResponse->{
 			strConsoleError = consumingResponse.getText();
 		});

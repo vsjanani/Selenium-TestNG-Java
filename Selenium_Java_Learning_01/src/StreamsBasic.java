@@ -60,10 +60,10 @@ public class StreamsBasic {
 		System.out.println(value);
 		List<Integer> mylist5 = Arrays.asList(2, 8, 5, 2, 8, 7, 5, 9, 3);
 //		ArrayList<Integer> mylist5 = new ArrayList();
-		mylist5.add(2);
-		mylist5.add(6);
-		mylist5.add(4);
-		
+//		mylist5.add(2);
+//		mylist5.add(6);
+//		mylist5.add(4);
+//		
 //		mylist5.add(6);
 		List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList());
 		List mylist8 = mylist5.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
@@ -107,7 +107,7 @@ public class StreamsBasic {
 		System.out.println(h.strip());
 		StringBuilder q = new StringBuilder("heloz");
 		System.out.println("using stringbuilder" + q.reverse());
-		char[] r = h.toCharArray();
+		char[] r = h.strip().toCharArray();
 		Arrays.sort(r);
 		System.out.println(new String(r));
 		String[] myuse = { "janani", "dinesh" };
