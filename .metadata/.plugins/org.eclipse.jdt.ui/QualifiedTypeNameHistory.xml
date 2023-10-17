@@ -45,7 +45,6 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
     <fullyQualifiedTypeName name="io.opentelemetry.exporter.logging.SystemOutLogRecordExporter"/>
     <fullyQualifiedTypeName name="StreamsBasic"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
 </qualifiedTypeNameHistroy>

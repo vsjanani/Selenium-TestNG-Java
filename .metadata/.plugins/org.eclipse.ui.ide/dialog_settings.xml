@@ -8,6 +8,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jansr\Downloads\Core_Java_Learning"/>
 			<item value="C:\Users\jansr\Downloads\REST_Assured_API"/>
 			<item value="C:\Users\jansr\Downloads\eclipse-workspace-20221214T201514Z-001\eclipse-workspace\TestNG_Framework"/>
 			<item value="C:\Users\jansr\eclipse-workspace"/>

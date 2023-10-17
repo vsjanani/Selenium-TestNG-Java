@@ -135,5 +135,8 @@ public class StreamsBasic {
 		Supplier<Stream<Integer>> dar = ()->Stream.of(1,2,3);
 		dar.get().anyMatch(s->s.equals(1));
 		dar.get().distinct();
+		
+		Integer[] podi = {1,2,3,4};
+		Stream.of(podi).filter(s->(s%2==0)).forEach(System.out::println);
 	}
 }
