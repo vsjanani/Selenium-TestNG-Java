@@ -18,6 +18,10 @@ public class Checking {
 //    String userName = myObj.nextLine();  // Read user input
 //    System.out.println("Username is: " + userName);  // Output user input
 //    
+	  String hi ="/contacts/clients/25103454";
+	  String[] arr = hi.split("/");
+	  System.out.println(arr[1]);
+			  
     int i = 10;
     if(i>12) {
     	i = 11;

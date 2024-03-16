@@ -6,6 +6,11 @@ import java.util.Map.Entry;
 public class Java_Basics {
 	public static void main(String[] args) {
 //	****************	arrays *******************************	
+		String hi = "2";
+		System.out.println(Integer.parseInt(hi)+100);
+		//both below are same
+		System.out.println(Integer.valueOf(100)+"hello");
+		System.out.println(Integer.toString(100)+"hello");
 		int[] mylist = {1, 2, 3, 4, 5};
 		System.out.println(mylist[1]);
 		mylist[1] = 100;
@@ -51,6 +56,7 @@ public class Java_Basics {
 				
 			}
 		}
+		
 		String k = new String("my name is janani");
 		String[] m = k.split(" ");
 		System.out.println(m[0]);

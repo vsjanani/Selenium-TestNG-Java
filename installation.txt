@@ -1,5 +1,9 @@
 Passwords:
 
+Airtable:
+janani
+SanjeevKrish@01
+
 jenkins:
 janani
 Kels3road

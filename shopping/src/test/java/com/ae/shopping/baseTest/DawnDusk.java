@@ -54,11 +54,11 @@ public class DawnDusk {
 				System.getProperty("user.dir") + "//src//main//java//com//ae//shopping//resources//GlobalData.properties");
 		objProperties.load(objFIS);		
 		String strBrowserName = System.getProperty("browserName") != null ? System.getProperty("browserName")
-				: objProperties.getProperty("browserName"
-						+ "");
+				: objProperties.getProperty("browserName");
 		ChromeOptions objChromeOptions = new ChromeOptions();
 		EdgeOptions objEdgeOptions = new EdgeOptions();
 		if (strBrowserName.contains("chrome")) {
+			//recent version has "--headless=new"
 			if (strBrowserName.contains("headless")) {
 				objChromeOptions.addArguments("headless");
 
@@ -87,7 +87,7 @@ public class DawnDusk {
 		objWebDriver = objAug.augment(objWebDriver);
 		objDevTools = ((HasDevTools) objWebDriver).getDevTools();
 		objDevTools.createSession();
-		//Network, Log and Fetch domains should be enabled first before using
+		//Network, Log and Fetch domains should be enabled first before using. To get autosuggestion mode, just give Network.enable(). Error will come. correct it.
 		objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 		objDevTools.send(Log.enable());
 		objDevTools.addListener(Network.responseReceived(), consumingResponse->{
@@ -127,7 +127,7 @@ public class DawnDusk {
 //		objWebDriver.close();
 //		
 //	}
-	
+	//beforemethod annotaion is to run this before each @Test method
 	@BeforeMethod
 	public void makeItNull() {
 		strErrorCode=null;

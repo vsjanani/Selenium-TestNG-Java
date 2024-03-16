@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,6 +20,7 @@ public class Browser_Invoke {
 		WebDriver webdriver_obj = new ChromeDriver();
 		webdriver_obj.get("https://www.google.com");
 		webdriver_obj.manage().window().maximize();
+		
 		System.out.println(webdriver_obj.getTitle());
 		System.out.println(webdriver_obj.getCurrentUrl());
 		String id = webdriver_obj.getWindowHandle();

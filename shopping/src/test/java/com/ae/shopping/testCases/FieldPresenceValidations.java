@@ -35,6 +35,7 @@ public class FieldPresenceValidations extends DawnDusk {
 		objWomenTopsPg = objMegaMenuPg.clickOptFrmWomen(exptdDataSetUp.get("exptdOptFrmWomen"));
 		Boolean blnOptFrmNowTrending = objWomenTopsPg.getNowTrendingProdName(exptdDataSetUp.get("exptdProdName"));
 		Assert.assertTrue(blnOptFrmNowTrending, "Expected product name from Now Trending header is not present");
+		
 	}
 	
 	

@@ -63,7 +63,7 @@ public class StreamsBasic {
 //		mylist5.add(2);
 //		mylist5.add(6);
 //		mylist5.add(4);
-//		
+//		getPriceVeggie
 //		mylist5.add(6);
 		List mylist6 = mylist5.stream().sorted().distinct().collect(Collectors.toList());
 		List mylist8 = mylist5.stream().distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());

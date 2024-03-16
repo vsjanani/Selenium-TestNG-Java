@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ExcelMultipleRuns {
-	@DataProvider
+	@DataProvider 
 	public static Object[][] ETH() throws IOException {
 		FileInputStream objFIS = new FileInputStream("C://Users//jansr//Downloads//DemoDataSetUp.xlsx");
 		XSSFWorkbook objWorkBook = new XSSFWorkbook(objFIS);

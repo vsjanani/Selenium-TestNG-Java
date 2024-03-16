@@ -15,8 +15,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ExcelDataDrive {
-@Test
-	public static void hehe() throws IOException {
+//@Test
+	public static void main(String[] args)throws IOException {
 		// TODO Auto-generated method stub
 		ArrayList<String> arrlstDataFromExcel = new ArrayList<String>();
 		FileInputStream objFIS = new FileInputStream("C://Users//jansr//Downloads//DemoDataSetUp.xlsx");

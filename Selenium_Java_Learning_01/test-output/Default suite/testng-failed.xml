@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Verify.TestngCheck">
+      <class name="Verify.TestNGAnnotaionsMisc">
         <methods>
-          <include name="checkagain"/>
-          <include name="before"/>
+          <include name="heroMethod"/>
+          <include name="verifyDependsOnMethods"/>
         </methods>
-      </class> <!-- Verify.TestngCheck -->
+      </class> <!-- Verify.TestNGAnnotaionsMisc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

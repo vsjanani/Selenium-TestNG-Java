@@ -28,7 +28,7 @@ public class MegaMenuPage extends Reusable {
 	@FindBy(xpath="//a[text() = 'Categories']")
 	private WebElement subMnuWomen;
 	
-	@FindBy(xpath="(//a[text() = 'Categories']/following-sibling::div)[1]/a")
+	@FindBy(xpath="(//a[text() = 'Categories'/following-sibling::div)[1]/a")
 	private List<WebElement> lstWomen;
 	
 		

@@ -15,7 +15,7 @@ a:ChromeDriver webdriver_obj = new ChromeDriver(); # add "implements WebDriver" 
 	WebDriver is an interface carried methods like getTitle, close, quit etc with empty bodies.
 Classes like ChromeDriver, EdgeDriver needs to use these methods and add their own codes to execute the methods from WebDriver interface.
 But in this line, ChromeDriver's own methods also can be used by webdriver_obj.getInputState etc along with WebDriver methods. But those ChromeDriver related methods may not be present in other browsers like firefox or ie.
-Note: WebDriver related methods is applicable across all browsers.
+Note: WebDriver related methods is applicabsle across all browsers.
 Code should be compatible for all browsers. If testing is only in chrome browser, then above statement can be used.
 b: WebDriver webdriver_obj = new ChromeDriver(); 
 	
@@ -137,6 +137,7 @@ linkText
 Partiallinktext
 tag name
 
+Use FlexWebDriver to access flex webelements.
 CSS:
 ----------------------------------------------------------------
 tagname[attribute="value"] or [attribute="value"] or #ID or .classname
@@ -164,6 +165,7 @@ if there is only text in html, webelement can be identified using text as below:
 
 //span[contains(text(),'Sign up')] - this works.
 or //tagname[text() = "text"]
+
 
 
 if multiple class names present in html for a single web element, pick one class name and write in regular expression(RegEx) as below:
@@ -213,6 +215,8 @@ if particular webelement is third sibling then try, xpath[3].
 nth-of-type vs nth-child in css:
 nth-of-type refers to the other element which has same css. it can either be its immediate sibiling or not immediate and where inside main tag.
 nth-child only refers to it own child in the same order mentioned.
+Above wasn't clear. So i saw the picture here: https://www.freecodecamp.org/news/nth-child-vs-nth-of-type-selector-in-css/
+Its easier to understand.
 eg:
 <div>
     <div >0</div>
@@ -225,6 +229,8 @@ eg:
 this selector: div div:nth-child(1) will select the first child of the div but with another condition that child must be a div. here first child is a <div>0</div> but if the first child was a paragraph p: <p>0</p> this selector will not effect the page because there is no first child div the first child is p.
 
 but this selector: div div:nth-of-type(1) if the first child was a <div>0</div> will effect it, but if the first child is <p>0</p> now he will effect the second child <div>1</div> because it's the first child of his type div.
+
+
 CSS: Tagname
 if there are two same tag names and if you want to go the last tag name: button:last-of-type will work. To get first tag name, button:first-of-type will work
 to get some random type, nth-of-type 
@@ -425,9 +431,9 @@ mouseHover.moveToElement(FamilyCheck).keyDown(Keys.SHIFT).sendKeys("hello")
 2 
 keys entered will be HELLO in browser.
 
-frames:
+Frames:
 
-by id, or any web attribute like class name or by index. driver.switchTo().frame(driver.findElement(By.className("frame-demo")));
+By id, or any web attribute like class name or by index. driver.switchTo().frame(driver.findElement(By.className("frame-demo")));
 index starts from 0. 
 get the number of webelements with tagname as frames in the webpage. -> driver.findElements(By.tagName(frames or iframes whatever is in html)).size(); 
 If there are 2 frames,
@@ -493,6 +499,7 @@ Chrome options:
 		options.addArguments("disable-notifications");
 		options.addArguments("start-maximized");
 		options.add_argument("headless")
+		//"headless=new"  is the latest way of doing.
 		options.add_argument("ignore-certificate-errors")
 		options.setAcceptInsecureCerts(true); -->accept https security advanced certifications internally and directly loads the website
 		WebDriver driverObj = new ChromeDriver(options);
@@ -509,7 +516,7 @@ FileUtils.moveFile(srcFile, desFile); //can use copyFile as well.
 
 To open  the URLs andall check if there are any broken links(404 error or error not found ):
 
-If you want to get all the urls under href tag, it is not possible to directly access href tag.
+If you want to get all the urls under href tag,  weit is not possible to directly access href tag.
 Hence, get the list of weblements using anchor a tag and then, from each element in anchor a tag(use for loop), use, .getAttribute("href") to get the URLs.
 
 SoftAssert softObj = new SoftAssert();
@@ -835,6 +842,63 @@ If both suit below and test below is defined, only test below is considered in t
 		return details;
 		
 	}
+
+@Factory:
+
+It Can be used to execute all the test methods present inside a test class with multiple sets of data, using the separate instance of the class.
+Using this, we can instantiate a class multiple times rather than just a method.
+The factory method should return an Object[]. This can be an array of Method calls or class objects.
+Note: Factory should be in a separate class whereas dataprovider can be in same class or other class.
+
+eg:
+
+public class FactoryAnnotationTestNGMisc {
+
+	@Factory
+	public Object[] verifyFactoryAnnotation() {
+		return new Object[] {new FactoryAnnotationTestNGMainClass("poda")};
+	} 
+}
+
+public class FactoryAnnotationTestNGMainClass {
+	String param;
+
+	public FactoryAnnotationTestNGMainClass(String param) {
+		this.param = param;
+	}
+	
+	@Test
+	public void method1() {
+		System.out.println("method1:" + param);
+	}
+	
+	@Test
+	public void method2() {
+		System.out.println("method2:" + param);
+	}
+
+}
+
+
+Output will be:
+
+[RemoteTestNG] detected TestNG version 7.4.0
+method1:poda
+method2:poda
+PASSED: method2
+PASSED: method1
+
+===============================================
+    Default test
+    Tests run: 2, Failures: 0, Skips: 0
+===============================================
+
+
+
+Difference between dataprovider and factory is:
+dataprovider provides multiple data to methods in a class where factory provides data in constructor level and so, it runs the whole class multiple times based on the input data.
+
+
 Parallel:
 To run test methods or tests or classes parallely, parallel = "methods (or classes or tests - check for autopopulated options after typing parallel in testng.xml)" can be used.
 <suite parallel="tests" name="Suite">
@@ -847,6 +911,19 @@ Thread-count number represents the maximum of number methods (browsers) or allow
 Hard dependencies. All the methods you depend on must have run and succeeded for you to run. If at least one failure occurred in your dependencies, you will not be invoked and marked as a SKIP in the report.
 Soft dependencies. You will always be run after the methods you depend on, even if some of them have failed. This is useful when you just want to make sure that your test methods are run in a certain order but their success doesn't really depend on the success of others. A soft dependency is obtained by adding "alwaysRun=true" in your @Test annotation.
 
+eg:
+@Test
+	public void heroMethod() {
+		System.out.println("This is the hero method");
+		Assert.assertTrue(false);
+		
+	}
+
+	@Test(dependsOnMethods = {"heroMethod"}, alwaysRun = true)
+	public void verifyDependsOnMethods() {
+		System.out.println("hard dependancy working");
+	}
+	
 
 If certain test cases are grouped with some name like, "negative test cases". in that case, before or after class methods in dawndusk class will not execute as it did not tag like "negative test cases". Hence it will not run. 
 alwaysRun=true will run, even if the test case is not grouped.
@@ -917,6 +994,55 @@ The list of exceptions that a test method is expected to throw. If no exception 
 		
 	}
 
+IAnnotationTransformer:
+
+It is implemented just like ITestListeneres. It is used to override the settings of TestNG annotations as shown below:
+
+public class AnnotationTransformerTestNGMisc implements IAnnotationTransformer{
+//check this annotation change implemented in AnnotationTransformerTestNGMisc class in testngMisc.xml just like normal listeners.
+	
+	@Override
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+		// TODO Auto-generated method stub
+		IAnnotationTransformer.super.transform(annotation, testClass, testConstructor, testMethod);
+		if("heroMethod".equals(testMethod.getName())) {
+			System.out.println(annotation.getEnabled());
+			annotation.setDescription("heroMethod which gives data");
+			//I could see this description in testng reports.
+			
+		}
+	}
+
+in xml above transformer should be updated just like listener:
+
+<suite name="Suite">
+	<listeners> <listener class-name="Verify.AnnotationTransformerTestNGMisc"></listener></listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Verify.TestNGAnnotaionsMisc"/>
+    </classes>
+
+now in testng report:
+
+ Verify.TestNGAnnotaionsMisc
+checkExceptions
+heroMethod (heroMethod which gives data)
+verifyDependsOnMethods
+
+
+expectedExceptions:
+
+Below test case fails if exception is not thrown:
+
+@Test(expectedExceptions = { IOException.class })
+	public void checkExceptions() throws IOException {
+		System.out.println("exception printing");
+		throw new IOException();
+	}
+
+
+
+
 *******************************************************************************************************************
 
 Interface:
@@ -982,6 +1108,8 @@ In such case, instead of visibility of element located(By.CSS..), use only visib
 MouseHover:
 Actions mouseHover = new Actions(driverObj);
 mouseHover.sendKeys(webElement target, charToSend) -> this type of sendkey can be used to directly move to the element and send keys in single step.
+
+
 
 **************************************************************************************************************
 Frameworks
@@ -1170,6 +1298,7 @@ flyout menu - right side vertical menu where one menu carries another menu which
 accordion menu Accordion Menus are vertical menus where clicking the main item expands the section below it. Clicking the top link a second time closes the section
 
 regardind flex webelements, inspect the same webelement in incognito mode to find the appropriate attribute and value.
+FlexWebdriver also being used for flex webelements.
 
 Abstract class vs interface:
 
@@ -1226,7 +1355,7 @@ Refer the screenshot for more details.
 Framework creation or Framework structure or Framework architecture or Framework diagram:
 
    	  objcreation		via testng Parent  		  extends  child     objcreation     child  extends Parent			  
-extentreport --->		Listener  BaseTest + dataproviders <--   TestClass   	<---	    PageObject -->  Utilities
+extentreport --->            Listener  BaseTest + dataproviders <--   TestClass   	<---	    PageObject -->  Utilities
 							^          	  ^
 							|	   	  |					
 				 		 datasetup.Json 	retryfailedtest.class					
@@ -1581,7 +1710,7 @@ Excel data drive:
 while using TestNG for excel datadriver, dataprovider is the only way to send data to @Test method.
 
 dataprovider can send only Object[][]. Each row takes each run. if there is one row, with 3 columns, one run occurs with three input data.
-If there 3 rows with one column, three different run happens and testng reports 3 test cases ran. It all depends on how object[][] is defined. Look for example defined below:
+If there 3 rows with one column, three different run happens with one input data and testng reports 3 test cases ran. It all depends on how object[][] is defined. Look for example defined below:
 
 SO even if it is. list of hashmap, it has to be converted to object[][].
 
@@ -1648,6 +1777,7 @@ Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
 selenium grid:
 
 to run in multiple machines for reducing overload and save time. 
+Selenium Grid allows the execution of WebDriver scripts on remote machines by routing commands sent by the client to remote browser instances. Grid aims to: Provide an easy way to run tests in parallel on multiple machines. Allow testing on different browser versions.
 
 architecture is :
 
