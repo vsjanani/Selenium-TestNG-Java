@@ -24,7 +24,7 @@ public class AppTest
     	options.addArguments("--remote-allow-origins=*");    	
     	WebDriver objWebDriver = new ChromeDriver(options);
     	objWebDriver.get("https://www.amazon.com");
-    	System.out.println("This is jenkinsgitintegration testing by Janani yes");
+    	System.out.println("This is jenkinsgitintegration testing by Janani try again");
         Assert.assertTrue( true );
     }
 }
