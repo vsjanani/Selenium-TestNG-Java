@@ -1663,7 +1663,7 @@ Scenario: Successful LogOut
 	When User LogOut from the Application
 	Then Message displayed LogOut Successfully
 
-Note: Ambigous or same step in step definition error is thrown if same wording is used for two different keyboards like given and when or And or then.
+Note: Ambigous or same step in step definition error is thrown if same wording is used for two different keywords like given and when or And or then.
 
 for eg:
 Given <optFrmWomen> is clicked
@@ -1881,9 +1881,10 @@ ChromeDriver objChromeDriver = new ChromeDriver();
 
 network response:
 
-In below consumingResponse is a lamda expression and it represents the response data received from responseReceived() function. Data initialised inside the braces has life inside it only.
+In below consumingResponse is a lamda expression and it represents the response data received from responseReceived() function. Data initialised inside the braces has life inside only.
 below piece of code can be used to framework to display which api call got failed in run-time.
 
+objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 objDevTool.addListener(Network.responseReceived(), consumingResponse -> {
 			String strURL = consumingResponse.getResponse().getUrl();
 			int intStatusCode = consumingResponse.getResponse().getStatus();
@@ -1978,7 +1979,7 @@ objDevTools.send(Network.emulateNetworkConditions(false, 3000, 20000, 10000, Opt
 		
 false defines, internet should be connected. True refers to disconnect it.
 
-20000 and 10000 refers to download and upload speed per mbps respectively.
+20000 and 10000 refers to download and speed per mbps respectively.
 
 
 Basic authentication:
@@ -2785,6 +2786,22 @@ Step #6: Risk Analysis
 Step #7: Review And Approvals
 features importantly
 
+Traceability matrix
+
+Test Case document:
+Test case Name - F2301_AE_womenMenu_topsOption_display
+Test case Description
+Test case Steps
+Test case Expected
+Test case Actual
+Test case priority
+Test case Severity
+
+Test Execution
+Test Evidence
+Test Summary Report
+
+
 Terms used in agile automation:
 squad, tribe, Return on investment
 octane-> like qc but can have code as well.
@@ -2905,3 +2922,30 @@ ElementNotSelectableException
 NoSuchSessionException
 StaleElementReferenceException
 
+
+What is a defect?
+The variation between the actual resultsd and expected results is known as defect.
+
+If a developer finds an issue and corrects it by himself in the development phase then it’s called a defect.
+
+What is a bug?
+If testers find any mismatch in the application/system in testing phase then they call it as Bug.
+
+As I mentioned earlier, there is a contradiction in the usage of Bug and Defect. People widely say the bug is an informal name for the defect.
+
+What is an error?
+We can’t compile or run a program due to coding mistake in a program. If a developer unable to successfully compile or run a program then they call it as an error.
+
+What is a failure?
+Once the product is deployed and customers find any issues then they call the product as a failure product. After release, if an end user finds an issue then that particular issue is called as failure
+
+OpenEye:
+
+OpenEye Web Services -> records in the office location HD quality and gets into cloud
+ secure video surveillance solution that simplifies operations and management by moving these functions to the cloud.
+Remote monitoring ->receive instant notifications of alarm, motion and system health events from the cloud to your PC or mobile.
+
+OpenEye, the cloud video platform company, provides solutions for video security, business intelligence and loss prevention. 
+
+Customers: Retail, Finance, Restaurants, Education
+Client Applications -> Webclient, command section, mobile console, spot monitor

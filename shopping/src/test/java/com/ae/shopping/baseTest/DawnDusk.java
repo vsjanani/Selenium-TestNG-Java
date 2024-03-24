@@ -23,6 +23,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
+import org.openqa.selenium.devtools.v109.input.Input.EmulateTouchFromMouseEventType;
+import org.openqa.selenium.devtools.v110.fetch.Fetch;
 import org.openqa.selenium.devtools.v111.network.Network;
 import org.openqa.selenium.devtools.v111.log.Log;
 import org.openqa.selenium.edge.EdgeDriver;

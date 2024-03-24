@@ -2,9 +2,10 @@ import java.util.Optional;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v114.log.Log;
-import org.openqa.selenium.devtools.v114.network.Network;
-import org.openqa.selenium.devtools.v114.network.model.ConnectionType;
+import org.openqa.selenium.devtools.v120.emulation.Emulation;
+import org.openqa.selenium.devtools.v120.log.Log;
+import org.openqa.selenium.devtools.v120.network.Network;
+import org.openqa.selenium.devtools.v120.network.model.ConnectionType;
 
 
 public class CDPConsoleErrorLogs {
@@ -21,7 +22,11 @@ public class CDPConsoleErrorLogs {
 		objChromeDriver.get("https://www.amazon.com/hell");
 		objDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 		objDevTools.send(Network.emulateNetworkConditions(true, 3000, 20000, 10000, Optional.of(ConnectionType.WIFI)));
-		objChromeDriver.get("https://www.amazon.com");
+		objDevTools.send(Emulation.setGeolocationOverride(Optional.of(17), Optional.of(78), Optional.of(1)));
+
+		objChromeDriver.get("https://my-location.org/");
+
+//		objChromeDriver.get("https://www.amazon.com");
 		
 	}
 

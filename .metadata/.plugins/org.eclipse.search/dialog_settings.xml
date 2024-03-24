@@ -18,11 +18,11 @@
 		</list>
 	</section>
 	<section name="SearchDialog.ScopePart">
-		<item key="scope" value="0"/>
+		<item key="scope" value="1"/>
 	</section>
 	<section name="DialogBounds_SearchDialog">
-		<item key="DIALOG_X_ORIGIN" value="592"/>
-		<item key="DIALOG_Y_ORIGIN" value="96"/>
+		<item key="DIALOG_X_ORIGIN" value="1094"/>
+		<item key="DIALOG_Y_ORIGIN" value="309"/>
 		<item key="DIALOG_WIDTH" value="796"/>
 		<item key="DIALOG_HEIGHT" value="653"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -33,12 +33,25 @@
 		<item key="WHOLE_WORD" value="false"/>
 		<item key="SEARCH_DERIVED" value="false"/>
 		<item key="SEARCH_IN_BINARIES" value="false"/>
-		<item key="HISTORY_SIZE" value="4"/>
+		<item key="HISTORY_SIZE" value="5"/>
 		<section name="EXTENSIONS">
-			<item key="0" value="//"/>
-			<item key="1" value="*"/>
+			<item key="0" value="v120"/>
+			<item key="1" value="//"/>
+			<item key="2" value="*"/>
 		</section>
 		<section name="HISTORY0">
+			<item key="ignoreCase" value="true"/>
+			<item key="isRegExSearch" value="false"/>
+			<item key="isWholeWord" value="false"/>
+			<item key="textPattern" value="v114"/>
+			<item key="scope" value="1"/>
+			<list key="fileNamePatterns">
+				<item value="v120"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
@@ -50,7 +63,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY1">
+		<section name="HISTORY2">
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
@@ -62,7 +75,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY2">
+		<section name="HISTORY3">
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
@@ -74,7 +87,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY4">
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
