@@ -14,6 +14,7 @@ public class Java_Basics {
 		int[] mylist = {1, 2, 3, 4, 5};
 		System.out.println(mylist[1]);
 		mylist[1] = 100;
+	
 		System.out.println("arrays to string" + Arrays.toString(mylist));
 		for (int i : mylist) {
 			System.out.println(i);

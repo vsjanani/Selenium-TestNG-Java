@@ -2137,7 +2137,7 @@ public class FileUploadAutoIt {
 		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.cssSelector(".sc-1mszb21-1.jmcfKp")))).click();
 		objWebDriver.findElement(By.xpath("//span[contains(text(),'option')]")).click();
 		objExplicitWait.until(ExpectedConditions.visibilityOf(objWebDriver.findElement(By.linkText("Download")))).click();
-		File f = new File("user.dir"+"//Authorization Letter.jpg");
+		File f = new File(System.getProperty("user.dir")+"//Authorization Letter.jpg");
 		System.out.println(f.exists());
 		
 	}
@@ -2939,6 +2939,47 @@ We can’t compile or run a program due to coding mistake in a program. If a dev
 What is a failure?
 Once the product is deployed and customers find any issues then they call the product as a failure product. After release, if an end user finds an issue then that particular issue is called as failure
 
+Encoding and Encryption:
+
+Encoding is changing the text to cipher text. Still human can decode it easily and it is not secured. Its just to maintain the data integrity.
+
+Encryption is securing the data using private keys.
+– Symmetric Key Encryption
+
+– Asymmetric Key Encryption
+
+Symmetric Key Encryption: As the name suggests, this type of encryption is symmetric. So when the sender sends a piece of data to the receiver, they use something called a ‘private key’ for encrypting the data. Here, the information of the private key stays confidential between the sender and the receiver.
+
+As the receiver receives the encrypted information, they use the same private key for decrypting it. Symmetric key encryption is often used in banking for encrypting personally identifiable information (PII) is required for transactions and data storage purposes.
+
+Asymmetric Key Encryption: Asymmetric Key encryption does the opposite of the symmetric encryption method. So, in this process, the encryption key is public and available to all, but the decryption key is private and known only to the intended recipient. This enables secure communication as there is no prior distribution of a shared secret key between the sender and the recipient.
+
+When and when not to automate:
+
+Depends on test case count, severity, priority, return on investment
+
+Automation testing may not be suitable in certain situations, such as:
+
+Early-stage development: When the software or feature is still in the early stages of development and is likely to undergo frequent changes, manual testing may be more efficient.
+User interface changes: If the user interface is frequently changing, automation testing may require constant updates and maintenance, making it less cost-effective.
+Exploratory testing: For exploratory or ad-hoc testing where testers need to explore the application without predefined test cases, manual testing is often preferred.
+Usability testing: When testing for usability, human judgment and perception are crucial, making manual testing more appropriate.
+One-time testing: For tasks that require testing only once or have a short lifespan, the setup time for automation may not be justified.
+Legacy systems: In cases where the application or system is old and not easily automatable, manual testing may be the only option.
+
+Gray box testing:
+Testers know the partial code like how the code flows, what are the internal systems involved but doesn't how it is coded.
+
+SDLC:
+Requirement Analysis
+Planning
+Design
+Code
+Testing
+Implementation
+Maintenance
+
+
 OpenEye:
 
 OpenEye Web Services -> records in the office location HD quality and gets into cloud
@@ -2949,3 +2990,6 @@ OpenEye, the cloud video platform company, provides solutions for video security
 
 Customers: Retail, Finance, Restaurants, Education
 Client Applications -> Webclient, command section, mobile console, spot monitor
+
+
+

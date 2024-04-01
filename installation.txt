@@ -57,7 +57,6 @@ Hence, project created in eclipse should be converted into maven project.
 To do so, create project in eclipse, go to configure and convert into maven project (pom.xml file will be created)
 go to mvn repository and copy the selenium dependancy. Paste it under <dependancies> (create this tag) inside pom.xml file.
 
-
 Download Testng:
 
 Paste Testng dependancy from mvn repository.
