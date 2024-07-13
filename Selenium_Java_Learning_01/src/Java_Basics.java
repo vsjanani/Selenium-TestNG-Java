@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 public class Java_Basics {
 	public static void main(String[] args) {
 //	****************	arrays *******************************	
+		String hello = "janani";
+		System.out.println("hi"+hello);
 		String hi = "2";
 		System.out.println(Integer.parseInt(hi)+100);
 		//both below are same
@@ -14,6 +16,7 @@ public class Java_Basics {
 		int[] mylist = {1, 2, 3, 4, 5};
 		System.out.println(mylist[1]);
 		mylist[1] = 100;
+		
 	
 		System.out.println("arrays to string" + Arrays.toString(mylist));
 		for (int i : mylist) {

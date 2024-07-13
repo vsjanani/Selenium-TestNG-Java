@@ -2992,4 +2992,8 @@ Customers: Retail, Finance, Restaurants, Education
 Client Applications -> Webclient, command section, mobile console, spot monitor
 
 
+Itron:
 
+Itron is an American technology company that offers products and services for energy and water resource management gewt: gas, electricity, water and thermal
+
+Collaborated with : SmartSynch, SiverSpring, Actaris	
